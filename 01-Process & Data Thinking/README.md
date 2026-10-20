@@ -1,10 +1,9 @@
 # U1 — UNDERSTAND THE WORK
-
-## Process & Data Thinking
+### Process & Data Thinking
 
 > Before automating the work, understand the work.
 
-في هذه الوحدة، أتعلم كيف أحوّل مشكلة واقعية إلى عملية واضحة يمكن تحليلها وتصميم حل مناسب لها باستخدام AI Automation.
+في هذه الوحدة، أتعلم كيف أحوّل مشكلة واقعية إلى عملية واضحة يمكن تحليلها وتصميم حل مناسب لها باستخدام **AI Automation**.
 
 الهدف ليس البدء بالأداة، بل فهم العمل أولًا، وتحديد المشكلة، وتحليل البيانات، وتصميم القرارات التي يحتاج النظام إلى اتخاذها.
 
@@ -14,7 +13,7 @@
 
 **Process & Data Thinking**
 
-القدرة على تحليل العمل وتفكيك العمليات وفهم المدخلات وتصميم منطق اتخاذ القرار قبل تنفيذ الأتمتة.
+القدرة على تحليل العمل، وتفكيك العمليات، وفهم المدخلات، وتصميم منطق اتخاذ القرار قبل تنفيذ الأتمتة.
 
 ---
 
@@ -24,7 +23,7 @@
 
 - **Understand the Work:** فهم المشكلة وسياق العمل والنتيجة المطلوبة.
 - **Decompose the Work:** تفكيك العملية إلى Workflow وTasks وSubtasks.
-- **Understand the Input:** تحديد البيانات المطلوبة وفهم البيانات المنظمة وغير المنظمة.
+- **Understand the Input:** تحديد البيانات المطلوبة والتمييز بين البيانات المنظمة وغير المنظمة.
 - **Design the Decision:** تحديد متى نستخدم AI ومتى تكفي القواعد المحددة.
 - **Handle Exceptions Safely:** التعامل مع الحالات غير المتوقعة وتحديد متى نحتاج إلى Human Review.
 - **Design the Automation:** تحويل تصميم العملية إلى Workflow قابل للتنفيذ.
@@ -33,53 +32,63 @@
 
 ## 🛠️ Projects
 
-### 01 — Guided Project
+### 01. Guided Project — AI Client Intake & Request Routing System
 
-**Project:**   AI Client Intake & Request Routing System
+مشروع تطبيقي موجّه لتعلّم كيفية تحليل طلبات العملاء وتصميم عملية أتمتة تساعد على تنظيمها وتحديد الإجراء المناسب لكل طلب.
 
-مشروع عملي أطبّق فيه مفاهيم تحليل العمل وتصميم عملية أتمتة تعتمد على AI.
+**Problem**
 
-- **Problem:** تعتمد عملية معالجة طلبات العملاء على تدخل الموظفين في عدة خطوات متكررة، بدءًا من فهم الطلب وحتى تحديد الإجراء التالي.
+تعتمد عملية معالجة طلبات العملاء على تدخل الموظفين في عدة خطوات متكررة، بدءًا من فهم الطلب وحتى تحديد الإجراء التالي.
 
-- **Solution:** نريد تقليل هذا العمل اليدوي من خلال تصميم نظام أتمتة يساعد الشركة على معالجة الطلبات بطريقة منظمة، مع إبقاء الحالات التي تحتاج إلى تدخل بشري تحت المراجعة.
+**Solution**
 
-- **Tools:**  
-Google Forms: لاستقبال طلبات العملاء.
-Google Sheets: لتسجيل الطلبات ونتائج معالجتها.
-Zapier: لبناء تدفق الأتمتة.
-AI by Zapier: لاستخراج المعلومات من الطلبات وتنظيمها.
-Gmail 
+تصميم نظام أتمتة يساعد على معالجة طلبات العملاء بطريقة منظمة، وتقليل العمل اليدوي، مع إبقاء الحالات التي تحتاج إلى تدخل بشري تحت المراجعة.
 
-[Explore the Project](https://zapier.com/templates/details/ai-client-intake-request-routing-e485e6)
+**Tools**
 
+- **Google Forms:** استقبال طلبات العملاء.
+- **Google Sheets:** تسجيل الطلبات ونتائج معالجتها.
+- **Zapier:** بناء تدفق الأتمتة وربط الخطوات.
+- **AI by Zapier:** استخراج المعلومات من الطلبات وتنظيمها.
+- **Gmail:** إرسال الإشعارات عبر البريد الإلكتروني.
 
-### 02 — Independent Project
+🔗 **[Explore the Guided Project](https://zapier.com/templates/details/ai-client-intake-request-routing-e485e6)**
 
-**Project:**  RAHEEQ - AI-Powered Client Request Management
+---
 
-مشروع مستقل أطبّق فيه ما تعلمته على مشكلة مختلفة، مع تصميم الحل وتنفيذه وتوثيق النتائج.
+### 02. Independent Project — Raheeq
 
-- **Problem:** يواجه أصحاب المهارات والمستقلون، والشركات الناشئة والمشاريع الصغيرة تحديات في تنظيم طلبات العملاء ومراجعة المعلومات المقدمة وتحديد الإجراءات المناسبة لكل طلب. وقد تؤدي المعالجة اليدوية إلى استهلاك الوقت، وتكرار المهام، وتأخر معالجة الطلبات التي تحتاج إلى مراجعة إضافية. 
+**Raheeq | AI-Powered Client Request Management**
 
-- **Solution:** رحيق هو نظام لأتمتة إدارة طلبات العملاء، يستخدم الذكاء الاصطناعي لاستخراج المعلومات الأساسية من الطلبات دون تخمين، ثم يحدد مسار المعالجة وفق قواعد واضحة: متابعة مباشرة للطلبات المستوفية للشروط، أو إحالة الطلبات التي تحتاج إلى تحقق إلى المراجعة البشرية. بعد ذلك، يسجل النظام النتائج في Google Sheets ويرسل إشعارات مناسبة عبر البريد الإلكتروني.
+مشروع مستقل أطبّق فيه مفاهيم تحليل العمل وتصميم الأتمتة على مشكلة واقعية، مع تصميم الحل وتنفيذه وتوثيق النتائج.
 
-يهدف المشروع إلى تقليل العمل اليدوي، وتحسين تنظيم البيانات، وتسهيل متابعة طلبات العملاء. 
-- **Tools:**
--  Google Forms: استقبال طلبات العملاء.
+**Problem**
 
-Zapier: ربط خطوات سير العمل وأتمتتها.
+يواجه أصحاب المهارات والمستقلون، والشركات الناشئة والمشاريع الصغيرة تحديات في تنظيم طلبات العملاء، ومراجعة المعلومات المقدمة، وتحديد الإجراء المناسب لكل طلب. وقد تؤدي المعالجة اليدوية إلى استهلاك الوقت، وتكرار المهام، وتأخر معالجة الطلبات التي تحتاج إلى مراجعة إضافية.
 
-AI by Zapier: استخراج المعلومات الأساسية من الطلبات.
+**Solution**
 
-Paths by Zapier: توجيه الطلبات وفق قواعد القرار المحددة.
+رحيق هو نظام أتمتة يستقبل طلبات العملاء عبر Google Forms، ويستخدم الذكاء الاصطناعي لاستخراج المعلومات الأساسية دون تخمين. بعد ذلك، يحدد مسار الطلب وفق قواعد واضحة:
 
-Google Sheets: تسجيل الطلبات ونتائج معالجتها.
+- **Valid:** متابعة الطلب المستوفي للشروط المحددة.
+- **Needs Review:** إحالة الطلبات التي تحتاج إلى تحقق أو مراجعة بشرية.
 
-Gmail: إرسال الإشعارات عبر البريد الإلكتروني.
+ثم يسجل النظام النتائج في Google Sheets ويرسل إشعارًا مناسبًا عبر Gmail.
 
-م
+**Workflow**
 
-[Explore the Project](https://zapier.com/templates/details/raheeq-ai-powered-client-request-management-c5b92a)
+`Google Forms → Zapier Trigger → AI by Zapier → Paths by Zapier → Google Sheets → Gmail`
+
+**Tools**
+
+- **Google Forms:** استقبال طلبات العملاء.
+- **Zapier:** ربط خطوات سير العمل وأتمتتها.
+- **AI by Zapier:** استخراج المعلومات الأساسية من الطلبات دون تخمين.
+- **Paths by Zapier:** توجيه الطلبات وفق قواعد القرار المحددة.
+- **Google Sheets:** تسجيل الطلبات ونتائج معالجتها.
+- **Gmail:** إرسال الإشعارات المناسبة.
+
+🔗 **[Explore the Raheeq Project](https://zapier.com/templates/details/raheeq-ai-powered-client-request-management-c5b92a)**
 
 ---
 
@@ -89,16 +98,16 @@ Gmail: إرسال الإشعارات عبر البريد الإلكتروني.
 
 1. ما المشكلة الحقيقية التي نريد حلها؟
 2. كيف تتم العملية حاليًا؟
-3. ما المدخلات والبيانات التي يحتاجها النظام؟
+3. ما المدخلات والمخرجات التي يحتاج إليها النظام؟
 4. أين نحتاج إلى AI، وأين تكفي القواعد المحددة؟
 5. ماذا يحدث عندما تكون المعلومات ناقصة أو غير واضحة؟
-6. كيف نحوّل التصميم إلى Automation Workflow؟
+6. كيف نحوّل تصميم العملية إلى Automation Workflow قابل للتنفيذ؟
 
 ---
 
 ## 📌 Key Takeaway
 
-**A good automation starts with a well-understood process, not with a tool.**
+> **A good automation starts with a well-understood process, not with a tool.**
 
 نجاح الأتمتة يبدأ بفهم العمل وتصميم العملية، وليس بمجرد اختيار الأداة.
 
@@ -117,9 +126,11 @@ Gmail: إرسال الإشعارات عبر البريد الإلكتروني.
 
 ## 🔗 Related Projects
 
-- [Guided Project](https://zapier.com/templates/details/ai-client-intake-request-routing-e485e6)
-- [Independent Project](https://zapier.com/templates/details/raheeq-ai-powered-client-request-management-c5b92a)
+| Project | Type | Link |
+|---|---|---|
+| AI Client Intake & Request Routing System | Guided Project | [Explore](https://zapier.com/templates/details/ai-client-intake-request-routing-e485e6) |
+| Raheeq — AI-Powered Client Request Management | Independent Project | [Explore](https://zapier.com/templates/details/raheeq-ai-powered-client-request-management-c5b92a) |
 
 ---
 
-**Next:** U2 — BUILD THE SYSTEM
+### Next: U2 — BUILD THE SYSTEM
