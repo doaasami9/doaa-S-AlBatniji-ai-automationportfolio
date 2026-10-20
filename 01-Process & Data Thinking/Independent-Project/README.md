@@ -1,367 +1,400 @@
 # AI Client Intake & Request Routing System
 
-> **نظام ذكي لأتمتة استقبال طلبات العملاء وتحليلها وتوجيهها وفق قواعد واضحة، مع إحالة الطلبات غير المكتملة أو غير الواضحة إلى المراجعة البشرية.**
+### U1 — Process & Data Thinking
 
-[![AI Automation](https://img.shields.io/badge/Focus-AI%20Automation-6C63FF?style=for-the-badge)](https://zapier.com/)
-[![Workflow](https://img.shields.io/badge/Workflow-Zapier-orange?style=for-the-badge)](https://zapier.com/)
-[![Documentation](https://img.shields.io/badge/Documentation-Process%20%26%20Data-247BA0?style=for-the-badge)](https://github.com/)
+نظام أتمتة يستقبل طلبات العملاء من Google Forms، ويستخدم AI by Zapier لتحويل نص الطلب غير المنظم إلى بيانات منظمة، ثم يوجّه الطلب عبر قواعد واضحة إلى مسار المتابعة أو إلى المراجعة البشرية، ويسجّل النتيجة في Google Sheets ويرسل الإشعار المناسب.
 
+> **AI → Understand · Rule / Logic → Control · Human → Judge**
 
+---
 
 ## 🎯 Problem
 
 ### The Context
 
-تستقبل شركات الخدمات طلبات من عملاء محتملين عبر النماذج الإلكترونية. وقد تتضمن الطلبات أوصافًا تفصيلية للاحتياجات، أو رسائل قصيرة، أو معلومات ناقصة وغير واضحة.
-
-تحتاج الشركة إلى فهم كل طلب، واستخراج المعلومات المهمة، والتحقق من اكتمالها، ثم تحديد الإجراء المناسب قبل متابعة العمل.
+تستقبل شركة خدمات (تصميم مواقع، تسويق رقمي، تطوير تطبيقات) طلبات من عملاء محتملين عبر النماذج الإلكترونية. يرسل كل عميل طلبه بطريقته: قد يشرح احتياجه بالتفصيل، أو يرسل رسالة قصيرة، أو ينسى ذكر معلومات مهمة.
 
 ### The Problem
 
-تعتمد المعالجة التقليدية على قراءة الموظفين لكل طلب يدويًا، وتنظيم بياناته، والتحقق من المعلومات، وتحديد الخطوة التالية. ومع تزايد الطلبات، تصبح هذه العملية متكررة وتستهلك الوقت والجهد، وقد تؤدي إلى تأخر المتابعة أو إغفال تفاصيل مهمة.
+يحتاج الموظف إلى قراءة كل طلب وفهمه وتنظيم معلوماته والتحقق من اكتمالها ثم تحديد الخطوة التالية. ومع زيادة الطلبات تصبح هذه العملية عبئًا متكررًا يستهلك الوقت وقد يؤدي إلى تأخر المتابعة أو فقدان تفاصيل مهمة.
 
 ### Why It Matters
 
-يساعد تنظيم عملية استقبال الطلبات ومعالجتها على تقليل المهام اليدوية المتكررة، وتوحيد آلية اتخاذ القرار، وتحسين إمكانية تتبع الطلبات، وتحديد الحالات التي تحتاج إلى معلومات إضافية أو مراجعة بشرية.
-
----
+المشكلة ليست في استقبال الرسائل، بل في كيفية معالجة الطلبات وتنظيمها وتحديد الإجراء المناسب لكل طلب، مع إبقاء الحالات غير المكتملة تحت مراجعة إنسان.
 
 ## 💡 Solution
 
-يهدف **AI Client Intake & Request Routing System** إلى أتمتة المعالجة الأولية لطلبات العملاء باستخدام الذكاء الاصطناعي وWorkflow Automation.
-
-يجمع النظام بين استخراج المعلومات من نصوص العملاء، وتطبيق قواعد واضحة لتحديد مسار الطلب، وتسجيل النتائج، وإرسال الإشعارات المناسبة.
+سير عمل مؤتمت يوزّع المسؤوليات بوضوح: الذكاء الاصطناعي يفهم الطلب ويستخرج المعلومات، والمنطق (Paths) يتحكم في المسار، والإنسان يحكم في الحالات الناقصة أو الغامضة.
 
 ### What does the system do?
 
-- يستقبل طلبات العملاء من خلال `Google Forms`.
-- يستخرج المعلومات ذات الصلة وينظمها باستخدام `AI by Zapier`.
-- يساعد على تحديد المعلومات الناقصة أو غير الواضحة.
-- يوجّه الطلبات وفق قواعد محددة مسبقًا.
-- يسجل بيانات الطلب ونتيجة معالجته في `Google Sheets`.
-- يتيح إحالة الحالات التي تحتاج إلى توضيح أو حكم بشري إلى المراجعة البشرية.
-- يدعم إرسال الإشعارات المرتبطة بنتيجة المعالجة وفق إعدادات الـ Workflow.
-
----
+- يستقبل طلب العميل من Google Forms.
+- يرسل نص الطلب (`request_text`) إلى AI by Zapier.
+- يستخرج `service_type` و`timeline` و`budget` دون تخمين.
+- يحدد `request_status`: `VALID` أو `NEEDS_REVIEW`.
+- يوجّه الطلب المكتمل إلى `web_team` والناقص إلى `human_review`.
+- يسجّل الطلب ونتائج التحليل في Google Sheets.
+- يرسل بريدًا مناسبًا لكل مسار.
 
 ## 👤 Users
 
-### Primary Users
+### Primary Users:
 
-- شركات الخدمات.
-- فرق المبيعات وخدمة العملاء.
-- الموظفون المسؤولون عن استقبال طلبات العملاء ومراجعتها.
-- الشركات الصغيرة التي تحتاج إلى تنظيم عملية استقبال الطلبات.
+- موظفو استقبال الطلبات ومراجعتها.
+- فريق الويب المسؤول عن متابعة الطلبات المكتملة.
+- شركات الخدمات التي تستقبل طلبات عملاء عبر النماذج.
 
-### User Need
+### User Need:
 
-الحاجة إلى آلية موحدة تساعد على جمع طلبات العملاء وفهمها وتنظيمها وتحديد الخطوة التالية، دون تكرار جميع خطوات المعالجة الأولية يدويًا لكل طلب.
-
----
+معرفة الطلبات الجاهزة للمتابعة، وتحديد المعلومات الناقصة في الطلبات الأخرى، والاحتفاظ بسجل منظم لكل طلب.
 
 ## 🧠 How I Designed the Solution
 
-اعتمد التصميم على **Process-First Engineering**؛ أي فهم العملية قبل البدء في بناء الأتمتة.
+اتبع التصميم الرحلة الهندسية: **Understand → Design → Build → Test → Refine**. بدأ بفهم العمل وتقسيمه إلى خطوات، ثم تحديد البيانات والقرارات والاستثناءات، ثم تصميم الأتمتة وبنائها.
 
-بدأت العملية بتحديد المشكلة والنتيجة المطلوبة، ثم تقسيم العمل إلى خطوات مترابطة، وتحديد البيانات اللازمة، وتصميم قواعد القرار والحالات الاستثنائية.
-
-بعد ذلك، جرى تحويل التحليل إلى Workflow يجمع بين قدرات الذكاء الاصطناعي في فهم النصوص وتنظيم المعلومات، وRule-Based Logic في تحديد المسار المناسب، مع الاحتفاظ بالمراجعة البشرية للحالات التي لا ينبغي حسمها دون تحقق إضافي.
-
-### Engineering Documentation
-
-| File | Purpose |
-|---|---|
-| `01-business-analysis.md` | تحليل العمل والمشكلة والنتيجة المطلوبة. |
-| `02-workflow-decomposition.md` | تفكيك العملية إلى خطوات ومهام. |
-| `03-data-design.md` | تحديد البيانات المطلوبة وتنظيمها. |
-| `04-decision-and-exception-design.md` | تصميم قواعد القرار والتعامل مع الحالات الاستثنائية. |
-| `05-automation-design.md` | تصميم Workflow اعتمادًا على التحليل السابق. |
-| `06-zapier-implementation.md` | توثيق التنفيذ والاختبارات باستخدام Zapier. |
-
-> **ملاحظة:** هذه هي بنية التوثيق المقترحة للمشروع. تُراجع أسماء الملفات النهائية ومحتوياتها قبل اعتماد المستودع.
-
----
+يعتمد القرار على إشارة واضحة واحدة هي `request_status` بدل أن يفسّر الـ Path عدة حقول (`budget` و`timeline`...). وتُعامل الحالات غير المكتملة كـ **Business Exception** تُوجَّه إلى إنسان، لا كخطأ تقني.
 
 ## ⚙️ How It Works
 
-### Workflow Overview
+### Input
 
-```mermaid
-flowchart TD
-    A["Google Forms<br/>Client Request"] --> B["Zapier Trigger<br/>New Form Response"]
-    B --> C["AI by Zapier<br/>Extract & Structure Information"]
-    C --> D{"Validation &<br/>Decision Logic"}
-    D -->|Sufficient Information| E["Appropriate Next Step"]
-    D -->|Incomplete or Unclear| F["Human Review"]
-    E --> G["Google Sheets<br/>Record Results"]
-    F --> G
-    G --> H["Email Notifications<br/>When Configured"]
-```
+يُدخل العميل الاسم والبريد والشركة ونص الطلب في Google Forms. نص الطلب هو البيانات غير المنظمة.
 
-### Process Steps
+↓
 
-1. **Input:** يرسل العميل طلبه عبر `Google Forms`.
-2. **Trigger:** يستقبل `Zapier` الرد الجديد ويبدأ الـ Workflow.
-3. **AI Processing:** يستخرج `AI by Zapier` المعلومات ذات الصلة وينظمها.
-4. **Validation:** تُراجع المعلومات وفق متطلبات العملية وقواعد القرار المحددة.
-5. **Routing:** يُوجّه الطلب إلى الخطوة المناسبة بناءً على نتيجة التحقق.
-6. **Output:** تُسجل البيانات والنتائج في `Google Sheets`، وتُرسل الإشعارات وفق الإعدادات المعتمدة.
+### Step 1 — Trigger
 
----
+يبدأ Zapier عند وصول استجابة جديدة إلى النموذج (New Form Response).
+
+↓
+
+### AI / Logic
+
+يحلل AI by Zapier نص الطلب ويرجع حقولًا منظمة وحالة الطلب.
+
+↓
+
+### Step 2 — Routing
+
+- `request_status` Exactly matches `VALID` → **Valid Request** (`web_team`).
+- أي حالة أخرى → **Needs Human Review** (`human_review`)، وهو مسار افتراضي بلا شرط.
+
+↓
+
+### Output
+
+صف في Google Sheets وإشعار بريدي مختلف لكل مسار.
 
 ## 🤖 Role of AI
 
 ### What does AI do in this solution?
 
-- تحليل نصوص طلبات العملاء المكتوبة بصيغ مختلفة.
-- استخراج المعلومات ذات الصلة من النصوص غير المنظمة.
-- تنظيم المعلومات في حقول محددة مسبقًا.
-- المساعدة في تحديد المعلومات الناقصة أو غير الواضحة.
-- توفير مخرجات منظمة يمكن استخدامها ضمن خطوات الأتمتة.
+- يقرأ نص الطلب فقط (`request_text`).
+- يستخرج `service_type` و`timeline` و`budget` كما وردت صراحةً.
+- يلخص الطلب دون افتراضات.
+- يحدد `missing_information` (`service_type` / `timeline` / `budget` أو `NONE`).
+- يعيد `request_status` و`routing` وفق قواعد الـ Prompt.
 
 ### What AI Should NOT Do
 
-- اختراع معلومات لم يذكرها العميل.
-- اعتبار المعلومات الناقصة حقائق مؤكدة.
-- اتخاذ قرارات غير مدعومة بالبيانات أو قواعد العمل.
-- حسم الحالات الغامضة دون مراجعة مناسبة.
-- استبدال الحكم البشري عندما يحتاج الطلب إلى توضيح أو قرار إضافي.
-
----
+- اختراع أو تقدير أو استنتاج أي معلومة غير مذكورة.
+- تحويل موعد غامض (`soon`، `urgently`، `as soon as possible`...) إلى موعد محدد.
+- استلام باقي بيانات العميل كمدخل.
+- إدارة العملية كاملة؛ فقرار المسار يعتمد على قاعدة واضحة وقابلة للاختبار.
 
 ## 🔄 Automation
 
 ### What parts of the process are automated?
 
-- بدء الـ Workflow عند استقبال رد جديد من النموذج.
-- تمرير بيانات الطلب إلى خطوة معالجة الذكاء الاصطناعي.
+- استقبال استجابات النموذج.
 - استخراج المعلومات وتنظيمها.
-- تطبيق قواعد التوجيه المحددة مسبقًا.
-- تسجيل بيانات الطلب ونتائج المعالجة في `Google Sheets`.
-- إحالة الحالات التي تستدعي مراجعة بشرية إلى المسار المناسب.
-- إرسال الإشعارات المرتبطة بنتيجة المعالجة، عند إعداد خطوات الإرسال.
+- تحديد حالة الطلب والمسار.
+- تسجيل الطلب في Google Sheets.
+- إرسال الإشعار المناسب.
 
----
+تبقى مراجعة الطلبات غير المكتملة واتخاذ قرار المتابعة مسؤولية بشرية.
 
 ## 🗂️ Data
 
 ### Input
 
-تتضمن البيانات المدخلة المعلومات التي يجمعها النموذج الإلكتروني، مثل:
+حقول Google Forms (نموذج **Client Intake Form**):
 
-- بيانات العميل التي يطلبها النموذج.
-- نوع الخدمة المطلوبة، إذا كان الحقل موجودًا.
-- وصف الطلب واحتياجات العميل.
-- أي معلومات إضافية يقدمها العميل عبر النموذج.
+| Field | Type |
+|---|---|
+| `Client Name` | Short answer |
+| `Email` | Email |
+| `Company` | Short answer |
+| `Request` | Paragraph |
 
-تعتمد الحقول الفعلية على تصميم النموذج المستخدم في التنفيذ.
+يرسل سير العمل إلى AI الحقل `Request` فقط عبر المدخل `request_text`.
 
 ### Output
 
-تشمل المخرجات المتوقعة من تصميم النظام:
+| Field | Purpose |
+|---|---|
+| `service_type` | الخدمة المستخرجة |
+| `timeline` | الموعد المذكور بوضوح |
+| `budget` | الميزانية المذكورة صراحةً |
+| `request_summary` | ملخص الطلب |
+| `missing_information` | المعلومات الناقصة أو `NONE` |
+| `request_status` | `VALID` أو `NEEDS_REVIEW` |
 
-- بيانات طلب منظمة.
-- المعلومات المستخرجة من وصف العميل.
-- نتيجة التحقق من اكتمال المعلومات.
-- قرار التوجيه أو الإجراء التالي.
-- حالة المراجعة البشرية، عند الحاجة.
-- سجل لبيانات الطلب ونتائج المعالجة في `Google Sheets`.
-- إشعارات مرتبطة بنتيجة المعالجة، وفق إعدادات الـ Workflow.
+يُسجَّل الطلب في Google Sheets (**AI Client Intake Records**) بـ 13 عمودًا:
 
----
+```text
+client_name, email, company, request_text, service_type, request_summary,
+timeline, budget, missing_information, request_status, requires_human,
+routing, processed_at
+```
+
+القيم الثابتة حسب المسار: `requires_human = false` و`routing = web_team` في مسار Valid، و`requires_human = true` و`routing = human_review` في مسار المراجعة.
 
 ## 🛠️ Tools & Technologies
 
 | Tool | Purpose |
 |---|---|
-| **Google Forms** | استقبال طلبات العملاء من خلال نموذج إلكتروني. |
-| **Google Sheets** | تخزين بيانات الطلبات ونتائج معالجتها. |
-| **Zapier** | ربط الأدوات وبناء Workflow للأتمتة. |
-| **AI by Zapier** | استخراج المعلومات من نصوص العملاء وتنظيمها. |
-| **GitHub** | توثيق المشروع وحفظ ملفات التحليل والتصميم والتنفيذ. |
-
-> قد تختلف الإمكانات المتاحة بحسب الخطة المستخدمة في الأدوات.
-
----
+| Google Forms | استقبال طلبات العملاء |
+| Zapier | تشغيل سير العمل وربط الخطوات |
+| AI by Zapier | استخراج المعلومات المنظمة من نص الطلب |
+| Paths by Zapier | توجيه الطلب حسب حالته |
+| Google Sheets | سجل الطلبات ونتائج المعالجة |
+| Email | إشعار الفريق حسب المسار |
+| GitHub | توثيق المشروع |
 
 ## 🔑 Key Design Decisions
 
-### Decision 1 — Understand the Process Before Automating
+### Decision 1
 
-**Decision:** تحليل العملية الحالية وتحديد خطواتها ومتطلباتها قبل بناء الأتمتة.
+**Decision:**
 
-**Why:** لضمان أن يعالج النظام المشكلة الفعلية، بدلًا من تحويل عملية غير واضحة إلى خطوات آلية.
+استخدام `request_status` كإشارة وحيدة للتوجيه.
 
-### Decision 2 — Combine AI with Rule-Based Logic
+**Why:**
 
-**Decision:** استخدام الذكاء الاصطناعي لفهم النصوص وتنظيم المعلومات، مع الاعتماد على قواعد محددة لتوجيه الطلبات.
+يجعل منطق القرار أبسط وأوضح وأسهل في الاختبار والتصحيح من تفسير عدة حقول داخل الـ Path.
 
-**Why:** يتيح ذلك الاستفادة من مرونة AI في التعامل مع اللغة، مع جعل قرارات التوجيه أكثر وضوحًا وقابلية للاختبار.
+### Decision 2
 
-### Decision 3 — Include Human Review
+**Decision:**
 
-**Decision:** تخصيص مسار للحالات الناقصة أو غير الواضحة التي تحتاج إلى مراجعة بشرية.
+جعل مسار Needs Human Review هو المسار الافتراضي (Fallback) وعدم استخدام Filter by Zapier.
 
-**Why:** ليست كل الطلبات قابلة للمعالجة الموثوقة دون توضيح إضافي، والمراجعة البشرية تحد من القرارات غير المدعومة بالمعلومات.
+**Why:**
 
-### Decision 4 — Maintain Structured Records
+الهدف ليس إيقاف الحالات الاستثنائية بل توجيهها (Route the exception)، فأي طلب لا يحقق شرط `VALID` يذهب إلى إنسان.
 
-**Decision:** تسجيل بيانات الطلبات ونتائج معالجتها في `Google Sheets`.
+### Decision 3
 
-**Why:** توفير سجل منظم يسهل الرجوع إليه ومتابعة الطلبات ومراجعة نتائج المعالجة.
+**Decision:**
 
----
+تمرير نص الطلب فقط إلى AI.
+
+**Why:**
+
+تركيز المهمة على النص غير المنظم دون حاجة لإرسال كل بيانات العميل.
+
+### Decision 4
+
+**Decision:**
+
+اختبار خطوة AI قبل بناء الـ Paths.
+
+**Why:**
+
+إذا كان الناتج المنظم خاطئًا فلن تتخذ الأتمتة قرارًا صحيحًا (Garbage In → Garbage Out).
+
+### Decision 5
+
+**Decision:**
+
+التمييز بين الاستثناء التجاري (طلب ناقص) والخطأ التقني (فشل خطوة).
+
+**Why:**
+
+الأول يُوجَّه إلى المراجعة البشرية، والثاني يحتاج إلى تصحيح (Debugging).
 
 ## 🧪 Testing
 
-يُستخدم هذا القسم لتوثيق الاختبارات الفعلية ومقارنة النتائج المتوقعة بالنتائج التي ظهرت أثناء التنفيذ.
+تم اختبار أربع حالات من إرسال النموذج حتى السجل والبريد، ووفق تأكيد صاحبة المشروع نجحت جميعها. ويُجرى كل اختبار بتغيير مدخل النموذج فقط دون إعادة بناء الـ Zap.
 
-> الحالات التالية سيناريوهات اختبار مقترحة، وليست ادعاءً بأنها نُفذت أو نجحت بالفعل.
+### Test 1 — Complete Request
 
-### Test 1 — Complete Client Request
+**Input:**
 
-**Input:**  
-طلب واضح لخدمة تصميم موقع إلكتروني، يتضمن المعلومات المطلوبة للمتابعة.
+```text
+We need a website for our company. Our budget is $5000. We need it next month.
+```
 
-**Expected Result:**  
-استخراج المعلومات المتاحة، والتحقق من استيفاء المتطلبات، وتوجيه الطلب وفق القواعد المحددة، مع تسجيل النتيجة.
+**Expected Result:**
 
-**Actual Result:** (أضيفي النتيجة الفعلية بعد الاختبار.)
+`website` / `next month` / `$5000` / `NONE` / `VALID`. مسار Valid Request. الشيت: `requires_human = false`, `routing = web_team`. البريد: New Valid Client Request.
 
-**Status:** ⏳ (لم تُحدد بعد.)
+**Actual Result:**
 
-### Test 2 — Incomplete Client Request
+نجح الاختبار وفق تأكيد صاحبة المشروع.
 
-**Input:**  
-طلب لا يتضمن إحدى المعلومات المطلوبة، مثل تفاصيل الهدف من المشروع.
+**Status:** ✅
 
-**Expected Result:**  
-تحديد المعلومات الناقصة وإحالة الطلب إلى المسار المناسب للمراجعة أو الاستيضاح، بدلًا من اعتباره مكتملًا.
+### Test 2 — Missing Budget
 
-**Actual Result:** (أضيفي النتيجة الفعلية بعد الاختبار.)
+**Input:**
 
-**Status:** ⏳ (لم تُحدد بعد.)
+```text
+We need a website for our company. We need it next month.
+```
 
-### Test 3 — Unclear Client Request
+**Expected Result:**
 
-**Input:**  
-رسالة عامة مثل: `I need help with my business website.`
+`website` / `next month` / `null` / `budget` / `NEEDS_REVIEW`. مسار Needs Human Review. الشيت: `requires_human = true`, `routing = human_review`. البريد: Client Request Requires Human Review.
 
-**Expected Result:**  
-استخراج المعلومات المدعومة بالنص فقط، وإحالة الطلب إلى المراجعة إذا لم تكن المعلومات كافية للخطوة التالية.
+**Actual Result:**
 
-**Actual Result:** (أضيفي النتيجة الفعلية بعد الاختبار.)
+نجح الاختبار وفق تأكيد صاحبة المشروع.
 
-**Status:** ⏳ (لم تُحدد بعد.)
+**Status:** ✅
 
-### Test 4 — Record and Routing Verification
+### Test 3 — Ambiguous Timeline
 
-**Input:**  
-إرسال طلب جديد من `Google Forms` عبر الـ Workflow.
+**Input:**
 
-**Expected Result:**  
-تسجيل البيانات ونتيجة المعالجة بصورة صحيحة، والتحقق من تنفيذ المسار والإشعارات المرتبطة به وفق الإعدادات.
+```text
+We need a website soon. Our budget is $5000.
+```
 
-**Actual Result:** (أضيفي النتيجة الفعلية بعد الاختبار.)
+**Expected Result:**
 
-**Status:** ⏳ (لم تُحدد بعد.)
+`website` / `null` / `$5000` / `timeline` / `NEEDS_REVIEW`. مسار Needs Human Review.
 
----
+**Actual Result:**
+
+نجح الاختبار وفق تأكيد صاحبة المشروع.
+
+**Status:** ✅
+
+### Test 4 — Multiple Missing Fields
+
+**Input:**
+
+```text
+We need a website for our company.
+```
+
+**Expected Result:**
+
+`website` / `null` / `null` / `timeline, budget` / `NEEDS_REVIEW`. مسار Needs Human Review.
+
+**Actual Result:**
+
+نجح الاختبار وفق تأكيد صاحبة المشروع.
+
+**Status:** ✅
 
 ## 📸 Evidence
 
-تُضاف الصور هنا لتوضيح التنفيذ العملي وربط التصميم بالنتائج الفعلية.
+### Final Result
 
-### 1. Final Result
+```text
+Unstructured Request
+        ↓
+        AI
+        ↓
+Structured Data → request_status
+        ↓
+┌───────────────┬──────────────────┐
+│     VALID     │   NEEDS_REVIEW   │
+│   web_team    │   human_review   │
+└───────────────┴──────────────────┘
+        ↓                ↓
+  Google Sheets    Google Sheets
+        ↓                ↓
+  Valid Email      Review Email
+```
 
-**ما توضحه الصورة:** مثال فعلي على الطلب بعد معالجته، مع ظهور البيانات المنظمة ونتيجة التوجيه في السجل.
+### Workflow
 
-**Screenshot:** (أضيفي صورة من `Google Sheets` بعد التحقق من النتيجة.)
+```mermaid
+flowchart TD
+    A["Google Forms<br/>Client Intake Form"] --> B["Zapier Trigger<br/>New Form Response"]
+    B --> C["AI by Zapier<br/>request_text → Structured Output"]
+    C --> D{"Paths by Zapier<br/>request_status = VALID?"}
+    D -->|VALID| E["Valid Request<br/>web_team"]
+    D -->|Fallback| F["Needs Human Review<br/>human_review"]
+    E --> G["Google Sheets<br/>requires_human = false"]
+    F --> H["Google Sheets<br/>requires_human = true"]
+    G --> I["Email<br/>New Valid Client Request"]
+    H --> J["Email<br/>Client Request Requires Human Review"]
+```
 
-### 2. Workflow
+### Test Matrix
 
-**ما توضحه الصورة:** تسلسل خطوات الأتمتة من استقبال الطلب إلى معالجة AI وتحديد المسار وتسجيل البيانات وإرسال الإشعارات.
+| Test | Scenario | Expected Status | Expected Path | Result |
+|---|---|---|---|---|
+| 01 | Complete request | `VALID` | Valid Request | ✅ |
+| 02 | Missing budget | `NEEDS_REVIEW` | Human Review | ✅ |
+| 03 | Ambiguous timeline | `NEEDS_REVIEW` | Human Review | ✅ |
+| 04 | Multiple missing fields | `NEEDS_REVIEW` | Human Review | ✅ |
 
-**Screenshot:** (أضيفي صورة واضحة للـ Workflow في Zapier.)
-
-### 3. AI Processing
-
-**ما توضحه الصورة:** إعداد خطوة `AI by Zapier` ومثال على المعلومات التي تستخرجها من طلب العميل.
-
-**Screenshot:** (أضيفي صورة لخطوة AI ونتيجة اختبار فعلية، مع إخفاء بيانات العملاء الحقيقية.)
-
-### 4. Routing and Notifications
-
-**ما توضحه الصورة:** قواعد التوجيه والإجراءات المرتبطة بكل مسار.
-
-**Screenshot:** (أضيفي صورة للـ Paths والإجراءات المرتبطة بها، إذا كانت موجودة في التنفيذ.)
-
----
+> يمكن إضافة صور فعلية من Zapier وGoogle Sheets والبريد هنا، مع إخفاء أي بيانات شخصية.
 
 ## ⚠️ Challenges & Failures
 
 ### What didn't work as expected?
 
-(وثّقي هنا التحديات التي واجهتِها فعلًا أثناء بناء المشروع أو اختباره، إن وُجدت.)
+(أضيفي هنا ما واجهتِه فعليًا أثناء البناء والاختبار.)
 
 ### How did I solve it?
 
-(وضّحي المشكلة، والخطوة التي اتخذتِها لمعالجتها، والنتيجة التي تحققت منها. إذا لم تواجهي مشكلة فعلية، يمكن توضيح ذلك بدل اختراع تحديات.)
-
----
+(أضيفي هنا كيف عالجتِه.)
 
 ## 📚 What I Learned
 
 ### Technical Lesson
 
-فهم كيفية ربط أدوات جمع البيانات ومعالجتها وتخزينها ضمن Workflow واحد، وكيفية تحويل المخرجات إلى بيانات منظمة يمكن استخدامها في الخطوات اللاحقة.
+الفرق بين الـ Trigger (الحدث الذي يبدأ الأتمتة) والـ Input (البيانات التي وصلت معه)، وكيف تتحول البيانات غير المنظمة إلى حقول منظمة عبر AI.
 
 ### Problem-Solving Lesson
 
-أهمية فهم المشكلة وتحليل العملية وتحديد البيانات وقواعد القرار قبل البدء في تنفيذ الأتمتة.
+اختبار كل طبقة بالترتيب (Trigger ← AI ← Status ← Path ← Sheets ← Email) ومقارنة المتوقع بالفعلي لتحديد أول نقطة فشل بدل تغيير كل شيء عشوائيًا.
 
 ### AI Lesson
 
-يمكن للذكاء الاصطناعي المساعدة في تفسير النصوص غير المنظمة واستخراج المعلومات منها، لكن يجب تحديد نطاق عمله والتحقق من مخرجاته وتوفير مسار آمن للحالات غير الواضحة.
-
----
+توزيع المسؤوليات: AI يفهم، والمنطق يتحكم، والإنسان يحكم؛ فلا نجعل AI يدير العملية كاملة.
 
 ## 🔮 Future Improvements
 
-إذا استمر تطوير المشروع، يمكن دراسة التحسينات التالية بحسب الحاجة:
+### If I continued developing this project, I would:
 
-- إضافة تحقق أقوى من الحقول الناقصة أو غير الصحيحة.
-- تحسين معالجة الأخطاء وتسجيل حالات فشل خطوات الأتمتة.
-- إضافة تتبع لحالة الطلب وتذكيرات للمتابعة.
-- تطوير آلية لمراجعة مخرجات AI غير المؤكدة.
-- قياس دقة استخراج المعلومات ودقة التوجيه وزمن المعالجة.
-- توسيع قواعد التوجيه لتناسب خدمات ومتطلبات إضافية.
+- إضافة حالات اختبار أخرى، مثل طلب يذكر أكثر من خدمة أو معلومات متعارضة.
+- تسجيل وقت المعالجة الفعلي في `processed_at`.
+- توجيه بريد المراجعة إلى بريد مشترك للفريق.
+- إضافة طريقة لتتبع الأخطاء التقنية (فشل خطوة) بصورة منفصلة عن حالات المراجعة.
 
-> هذه أفكار تطوير مستقبلية، وليست وظائف يُفترض أنها موجودة في النسخة الحالية.
+## 📁 Repository Structure
 
----
+```text
+AI-Client-Intake-Request-Routing/
+├── README.md
+├── 01-business-analysis.md
+├── 02-workflow-decomposition.md
+├── 03-data-design.md
+├── 04-decision-and-exception-design.md
+├── 05-automation-design.md
+└── 06-zapier-implementation.md
+```
 
 ## 🔗 Project Links
 
-| Resource | Link |
-|---|---|
-| **Zapier Template** | [AI Client Intake & Request Routing System](https://zapier.com/templates/details/ai-client-intake-request-routing-e485e6) |
-| **Live Demo** | (أضيفي رابطًا إذا كان هناك نموذج تجريبي مناسب للمشاركة.) |
-| **Workflow** | (أضيفي رابط الـ Workflow الفعلي إذا كان متاحًا للمشاركة.) |
-| **Repository** | (أضيفي رابط مستودع GitHub بعد إنشائه ورفع الملفات.) |
+**Request Form:** [Client Intake Form](https://docs.google.com/forms/d/e/1FAIpQLScz3w8sWc5KHbgJeUR3C7tu2xmZm2nipk5W8OCJMdUVRUeyRQ/viewform?usp=header)
 
----
+**Zapier Template:** [AI Client Intake & Request Routing](https://zapier.com/templates/details/ai-client-intake-request-routing-e485e6)
+
+**Repository:** (أضيفي رابط المستودع الفعلي من GitHub هنا.)
 
 ## 👩‍💻 Author
 
-**Doaa Sami Al-Batniji**  
+دعاء سامي البطنيجي
+
 Computer Engineer | Data, AI & Automation
 
-[GitHub](https://github.com/doaasami9) · [LinkedIn](https://www.linkedin.com/in/doaa-sami-984426271/)
-
----
-
-<p align="center">
-  <strong>Think First. Build Later.</strong><br/>
-  فهم المشكلة أولًا، ثم تصميم الحل، وبعدها بناء الأتمتة واختبارها.
-</p>
+[LinkedIn](https://www.linkedin.com/in/doaa-sami-984426271/) · [GitHub](https://github.com/doaasami9)
