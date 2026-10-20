@@ -6,29 +6,7 @@
 [![Workflow](https://img.shields.io/badge/Workflow-Zapier-orange?style=for-the-badge)](https://zapier.com/)
 [![Documentation](https://img.shields.io/badge/Documentation-Process%20%26%20Data-247BA0?style=for-the-badge)](https://github.com/)
 
----
 
-## 📑 Table of Contents
-
-- [🎯 Problem](#-problem)
-- [💡 Solution](#-solution)
-- [👤 Users](#-users)
-- [🧠 How I Designed the Solution](#-how-i-designed-the-solution)
-- [⚙️ How It Works](#️-how-it-works)
-- [🤖 Role of AI](#-role-of-ai)
-- [🔄 Automation](#-automation)
-- [🗂️ Data](#️-data)
-- [🛠️ Tools & Technologies](#️-tools--technologies)
-- [🔑 Key Design Decisions](#-key-design-decisions)
-- [🧪 Testing](#-testing)
-- [📸 Evidence](#-evidence)
-- [⚠️ Challenges & Failures](#️-challenges--failures)
-- [📚 What I Learned](#-what-i-learned)
-- [🔮 Future Improvements](#-future-improvements)
-- [🔗 Project Links](#-project-links)
-- [👩‍💻 Author](#-author)
-
----
 
 ## 🎯 Problem
 
