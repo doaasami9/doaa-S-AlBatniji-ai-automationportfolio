@@ -1,5 +1,3 @@
-[README (2).md](https://github.com/user-attachments/files/33710863/README.2.md)
-<div align="center">
 
 # رحيق | RAHEEQ
 
