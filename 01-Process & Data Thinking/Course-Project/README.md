@@ -15,27 +15,7 @@
 
 </div>
 
----
 
-## 📌 Table of Contents
-
-- [🎯 Problem](#-problem)
-- [💡 Solution](#-solution)
-- [👥 Users](#-users)
-- [⚙️ How It Works](#️-how-it-works)
-- [🤖 Role of AI](#-role-of-ai)
-- [🗂️ Data Design](#️-data-design)
-- [🛠️ Tools & Technologies](#️-tools--technologies)
-- [🔑 Key Design Decisions](#-key-design-decisions)
-- [🧪 Testing](#-testing)
-- [🧭 Workflow Diagram](#-workflow-diagram)
-- [⚠️ Challenges & Failures](#️-challenges--failures)
-- [📚 What I Learned](#-what-i-learned)
-- [🚀 Future Improvements](#-future-improvements)
-- [🔗 Project Links](#-project-links)
-- [👩‍💻 Author](#-author)
-
----
 
 ## 🎯 Problem
 
@@ -175,7 +155,6 @@
 | 14 | `needs_human_review` | هل يحتاج الطلب إلى مراجعة بشرية؟ |
 | 15 | `processed_at` | الحقل المستخدم حاليًا لتسجيل وقت الإرسال |
 
-> **ملاحظة تنفيذية:** حقل `processed_at` مربوط حاليًا بوقت إرسال النموذج (`Last Submitted Time`)، لذلك لا يمثل وقت المعالجة الفعلي حتى الآن.
 
 ---
 
@@ -311,7 +290,6 @@ flowchart TD
 
 تم التحقق من حالات الاختبار الأربع من بداية النموذج إلى حفظ البيانات وإرسال البريد.
 
-*(يمكن إضافة لقطات شاشة فعلية من Zapier وGoogle Sheets والبريد هنا عند توفرها، مع إخفاء أي بيانات شخصية أو مفاتيح وصول.)*
 
 ---
 
@@ -374,7 +352,7 @@ flowchart TD
 
 <div align="center">
 
-### دعاء سامي البطنيجي
+### DOAA SAMI AL-BATNIJI
 
 **Computer Engineer | Data, AI & Automation**
 
