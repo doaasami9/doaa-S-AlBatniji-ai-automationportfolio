@@ -1,646 +1,290 @@
+# SkillBridge Lite | AI-Powered Career & Skills Platform
 
-# SkillBridge Lite
-
-### AI-Powered Career Fit Assistant
-
-```{=html}
 <p align="center">
-```
-`<strong>`{=html}Understand Your Skills. Explore Opportunities. Plan
-Your Next Step.`</strong>`{=html} `<br/>`{=html} `<strong>`{=html}افهم
-مهاراتك. استكشف الفرص. خطط لخطوتك التالية.`</strong>`{=html}
-
-```{=html}
+  <strong>Turn Your Skills Into Career Opportunities</strong>
+  <br/>
+  <strong>حوّل مهاراتك إلى فرص مهنية</strong>
 </p>
-```
-```{=html}
+
 <p align="center">
-```
-`<img src="https://img.shields.io/badge/AI-Career%20Fit-7C3AED?style=for-the-badge" alt="AI Career Fit"/>`{=html}
-`<img src="https://img.shields.io/badge/Development-Lovable-2563EB?style=for-the-badge" alt="Lovable"/>`{=html}
-`<img src="https://img.shields.io/badge/Project-MVP-0F766E?style=for-the-badge" alt="MVP"/>`{=html}
-
-```{=html}
+  <img src="https://img.shields.io/badge/AI--Powered-7C3AED?style=for-the-badge" alt="AI-Powered"/>
+  <img src="https://img.shields.io/badge/Career-Development-2563EB?style=for-the-badge" alt="Career Development"/>
+  <img src="https://img.shields.io/badge/Skills-Management-0F766E?style=for-the-badge" alt="Skills Management"/>
 </p>
-```
 
-------------------------------------------------------------------------
+---
 
-## 📌 Overview \| نظرة عامة
+## 📌 Overview | نظرة عامة
 
-**SkillBridge Lite** is an AI-powered web application designed to
-compare a user's professional profile with a selected career opportunity
-and provide structured feedback through relevant skills, potential gaps,
-and recommended next steps.
+**SkillBridge Lite** هو تطبيق ويب مدعوم بالذكاء الاصطناعي، يساعد المستخدمين على مقارنة ملفاتهم المهنية بالفرص الوظيفية، والتعرّف على المهارات ذات الصلة والفجوات المحتملة، وتحديد الخطوات التالية لتطوير مسيرتهم المهنية.
 
-**SkillBridge Lite** هو تطبيق ويب مدعوم بالذكاء الاصطناعي، صُمم لمقارنة
-الملف المهني للمستخدم بفرصة مهنية يختارها، وتقديم ملاحظات منظمة تشمل
-المهارات ذات الصلة والفجوات المحتملة والخطوات التالية المقترحة.
+يستهدف المشروع الطلاب والخريجين الجدد والمهنيين في بداية مسيرتهم، من خلال تجربة منظمة تربط المهارات والمشاريع والخبرات بالفرص المهنية المناسبة.
 
-The project helps students, recent graduates, and early-career
-professionals understand how their skills, projects, and experience
-relate to specific career opportunities.
+## 🎯 Problem Statement | المشكلة
 
-يساعد المشروع الطلاب والخريجين الجدد والمهنيين في بداية مسيرتهم على فهم
-مدى ارتباط مهاراتهم ومشاريعهم وخبراتهم بفرص مهنية محددة.
+### The Context | السياق
 
-## 🎯 Problem Statement \| المشكلة
+يمتلك الكثير من الطلاب والخريجين مهارات ومشاريع وخبرات، لكنهم قد يجدون صعوبة في فهم مدى ارتباطها بمتطلبات الفرص المهنية المتاحة.
 
-### The Context \| السياق
+### The Problem | المشكلة
 
-Students, recent graduates, and early-career professionals may have
-valuable skills, projects, and experience but struggle to understand how
-their qualifications relate to specific career opportunities.
+تكون المعلومات المهنية أحيانًا موزعة بين المهارات والمشاريع والخبرات، مما يصعّب تحديد نقاط القوة، واكتشاف المعلومات الناقصة، ومعرفة الجوانب التي تحتاج إلى تطوير.
 
-قد يمتلك الطلاب والخريجون الجدد والمهنيون في بداية مسيرتهم مهارات
-ومشاريع وخبرات قيّمة، لكنهم قد يجدون صعوبة في فهم علاقتها بمتطلبات الفرص
-المهنية المحددة.
+### Why It Matters | أهمية الحل
 
-### The Problem \| المشكلة
+يساعد فهم العلاقة بين الملف المهني والفرصة المستهدفة على تحديد نقاط القوة، وفهم متطلبات الفرصة، واتخاذ خطوات عملية نحو الاستعداد المهني.
 
-Professional information is often spread across skills, projects, and
-experience descriptions. Users may struggle to identify relevant
-qualifications, recognize missing evidence, and determine what to
-improve.
+## 💡 Solution | الحل
 
-غالبًا ما تكون المعلومات المهنية موزعة بين المهارات والمشاريع ووصف
-الخبرات، مما يصعّب تحديد المؤهلات ذات الصلة ومعرفة المعلومات التي تحتاج
-إلى دعم أو استكمال والجوانب التي ينبغي تطويرها.
+يوفر **SkillBridge Lite** تجربة تفاعلية تربط الملف المهني بفرصة مهنية مختارة، وتعرض الملاحظات ضمن أقسام منظمة تساعد المستخدم على فهم وضعه وتحديد خطواته التالية.
 
-### Why It Matters \| أهمية الحل
+### What Does the System Do? | ماذا يقدم النظام؟
 
-A clearer understanding of the relationship between a professional
-profile and an opportunity helps users recognize their strengths and
-plan practical steps toward career readiness.
+- يتيح للمستخدم عرض ملفه المهني وتعديل معلوماته.
+- يوفر ثلاث فرص مهنية محددة مسبقًا لاستكشافها.
+- يعرض تفاصيل الفرص ومتطلباتها.
+- يتيح اختيار فرصة وبدء مسار تحليل التوافق المهني.
+- ينظم النتائج ضمن المهارات ذات الصلة والفجوات المحتملة والخطوات التالية المقترحة.
 
-يساعد فهم العلاقة بين الملف المهني والفرصة المستهدفة المستخدمين على
-إدراك نقاط قوتهم وتحديد خطوات عملية للاستعداد المهني.
+## 👤 Target Users | الفئات المستهدفة
 
-## 💡 Solution \| الحل
+- الطلاب.
+- الخريجون الجدد.
+- المهنيون في بداية مسيرتهم المهنية.
 
-SkillBridge Lite provides a structured experience that connects a
-professional profile with a selected career opportunity and organizes
-the resulting feedback into actionable sections.
+**User Need | احتياج المستخدم**
 
-يوفر SkillBridge Lite تجربة منظمة تربط الملف المهني بفرصة مهنية مختارة،
-ثم تعرض الملاحظات الناتجة ضمن أقسام واضحة تساعد المستخدم على اتخاذ خطوات
-عملية.
+وسيلة بسيطة لفهم علاقة المهارات والمشاريع والخبرات بمتطلبات فرصة مهنية محددة، ومعرفة الجوانب التي يمكن تطويرها.
 
-### What Does the System Do? \| ماذا يقدم النظام؟
+## ✨ Core Features | المميزات الرئيسية
 
--   Allows users to view and edit their professional profiles.\
-    يتيح للمستخدمين عرض ملفاتهم المهنية وتعديلها.
+### 1. My Profile | ملفي المهني
 
--   Provides three predefined career opportunities to explore.\
-    يوفر ثلاث فرص مهنية محددة مسبقًا لاستكشافها.
+إمكانية مراجعة المعلومات المهنية وتعديلها، بما يشمل المسمى المهني والنبذة والمهارات والمشاريع والخبرات.
 
--   Displays opportunity details and requirements.\
-    يعرض تفاصيل الفرص ومتطلباتها.
+### 2. Explore Opportunities | استكشاف الفرص
 
--   Analyzes the relationship between the user's profile and the
-    selected opportunity.\
-    يحلل العلاقة بين الملف المهني للمستخدم والفرصة المختارة.
+استعراض ثلاث فرص مهنية محددة مسبقًا، والتعرّف على طبيعة كل فرصة.
 
--   Organizes feedback into Relevant Skills, Potential Gaps, and
-    Recommended Next Steps.\
-    ينظم النتائج ضمن المهارات ذات الصلة والفجوات المحتملة والخطوات
-    التالية المقترحة.
+### 3. Opportunity Details | تفاصيل الفرصة
 
-## 👤 Target Users \| الفئات المستهدفة
+عرض تفاصيل الفرصة المختارة ومتطلباتها قبل بدء التحليل.
 
-**Primary Users**
+### 4. Career Fit Analysis | تحليل التوافق المهني
 
--   Students.
--   Recent graduates.
--   Early-career professionals.
+مقارنة المعلومات المتاحة في الملف المهني بمتطلبات الفرصة المختارة، بهدف تقديم صورة منظمة عن مدى ارتباط المؤهلات بالفرصة.
 
-**الفئات الرئيسية**
+### 5. Structured Feedback | الملاحظات المنظمة
 
--   الطلاب.
--   الخريجون الجدد.
--   المهنيون في بداية مسيرتهم.
+تُعرض النتائج ضمن ثلاثة أقسام رئيسية:
 
-**User Need:** A simple way to understand how professional skills,
-projects, and experience relate to an opportunity and what can be
-improved.
+| Section | الوصف |
+|---|---|
+| Relevant Skills | تحديد المهارات والخبرات المرتبطة بالفرصة. |
+| Potential Gaps | إبراز المتطلبات التي لا تتوفر عنها معلومات داعمة كافية. |
+| Recommended Next Steps | اقتراح خطوات عملية للتطوير والاستعداد المهني. |
 
-**احتياج المستخدم:** وسيلة بسيطة لفهم علاقة المهارات والمشاريع والخبرات
-المهنية بفرصة معينة، ومعرفة ما يمكن تحسينه لزيادة الاستعداد لها.
+## ⚙️ How It Works | آلية العمل
 
-## ✨ Core Features \| المميزات الرئيسية
+**Step 1 — Review Your Profile**
 
-### 1. My Profile \| ملفي المهني
+مراجعة المعلومات المهنية المستخدمة في التحليل وتعديلها عند الحاجة.
 
-Users can review and edit their professional information, including
-their headline, summary, skills, projects, and experience.
+**Step 2 — Explore Opportunities**
 
-يمكن للمستخدمين مراجعة معلوماتهم المهنية وتعديلها، بما يشمل المسمى
-المهني والنبذة والمهارات والمشاريع والخبرات.
+استكشاف الفرص المهنية المتاحة داخل التطبيق.
 
-### 2. Explore Opportunities \| استكشاف الفرص
+**Step 3 — Select an Opportunity**
 
-The application provides three predefined career opportunities for users
-to explore.
+اختيار الفرصة المطلوبة والاطلاع على تفاصيلها ومتطلباتها.
 
-يوفر التطبيق ثلاث فرص مهنية محددة مسبقًا يمكن للمستخدم استكشافها.
+**Step 4 — Request a Fit Analysis**
 
-### 3. Opportunity Details \| تفاصيل الفرصة
+بدء عملية تحليل التوافق باستخدام بيانات الملف المهني والفرصة المختارة.
 
-Users can review the selected opportunity and understand its
-requirements before requesting an analysis.
-
-يمكن للمستخدم الاطلاع على تفاصيل الفرصة المختارة وفهم متطلباتها قبل طلب
-التحليل.
-
-### 4. Career Fit Analysis \| تحليل التوافق المهني
-
-The application compares the available professional profile information
-with the selected opportunity.
-
-يقارن التطبيق المعلومات المتاحة في الملف المهني بمتطلبات الفرصة
-المختارة.
-
-### 5. Structured Feedback \| ملاحظات منظمة
-
-Analysis results are organized into three sections.
-
-تُنظم نتائج التحليل ضمن ثلاثة أقسام.
-
-  -----------------------------------------------------------------------
-  Section                 القسم                   Purpose / الهدف
-  ----------------------- ----------------------- -----------------------
-  Relevant Skills         المهارات ذات الصلة      Identify relevant
-                                                  skills and experience.
-                                                  / تحديد المهارات
-                                                  والخبرات المرتبطة
-                                                  بالفرصة.
-
-  Potential Gaps          الفجوات المحتملة        Highlight requirements
-                                                  without sufficient
-                                                  supporting information.
-                                                  / إبراز المتطلبات التي
-                                                  لا تتوفر عنها معلومات
-                                                  داعمة كافية.
-
-  Recommended Next Steps  الخطوات التالية         Suggest practical
-                          المقترحة                development actions. /
-                                                  اقتراح خطوات عملية
-                                                  للتطوير والاستعداد.
-  -----------------------------------------------------------------------
-
-## ⚙️ How It Works \| آلية العمل
-
-**Step 1 --- Review Your Profile**
-
-Review or edit the professional information used in the analysis.
-
-**الخطوة الأولى --- مراجعة الملف المهني**
-
-مراجعة المعلومات المهنية المستخدمة في التحليل أو تعديلها.
-
-**Step 2 --- Explore Opportunities**
-
-Browse the available career opportunities.
-
-**الخطوة الثانية --- استكشاف الفرص**
-
-تصفح الفرص المهنية المتاحة.
-
-**Step 3 --- Select an Opportunity**
-
-Choose an opportunity and review its details and requirements.
-
-**الخطوة الثالثة --- اختيار فرصة**
-
-اختيار فرصة والاطلاع على تفاصيلها ومتطلباتها.
-
-**Step 4 --- Request a Fit Analysis**
-
-Use the selected profile and opportunity in the fit-analysis workflow.
-
-**الخطوة الرابعة --- طلب تحليل التوافق**
-
-استخدام الملف المهني والفرصة المختارة ضمن مسار تحليل التوافق.
-
-**Step 5 --- Review the Feedback**
-
-Review relevant skills, potential gaps, and recommended next steps.
-
-**الخطوة الخامسة --- مراجعة النتائج**
+**Step 5 — Review the Feedback**
 
 مراجعة المهارات ذات الصلة والفجوات المحتملة والخطوات التالية المقترحة.
 
-**Workflow / مسار العمل**
+**Workflow | مسار العمل**
 
 `Profile → Opportunities → Opportunity Details → Fit Analysis → Structured Feedback`
 
 `الملف المهني ← الفرص ← تفاصيل الفرصة ← تحليل التوافق ← الملاحظات المنظمة`
 
-## 🧠 Design Approach \| منهجية التصميم
+## 🧠 Design Approach | منهجية التصميم
 
-I followed a user-centered, process-first approach by defining the
-problem, identifying the target users, and establishing the MVP scope
-before building the application.
+اتبعت في بناء المشروع منهجية تركز على المستخدم، بدءًا من تحديد المشكلة والفئات المستهدفة، ثم تحديد نطاق العمل والميزات الأساسية قبل تطوير التطبيق.
 
-اتبعت منهجية تركز على المستخدم والعملية، من خلال تحديد المشكلة والفئات
-المستهدفة ونطاق المنتج الأولي قبل بناء التطبيق.
+يرتكز التطبيق على رحلة استخدام واضحة تبدأ بمراجعة الملف المهني، ثم استكشاف الفرص واختيار إحداها، يلي ذلك تحليل التوافق ومراجعة النتائج.
 
-The solution centers on one primary user journey: review a profile,
-explore opportunities, select an opportunity, request an analysis, and
-review actionable feedback.
+يساعد هذا النهج على إبقاء تجربة الاستخدام مركزة وتقليل التعقيد غير الضروري.
 
-يرتكز الحل على رحلة استخدام رئيسية واحدة: مراجعة الملف المهني، واستكشاف
-الفرص، واختيار فرصة، وطلب التحليل، ثم مراجعة الملاحظات العملية.
+## 🤖 Role of AI | دور الذكاء الاصطناعي
 
-The MVP focuses on five core features to keep the scope manageable and
-avoid unnecessary complexity.
+### Intended Capabilities | القدرات المستهدفة
 
-يركز المنتج الأولي على خمس ميزات أساسية للحفاظ على نطاق واضح وتجنب
-التعقيد غير الضروري.
+عند إعداد تكامل فعلي مع نموذج ذكاء اصطناعي، يُفترض أن يساعد التحليل في:
 
-## 🤖 Role of AI \| دور الذكاء الاصطناعي
+- تحديد المهارات والخبرات ذات الصلة بالفرصة.
+- إبراز المتطلبات التي لا تتوفر عنها معلومات داعمة كافية.
+- التمييز بين المهارات المذكورة والأدلة المستمدة من المشاريع والخبرات.
+- اقتراح خطوات عملية لتطوير الاستعداد المهني.
+- تنظيم الملاحظات ضمن أقسام واضحة.
 
-### Intended Capabilities \| القدرات المستهدفة
+### Responsible AI Principles | مبادئ الاستخدام المسؤول للذكاء الاصطناعي
 
-When a real AI integration is available, the analysis component is
-intended to:
+يجب أن يلتزم النظام بالمبادئ التالية:
 
--   Identify skills and experience relevant to the selected
-    opportunity.\
-    تحديد المهارات والخبرات المرتبطة بالفرصة المختارة.
+- عدم اختلاق مهارات أو مؤهلات أو مشاريع أو خبرات.
+- عدم اعتبار غياب المعلومات دليلًا على افتقار المستخدم إلى مهارة.
+- عدم ضمان الحصول على وظيفة أو التنبؤ بقرارات التوظيف.
+- عدم إصدار أحكام نهائية على قدرات المستخدم.
+- التمييز بوضوح بين النتائج الحقيقية التي يولدها الذكاء الاصطناعي والنتائج التجريبية.
 
--   Highlight requirements without sufficient supporting information.\
-    إبراز المتطلبات التي لا تتوفر عنها معلومات داعمة كافية.
+**Transparency Note | ملاحظة الشفافية**
 
--   Distinguish between listed skills and evidence from projects or
-    experience.\
-    التمييز بين المهارات المذكورة والأدلة الداعمة المستمدة من المشاريع
-    أو الخبرات.
+يجب توضيح مصدر النتائج للمستخدم، وعدم عرض النتائج التجريبية على أنها تحليل حقيقي مولّد بالذكاء الاصطناعي.
 
--   Recommend practical steps to improve career readiness.\
-    اقتراح خطوات عملية لتحسين الاستعداد المهني.
+## 🔄 Automation | الأتمتة
 
--   Organize feedback into consistent sections.\
-    تنظيم الملاحظات ضمن أقسام ثابتة وواضحة.
+ينظم التطبيق عملية الانتقال من الملف المهني إلى تحليل الفرصة، من خلال جمع المعلومات المطلوبة وعرض الملاحظات ضمن أقسام موحدة.
 
-### Responsible AI Principles \| مبادئ الاستخدام المسؤول للذكاء الاصطناعي
+يشمل المسار المستهدف جمع بيانات الملف المهني والفرصة، وتمريرها إلى مكوّن الذكاء الاصطناعي عند تهيئة تكامل فعلي، ثم تنظيم المخرجات وعرضها للمستخدم.
 
-The system should not:
+يركز المشروع على منطق التطبيق والتحليل المدعوم بالذكاء الاصطناعي، ولا يفترض وجود تكاملات خارجية غير مهيأة فعليًا.
 
--   Invent skills, qualifications, projects, or experience.
--   Treat missing information as proof that a user lacks a skill.
--   Guarantee employment or predict hiring decisions.
--   Make final judgments about a user's abilities.
--   Present sample results as genuine AI-generated analysis.
+## 🗂️ Data Structure | هيكل البيانات
 
-يجب ألا يقوم النظام بما يلي:
+### Professional Profile | الملف المهني
 
--   اختلاق مهارات أو مؤهلات أو مشاريع أو خبرات.
--   اعتبار غياب المعلومات دليلًا على افتقار المستخدم إلى مهارة معينة.
--   ضمان الحصول على وظيفة أو التنبؤ بقرارات التوظيف.
--   إصدار أحكام نهائية على قدرات المستخدم.
--   عرض النتائج التجريبية على أنها تحليل حقيقي مولّد بالذكاء الاصطناعي.
+- **Name:** الاسم.
+- **Professional Headline:** المسمى المهني.
+- **About Me:** النبذة الشخصية والمهنية.
+- **Skills:** المهارات.
+- **Projects:** المشاريع.
+- **Experience:** الخبرات.
 
-**Transparency Note:** Real AI-generated results and sample
-demonstration results must be clearly distinguished.
+### Career Opportunity | الفرصة المهنية
 
-**ملاحظة حول الشفافية:** يجب التمييز بوضوح بين النتائج التي يولدها
-الذكاء الاصطناعي فعليًا والنتائج التجريبية المستخدمة للعرض.
+- **Title:** المسمى الوظيفي.
+- **Company:** الشركة أو المؤسسة.
+- **Description:** وصف الفرصة.
+- **Required Skills:** المهارات المطلوبة.
+- **Responsibilities:** المسؤوليات.
 
-## 🔄 Automation \| الأتمتة
+### Analysis Output | مخرجات التحليل
 
-The application streamlines the profile-to-opportunity analysis process
-by organizing the required information and presenting the results
-consistently.
+- **Relevant Skills:** المهارات والخبرات ذات الصلة.
+- **Potential Gaps:** الفجوات المحتملة أو المعلومات الداعمة غير الكافية.
+- **Recommended Next Steps:** الخطوات التالية المقترحة.
+- **Result Type:** توضيح ما إذا كانت النتائج ناتجة عن تكامل فعلي أو مخصصة للعرض التجريبي.
 
-يسهّل التطبيق عملية تحليل التوافق من خلال تنظيم المعلومات اللازمة وعرض
-النتائج بطريقة موحدة.
+### Data Handling | إدارة البيانات
 
-The intended workflow includes collecting profile and opportunity
-information, passing it to an AI component when configured, organizing
-the output, and displaying structured feedback.
+تُدار بيانات الملف المهني داخل التطبيق وفق آلية التخزين المتاحة في تنفيذه الحالي. ويجب التحقق من آلية حفظ البيانات قبل تأكيد استمرارها بعد تحديث الصفحة أو انتقال المستخدم إلى جهاز آخر.
 
-يشمل المسار المستهدف جمع بيانات الملف المهني والفرصة، وتمريرها إلى مكوّن
-الذكاء الاصطناعي عند تهيئته، وتنظيم المخرجات، ثم عرض الملاحظات بصورة
-واضحة.
+## 🛠️ Tools & Technologies | الأدوات والتقنيات
 
-The MVP focuses on application logic and AI-assisted analysis rather
-than external workflow automation.
+| Tool / Component | الاستخدام |
+|---|---|
+| Lovable | بناء تطبيق الويب وتطوير واجهته. |
+| AI Model / Integration | تحليل التوافق عند إعداد تكامل فعلي. |
+| Application State | إدارة بيانات الملف وتفاعلات الواجهة. |
+| Browser Storage (Optional) | حفظ التعديلات محليًا إذا كانت هذه الميزة مطبقة. |
 
-يركز المنتج الأولي على منطق التطبيق والتحليل المدعوم بالذكاء الاصطناعي
-بدلًا من أتمتة سير العمل عبر خدمات خارجية.
+## 🔑 Key Design Decisions | قرارات التصميم الرئيسية
 
-## 🗂️ Data Structure \| هيكل البيانات
+### Decision 1 — Focused User Journey
 
-### Professional Profile \| الملف المهني
+**القرار:** التركيز على رحلة استخدام أساسية تبدأ بالملف المهني وتنتهي بملاحظات عملية.
 
--   Name --- الاسم.
--   Professional Headline --- المسمى المهني.
--   About Me --- نبذة شخصية ومهنية.
--   Skills --- المهارات.
--   Projects --- المشاريع.
--   Experience --- الخبرات.
+**السبب:** تسهيل الاستخدام والحفاظ على وضوح خطوات التحليل.
 
-### Career Opportunity \| الفرصة المهنية
+### Decision 2 — Predefined Opportunities
 
--   Title --- المسمى الوظيفي.
--   Company --- الشركة أو المؤسسة.
--   Description --- وصف الفرصة.
--   Required Skills --- المهارات المطلوبة.
--   Responsibilities --- المسؤوليات.
+**القرار:** توفير ثلاث فرص مهنية محددة مسبقًا.
 
-### Analysis Output \| مخرجات التحليل
+**السبب:** التركيز على تحليل التوافق المهني بدلًا من بناء منصة توظيف متكاملة.
 
--   Relevant skills and experience. --- المهارات والخبرات ذات الصلة.
--   Potential gaps or insufficient supporting information. --- الفجوات
-    المحتملة أو المعلومات الداعمة غير الكافية.
--   Recommended next steps. --- الخطوات التالية المقترحة.
--   Clear identification of real AI-generated or sample results. ---
-    تحديد واضح لما إذا كانت النتائج حقيقية أو تجريبية.
+### Decision 3 — Transparent Analysis
 
-### Data Handling \| إدارة البيانات
+**القرار:** التمييز بين النتائج الحقيقية والنتائج التجريبية.
 
-Profile data can be managed within the application without requiring an
-external database.
+**السبب:** مساعدة المستخدم على فهم طبيعة النتائج وحدودها.
 
-يمكن إدارة بيانات الملف المهني داخل التطبيق دون الحاجة إلى قاعدة بيانات
-خارجية.
+### Decision 4 — Actionable Feedback
 
-Browser storage may be used to preserve edits across page refreshes on
-the same browser and device, if implemented.
+**القرار:** تنظيم الملاحظات ضمن المهارات ذات الصلة والفجوات المحتملة والخطوات التالية.
 
-يمكن استخدام التخزين المحلي للمتصفح للاحتفاظ بالتعديلات بعد تحديث الصفحة
-على المتصفح والجهاز نفسيهما، إذا كانت هذه الميزة مطبقة.
+**السبب:** جعل النتائج أكثر وضوحًا وقابلية للاستفادة منها.
 
-## 🛠️ Tools & Technologies \| الأدوات والتقنيات
+## 🧪 Testing & Validation | الاختبار والتحقق
 
-  -----------------------------------------------------------------------
-  Tool / Component        الأداة / المكوّن         Purpose / الاستخدام
-  ----------------------- ----------------------- -----------------------
-  Lovable                 منصة Lovable            Building and refining
-                                                  the web application. /
-                                                  بناء تطبيق الويب
-                                                  وتطويره.
+تم الإبلاغ عن نجاح الاختبارات الأساسية التالية أثناء اختبار المشروع:
 
-  AI Model / Integration  نموذج أو تكامل الذكاء   Generating fit analysis
-                          الاصطناعي               when a real integration
-                                                  is configured. / توليد
-                                                  تحليل التوافق عند إعداد
-                                                  تكامل حقيقي.
+| Test Case | حالة الاختبار |
+|---|---|
+| Profile Editing | تعديل الملف المهني — ناجح. |
+| Opportunity Exploration | استعراض الفرص — ناجح. |
+| Opportunity Details | عرض تفاصيل الفرص — ناجح. |
+| Opportunity Selection | اختيار الفرصة — ناجح. |
+| Fit Analysis Workflow | مسار تحليل التوافق — ناجح. |
+| Structured Analysis Output | عرض أقسام النتائج — ناجح. |
+ ---
+## 📸 Evidence & Screenshots | الأدلة ولقطات الشاشة
 
-  Application State       حالة التطبيق            Managing profile data
-                                                  and interface
-                                                  interactions. / إدارة
-                                                  بيانات الملف وتفاعلات
-                                                  الواجهة.
+(https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/02-System%20Thinking/Course-Project/Screenshots)
+## ⚠️ Challenges & Limitations | التحديات والقيود
 
-  Browser Storage         التخزين المحلي للمتصفح  Preserving edits across
-  (Optional)              (اختياري)               refreshes, if
-                                                  implemented. / الاحتفاظ
-                                                  بالتعديلات بعد تحديث
-                                                  الصفحة، إذا كانت الميزة
-                                                  مطبقة.
-  -----------------------------------------------------------------------
+تشمل الجوانب التي تس.
+- التحقق من حفظ بيانات الملف.
+- التأكد من تحليل الفرصة التي اختارها المستخدم.
+- منع الاستنتاجات غير المدعومة بالمعلومات.
+- توضيح الفرق بين النتائج الحقيقية والنتائج التجريبية. .
 
-*Optional or planned components are not necessarily implemented
-dependencies.*
+## 📚 What I Learned | ما تعلمته
 
-*المكونات الاختيارية أو المخطط لها ليست بالضرورة تقنيات مطبقة فعليًا.*
+### Technical Learning | التعلم التقني
 
-## 🔑 Key Design Decisions \| قرارات التصميم الرئيسية
+تعلمت كيفية تنظيم تطبيق ويب حول إدارة الملف المهني واختيار الفرص ومسار تحليل التوافق وعرض النتائج.
 
-### Decision 1 --- Focused MVP
+### Problem-Solving | حل المشكلات
 
-**Decision:** Limit the application to five core features.
+ساعدني تحديد المشكلة والمستخدمين ونطاق العمل قبل التطوير على تنظيم الحل والتركيز على الاحتياج الأساسي.
 
-**Why:** A focused scope simplifies development and keeps attention on
-the primary user need.
+### Responsible AI | الذكاء الاصطناعي المسؤول
 
-**القرار:** حصر التطبيق في خمس ميزات أساسية.
+تعلمت أهمية ربط الملاحظات بالمعلومات المتاحة، وتوضيح حدود التحليل، وعدم تقديم النتائج التجريبية على أنها نتائج حقيقية.
 
-**السبب:** يسهل النطاق المحدد عملية التطوير ويحافظ على التركيز على
-احتياج المستخدم الرئيسي.
+## 🔮 Future Improvements | التحسينات المستقبلية
 
-### Decision 2 --- Three Predefined Opportunities
+- تحسين التحقق من بيانات الملف المهني وتحريرها.
+- إضافة المزيد من الفرص المهنية.
+- توضيح الأدلة التي تدعم مطابقة المهارات.
+- تحسين التعامل مع المعلومات الناقصة أو غير الواضحة.
+- تطوير جودة التوصيات واتساقها.
+- دراسة إمكانية حفظ الملف المهني ومزامنته بين الأجهزة.
 
-**Decision:** Use three predefined opportunities instead of building a
-complete job marketplace.
+## 🔗 Project Links | روابط المشروع
 
-**Why:** The project focuses on career-fit analysis rather than managing
-a large job database.
+- **Live Demo | التطبيق المباشر:** [فتح SkillBridge Lite](https://pixel-perfect-dream-6188.lovable.app)
+- **GitHub Repository | مستودع GitHub:** [عرض ملفات المشروع](https://github.com/doaasami9/skillbridge-lite)
 
-**القرار:** استخدام ثلاث فرص مهنية محددة مسبقًا بدلًا من إنشاء منصة توظيف
-متكاملة.
-
-**السبب:** يركز المشروع على تحليل التوافق المهني بدلًا من إدارة قاعدة
-بيانات كبيرة للوظائف.
-
-### Decision 3 --- Transparent Analysis
-
-**Decision:** Distinguish genuine AI-generated analysis from sample
-results.
-
-**Why:** Users should understand how the feedback was produced.
-
-**القرار:** التمييز بين التحليل الحقيقي الذي يولده الذكاء الاصطناعي
-والنتائج التجريبية.
-
-**السبب:** يجب أن يفهم المستخدم كيفية إنتاج الملاحظات المعروضة.
-
-### Decision 4 --- Actionable and Responsible Feedback
-
-**Decision:** Organize feedback into relevant skills, potential gaps,
-and recommended next steps.
-
-**Why:** This makes results easier to understand and reduces unsupported
-conclusions.
-
-**القرار:** تنظيم الملاحظات ضمن المهارات ذات الصلة والفجوات المحتملة
-والخطوات التالية المقترحة.
-
-**السبب:** يجعل ذلك النتائج أسهل للفهم ويحد من الاستنتاجات غير المدعومة
-بالمعلومات.
-
-## 🧪 Testing & Validation \| الاختبار والتحقق
-
-The following core functionality tests were reported as successful
-during project testing.
-
-تم الإبلاغ عن نجاح الاختبارات الأساسية التالية أثناء اختبار المشروع.
-
-  -----------------------------------------------------------------------
-  Test Case               حالة الاختبار           Result / النتيجة
-  ----------------------- ----------------------- -----------------------
-  Profile editing         تعديل الملف المهني      ✅ Passed / ناجح
-
-  Opportunity exploration استعراض الفرص           ✅ Passed / ناجح
-
-  Opportunity details     عرض تفاصيل الفرص        ✅ Passed / ناجح
-
-  Opportunity selection   اختيار الفرصة           ✅ Passed / ناجح
-
-  Fit analysis workflow   مسار تحليل التوافق      ✅ Passed / ناجح
-
-  Structured analysis     عرض أقسام نتائج التحليل ✅ Passed / ناجح
-  output                                          
-  -----------------------------------------------------------------------
-
-### Additional Validation \| اختبارات إضافية
-
-The following scenarios require separate verification before being
-reported as passed.
-
-تحتاج الحالات التالية إلى تحقق مستقل قبل توثيقها على أنها ناجحة.
-
-  -----------------------------------------------------------------------
-  Test Case               حالة الاختبار           Status / الحالة
-  ----------------------- ----------------------- -----------------------
-  Missing skill           التعامل مع المعلومات    Requires verification /
-  information             الناقصة عن المهارات     يحتاج إلى تحقق
-
-  Sample result           تمييز النتائج التجريبية Requires verification /
-  identification                                  يحتاج إلى تحقق
-
-  Persistence after       الاحتفاظ بالتعديلات بعد Requires verification /
-  refresh                 تحديث الصفحة            يحتاج إلى تحقق
-
-  Incomplete profile      التعامل مع الملفات غير  Requires verification /
-  handling                المكتملة                يحتاج إلى تحقق
-  -----------------------------------------------------------------------
-
-Testing status should reflect the actual behavior observed during
-execution.
-
-يجب أن تعكس حالة الاختبار السلوك الفعلي الذي تمت ملاحظته أثناء التنفيذ.
-
-## 📸 Evidence & Screenshots \| الأدلة ولقطات الشاشة
-
-Screenshots and visual evidence are maintained separately from this
-README.
-
-يتم الاحتفاظ بلقطات الشاشة والأدلة المرئية في ملف مستقل عن README.
-
-Suggested evidence includes:
-
--   Home page.
--   Professional profile.
--   Opportunities page.
--   Opportunity details.
--   Fit analysis results.
-
-تشمل الأدلة المقترحة:
-
--   الصفحة الرئيسية.
--   الملف المهني.
--   صفحة الفرص.
--   تفاصيل الفرصة.
--   نتائج تحليل التوافق.
-
-### Workflow Evidence \| توثيق مسار العمل
-
-`Home → My Profile → Explore Opportunities → Opportunity Details → Fit Analysis → Recommended Next Steps`
-
-`الرئيسية ← ملفي المهني ← استكشاف الفرص ← تفاصيل الفرصة ← تحليل التوافق ← الخطوات التالية المقترحة`
-
-## ⚠️ Challenges & Limitations \| التحديات والقيود
-
-Potential challenges include profile persistence, incomplete
-information, correct opportunity selection, unsupported AI claims, and
-distinguishing genuine AI output from sample results.
-
-تشمل التحديات المحتملة حفظ بيانات الملف، والتعامل مع المعلومات الناقصة،
-وضمان تحليل الفرصة الصحيحة، ومنع الادعاءات غير المدعومة، والتمييز بين
-مخرجات الذكاء الاصطناعي الحقيقية والنتائج التجريبية.
-
-These are areas for validation and improvement, not confirmed
-implementation failures.
-
-هذه جوانب تحتاج إلى التحقق والتحسين، وليست إخفاقات مؤكدة في التنفيذ.
-
-## 📚 What I Learned \| ما تعلمته
-
-### Technical Learning \| التعلم التقني
-
-I learned how to structure a web application around profile management,
-opportunity selection, application state, and an AI-assisted analysis
-workflow.
-
-تعلمت كيفية تنظيم تطبيق ويب حول إدارة الملف المهني واختيار الفرص وحالة
-التطبيق ومسار تحليل مدعوم بالذكاء الاصطناعي.
-
-### Problem-Solving \| حل المشكلات
-
-Defining the user, problem, scope, and workflow before development helps
-reduce unnecessary complexity and keeps the solution focused.
-
-يساعد تحديد المستخدم والمشكلة والنطاق ومسار العمل قبل التطوير على تقليل
-التعقيد غير الضروري والحفاظ على تركيز الحل.
-
-### Responsible AI \| الذكاء الاصطناعي المسؤول
-
-AI-generated feedback should be grounded in available information,
-transparent about its limitations, and clear about whether results are
-real or simulated.
-
-يجب أن تستند ملاحظات الذكاء الاصطناعي إلى المعلومات المتاحة، وأن تكون
-واضحة بشأن حدودها، وأن تميز بين النتائج الحقيقية والمحاكاة.
-
-## 🔮 Future Improvements \| التحسينات المستقبلية
-
--   Improve profile validation and editing.\
-    تحسين التحقق من بيانات الملف المهني وتحريرها.
-
--   Add more predefined career opportunities.\
-    إضافة المزيد من الفرص المهنية المحددة مسبقًا.
-
--   Provide evidence behind identified skill matches.\
-    توضيح الأدلة التي تدعم مطابقة المهارات.
-
--   Improve handling of incomplete or ambiguous information.\
-    تحسين التعامل مع المعلومات الناقصة أو غير الواضحة.
-
--   Improve the quality and consistency of AI recommendations.\
-    تحسين جودة التوصيات واتساقها.
-
--   Explore optional cross-device profile persistence.\
-    دراسة إمكانية حفظ الملف المهني ومزامنته بين الأجهزة مستقبلًا.
-
-## 🔗 Project Links \| روابط المشروع
-
--   **Live Demo:** [Open SkillBridge
-    Lite](https://pixel-perfect-dream-6188.lovable.app)
-
--   **التطبيق المباشر:** [فتح SkillBridge
-    Lite](https://pixel-perfect-dream-6188.lovable.app)
-
--   **Repository:** [GitHub
-    Repository](https://github.com/doaasami9/skillbridge-lite)
-
--   **المستودع:** [عرض ملفات المشروع على
-    GitHub](https://github.com/doaasami9/skillbridge-lite)
-
--   **Screenshots & Evidence:** Maintained separately from this README.
-
--   **لقطات الشاشة والأدلة:** محفوظة في ملف مستقل عن README.
-
-## 👩‍💻 Author \| المطوّرة
+## 👩‍💻 Author | المطوّرة
 
 **Doaa Sami Al-Batniji**
 
-Computer Engineer \| Data, AI & Automation
+**Computer Engineer | Data, AI & Automation**
 
-مهندسة حاسوب \| البيانات والذكاء الاصطناعي والأتمتة
+Computer Engineer | Data, AI & Automation
 
-------------------------------------------------------------------------
+---
 
-```{=html}
 <p align="center">
-```
-`<strong>`{=html}SkillBridge Lite`</strong>`{=html} `<br/>`{=html}
-`<em>`{=html}Understand Your Skills. Explore Opportunities. Plan Your
-Next Step.`</em>`{=html} `<br/>`{=html} `<em>`{=html}افهم مهاراتك.
-استكشف الفرص. خطط لخطوتك التالية.`</em>`{=html}
-
-```{=html}
+  <strong>SkillBridge Lite</strong>
+  <br/>
+  <em>Turn Your Skills Into Career Opportunities</em>
+  <br/>
+  <em>حوّل مهاراتك إلى فرص مهنية</em>
 </p>
-```
