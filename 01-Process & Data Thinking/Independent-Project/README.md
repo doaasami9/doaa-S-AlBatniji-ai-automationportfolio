@@ -372,16 +372,7 @@ flowchart TD
 
 ## 📁 Repository Structure
 
-```text
-AI-Client-Intake-Request-Routing/
-├── README.md
-├── 01-business-analysis.md
-├── 02-workflow-decomposition.md
-├── 03-data-design.md
-├── 04-decision-and-exception-design.md
-├── 05-automation-design.md
-└── 06-zapier-implementation.md
-```
+
 
 ## 🔗 Project Links
 
@@ -392,8 +383,7 @@ AI-Client-Intake-Request-Routing/
 **Repository:** (أضيفي رابط المستودع الفعلي من GitHub هنا.)
 
 ## 👩‍💻 Author
-
-دعاء سامي البطنيجي
+DOAA SAMI AL-BATNIJI
 
 Computer Engineer | Data, AI & Automation
 
