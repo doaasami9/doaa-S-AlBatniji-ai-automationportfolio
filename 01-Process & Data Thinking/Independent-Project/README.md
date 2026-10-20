@@ -19,26 +19,6 @@
 
 </div>
 
----
-
-## 📑 Table of Contents
-
-- [🎯 Problem](#-problem)
-- [💡 Solution](#-solution)
-- [👥 Target Users](#-target-users)
-- [⚙️ How It Works](#️-how-it-works)
-- [🧠 Role of AI](#-role-of-ai)
-- [🗂️ Data Design](#️-data-design)
-- [🛠️ Tools & Technologies](#️-tools--technologies)
-- [🧩 Key Design Decisions](#-key-design-decisions)
-- [🧪 Testing & Validation](#-testing--validation)
-- [📸 Evidence](#-evidence)
-- [⚠️ Challenges & Limitations](#️-challenges--limitations)
-- [📚 What I Learned](#-what-i-learned)
-- [🚀 Future Improvements](#-future-improvements)
-- [📁 Repository Structure](#-repository-structure)
-- [🔗 Project Links](#-project-links)
-- [👩‍💻 Author](#-author)
 
 ---
 
@@ -200,7 +180,6 @@
 | Quality checks | `missing_information`, `request_status` |
 | Workflow routing | `routing` |
 
-> **Note:** يجب أن تتطابق أسماء الأعمدة والحقول النهائية مع الإعداد الفعلي في Google Forms وZapier وGoogle Sheets. لا تُعدّ أسماء الحقول أعلاه تأكيدًا لوجود أعمدة إضافية لم تُنشأ في المشروع.
 
 ---
 
@@ -263,16 +242,6 @@
 
 ## 📸 Evidence
 
-أضيفي لقطات شاشة فعلية من مشروعك في المسارات المقترحة أدناه، ثم حدّثي الروابط لتطابق أسماء الملفات التي رفعتِها إلى المستودع.
-
-| Evidence | Suggested File | What It Should Show |
-|---|---|---|
-| Workflow Overview | `screenshots/workflow-overview.png` | خطوات Zapier والروابط بين مكونات سير العمل. |
-| Processed Requests | `screenshots/processed-requests.png` | سجلات الطلبات ونتائج التحليل في Google Sheets. |
-| Email Notifications | `screenshots/email-notifications.png` | مثال على إشعار ناتج عن سير العمل. |
-
-> **Before publishing:** هذه أسماء مقترحة وليست ملفات مرفقة حاليًا. لا تضيفي روابط الصور إلى README إلا بعد رفع الصور الفعلية إلى المستودع.
-
 ---
 
 ## ⚠️ Challenges & Limitations
@@ -283,11 +252,6 @@
 - قد تحتاج الحالات التي تحتوي على معلومات غامضة إلى مراجعة بشرية، حتى لو نجحت الأتمتة تقنيًا.
 - يجب أن تتوافق أسماء الحقول ومخرجات الذكاء الاصطناعي مع خرائط البيانات الفعلية في خطوات Zapier وGoogle Sheets.
 
-### Documentation Note
-
-لم تُحدّد في المعلومات المتاحة تفاصيل مؤكدة عن أعطال فعلية أو إخفاقات تقنية واجهت هذا المشروع؛ لذلك لم تُضف أمثلة غير موثقة. يمكن تحديث هذا القسم لاحقًا إذا توفرت حالات واقعية من التنفيذ.
-
----
 
 ## 📚 What I Learned
 
@@ -321,27 +285,6 @@
 - تحسين معالجة الأخطاء التقنية وإظهار حالة الفشل بوضوح.
 - إضافة لقطات شاشة توثيقية وشرح مرئي لكل خطوة في سير العمل.
 
-> تمثل هذه النقاط تحسينات مستقبلية مقترحة، وليست ميزات مؤكدة التنفيذ حاليًا.
-
----
-
-## 📁 Repository Structure
-
-يمكن تنظيم المستودع بهذا الشكل، مع الاحتفاظ بالملفات التي أنشأتِها فعلًا فقط:
-
-```text
-ai-client-intake-request-routing/
-├── README.md
-├── screenshots/
-│   ├── workflow-overview.png
-│   ├── processed-requests.png
-│   └── email-notifications.png
-└── docs/
-    └── workflow-notes.md
-```
-
-**Important:** لا تنشئي ملفات فارغة لمجرد مطابقة الهيكل المقترح. أضيفي `screenshots/` و`docs/` فقط إذا كان لديك محتوى فعلي لرفعهما.
-
 ---
 
 ## 🔗 Project Links
@@ -352,8 +295,6 @@ ai-client-intake-request-routing/
 | **Zapier Template** | [AI Client Intake & Request Routing](https://zapier.com/templates/details/ai-client-intake-request-routing-e485e6) |
 | **GitHub Profile** | [doaasami9](https://github.com/doaasami9) |
 | **LinkedIn Profile** | [Doaa Sami Al-Batniji](https://www.linkedin.com/in/doaa-sami-984426271/) |
-| **Live Demo / Repository** | يُضاف الرابط بعد نشر النسخة النهائية إن وُجد. |
-
 ---
 
 <div align="center">
