@@ -10,30 +10,6 @@
 
 </p>
 
----
-
-## 📑 Table of Contents
-
-- [Problem](#-problem)
-- [Solution](#-solution)
-- [Users](#-users)
-- [System Design](#-how-i-designed-the-solution)
-- [How It Works](#️-how-it-works)
-- [Role of AI](#-role-of-ai)
-- [Automation Workflow](#-automation)
-- [Data Design](#️-data)
-- [Tools & Technologies](#️-tools--technologies)
-- [Key Design Decisions](#-key-design-decisions)
-- [Testing & Validation](#-testing--validation)
-- [Evidence](#-evidence)
-- [Challenges & Failures](#️-challenges--failures)
-- [Lessons Learned](#-lessons-learned)
-- [Future Improvements](#-future-improvements)
-- [Repository Structure](#-repository-structure)
-- [Project Links](#-project-links)
-- [Author](#-author)
-
----
 
 ## 🎯 Problem
 
