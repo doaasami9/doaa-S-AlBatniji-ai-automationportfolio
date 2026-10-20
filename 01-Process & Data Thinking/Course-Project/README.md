@@ -344,7 +344,7 @@ flowchart TD
 
 - **Request Form:** [نموذج استقبال طلبات رحيق](https://docs.google.com/forms/d/e/1FAIpQLSf1A8j58o7fnQ3gECBpCiFoPK5jgw3GHozOWuQgpYb_4uuPbQ/viewform?usp=header)
 - **Zapier Template:** [قالب رحيق على Zapier](https://zapier.com/templates/details/raheeq-ai-powered-client-request-management-c5b92a)
-- **GitHub Repository:** (أضيفي رابط مستودع رحيق الفعلي هنا.)
+- **GitHub Repository:** ( https://github.com/doaasami9/RAHEEQ ).
 
 ---
 
