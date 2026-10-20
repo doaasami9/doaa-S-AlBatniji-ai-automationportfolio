@@ -35,27 +35,51 @@
 
 ### 01 — Guided Project
 
-**Project:** [Course Project Name]
+**Project:**   AI Client Intake & Request Routing System
 
 مشروع عملي أطبّق فيه مفاهيم تحليل العمل وتصميم عملية أتمتة تعتمد على AI.
 
-- **Problem:** [المشكلة التي يعالجها المشروع]
-- **Solution:** [وصف مختصر للحل]
-- **Tools:** [الأدوات المستخدمة]
+- **Problem:** تعتمد عملية معالجة طلبات العملاء على تدخل الموظفين في عدة خطوات متكررة، بدءًا من فهم الطلب وحتى تحديد الإجراء التالي.
 
-[Explore the Project](./course-project/)
+- **Solution:** نريد تقليل هذا العمل اليدوي من خلال تصميم نظام أتمتة يساعد الشركة على معالجة الطلبات بطريقة منظمة، مع إبقاء الحالات التي تحتاج إلى تدخل بشري تحت المراجعة.
+
+- **Tools:**  
+Google Forms: لاستقبال طلبات العملاء.
+Google Sheets: لتسجيل الطلبات ونتائج معالجتها.
+Zapier: لبناء تدفق الأتمتة.
+AI by Zapier: لاستخراج المعلومات من الطلبات وتنظيمها.
+Gmail 
+
+[Explore the Project](https://zapier.com/templates/details/ai-client-intake-request-routing-e485e6)
+
 
 ### 02 — Independent Project
 
-**Project:** [Independent Project Name]
+**Project:**  RAHEEQ - AI-Powered Client Request Management
 
 مشروع مستقل أطبّق فيه ما تعلمته على مشكلة مختلفة، مع تصميم الحل وتنفيذه وتوثيق النتائج.
 
-- **Problem:** [المشكلة التي يعالجها المشروع]
-- **Solution:** [وصف مختصر للحل]
-- **Tools:** [الأدوات المستخدمة]
+- **Problem:** يواجه أصحاب المهارات والمستقلون، والشركات الناشئة والمشاريع الصغيرة تحديات في تنظيم طلبات العملاء ومراجعة المعلومات المقدمة وتحديد الإجراءات المناسبة لكل طلب. وقد تؤدي المعالجة اليدوية إلى استهلاك الوقت، وتكرار المهام، وتأخر معالجة الطلبات التي تحتاج إلى مراجعة إضافية. 
 
-[Explore the Project](./independent-project/)
+- **Solution:** رحيق هو نظام لأتمتة إدارة طلبات العملاء، يستخدم الذكاء الاصطناعي لاستخراج المعلومات الأساسية من الطلبات دون تخمين، ثم يحدد مسار المعالجة وفق قواعد واضحة: متابعة مباشرة للطلبات المستوفية للشروط، أو إحالة الطلبات التي تحتاج إلى تحقق إلى المراجعة البشرية. بعد ذلك، يسجل النظام النتائج في Google Sheets ويرسل إشعارات مناسبة عبر البريد الإلكتروني.
+
+يهدف المشروع إلى تقليل العمل اليدوي، وتحسين تنظيم البيانات، وتسهيل متابعة طلبات العملاء. 
+- **Tools:**
+-  Google Forms: استقبال طلبات العملاء.
+
+Zapier: ربط خطوات سير العمل وأتمتتها.
+
+AI by Zapier: استخراج المعلومات الأساسية من الطلبات.
+
+Paths by Zapier: توجيه الطلبات وفق قواعد القرار المحددة.
+
+Google Sheets: تسجيل الطلبات ونتائج معالجتها.
+
+Gmail: إرسال الإشعارات عبر البريد الإلكتروني.
+
+م
+
+[Explore the Project](https://zapier.com/templates/details/raheeq-ai-powered-client-request-management-c5b92a)
 
 ---
 
@@ -93,8 +117,8 @@
 
 ## 🔗 Related Projects
 
-- [Guided Project](./course-project/)
-- [Independent Project](./independent-project/)
+- [Guided Project](https://zapier.com/templates/details/ai-client-intake-request-routing-e485e6)
+- [Independent Project](https://zapier.com/templates/details/raheeq-ai-powered-client-request-management-c5b92a)
 
 ---
 
