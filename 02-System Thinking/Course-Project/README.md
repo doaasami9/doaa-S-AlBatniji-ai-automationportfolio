@@ -268,10 +268,16 @@
 - **Live Demo | التطبيق المباشر:** [فتح SkillBridge Lite](https://pixel-perfect-dream-6188.lovable.app)
 - **GitHub Repository | مستودع GitHub:** [عرض ملفات المشروع](https://github.com/doaasami9/skillbridge-lite)
 
-DOAA SAMI AL-BATNIJI
-Computer Engineer | Data, AI & Automation
+---
 
-GitHub LinkedIn
+## 👩‍💻 Author
+
+### **DOAA SAMI AL-BATNIJI**
+
+**Computer Engineer | Data, AI & Automation**
+
+[![GitHub](https://img.shields.io/badge/GitHub-doaasami9-181717?style=for-the-badge&logo=github)](https://github.com/doaasami9)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/doaa-sami-984426271/)
 
 ---
 
