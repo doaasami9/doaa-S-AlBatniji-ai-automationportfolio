@@ -1,233 +1,46 @@
-# [Project Name]
+## 📌 Evidence & Screenshots
 
-> [One-sentence description of what this project does.]
+يمكن الاطلاع على لقطات الشاشة والأدلة المرئية الخاصة بالمشروع من خلال مجلد **Screenshots** في مستودع GitHub:
 
----
+<p align="center">
+  <a href="https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/02-System%20Thinking/Independent-Project/Screenshots">
+    <img src="https://img.shields.io/badge/View-Project%20Screenshots-702D3D?style=for-the-badge&logo=github" alt="View Project Screenshots" />
+  </a>
+</p>
 
-## 🎯 Problem
+## 🌐 Live Demo
 
-### The Context
+يمكن زيارة النسخة المنشورة من البورتفوليو عبر الرابط النهائي:
 
-[What is the real-world situation?]
-
-### The Problem
-
-[What problem are you trying to solve?]
-
-### Why It Matters
-
-[Why is solving this problem useful?]
-
----
-
-## 💡 Solution
-
-[Explain your solution briefly.]
-
-What does the system do?
-
-1. ...
-2. ...
-3. ...
-4. ...
-
----
-
-## 👤 Users
-
-**Primary Users:**  
-[Who will use this solution?]
-
-**User Need:**  
-[What do they need to accomplish?]
-
----
-
-## 🧠 How I Designed the Solution
-
-[Briefly explain the main thinking/design decisions behind the solution.]
-
----
-
-## ⚙️ How It Works
-
-```text
-Input
-  ↓
-[Step]
-  ↓
-AI / Logic
-  ↓
-[Step]
-  ↓
-Output
-```
-
----
-
-## 🤖 Role of AI
-
-What does AI do in this solution?
-
-- ...
-- ...
-- ...
-
-### What AI Should NOT Do
-
-- ...
-- ...
-
----
-
-## 🔄 Automation
-
-What parts of the process are automated?
-
-- ...
-- ...
-- ...
-
----
-
-## 🗂️ Data
-
-### Input
-
-[What information enters the system?]
-
-### Output
-
-[What does the system produce?]
-
----
-
-## 🛠️ Tools & Technologies
-
-| Tool | Purpose |
-|---|---|
-| [Tool] | [Purpose] |
-| [Tool] | [Purpose] |
-| [Tool] | [Purpose] |
-
----
-
-## 🔑 Key Design Decisions
-
-### Decision 1
-
-**Decision:**  
-...
-
-**Why:**  
-...
-
-### Decision 2
-
-**Decision:**  
-...
-
-**Why:**  
-...
-
----
-
-## 🧪 Testing
-
-### Test 1
-
-**Input:**  
-...
-
-**Expected Result:**  
-...
-
-**Actual Result:**  
-...
-
-**Status:** ✅ / ❌
-
----
-
-### Test 2
-
-**Input:**  
-...
-
-**Expected Result:**  
-...
-
-**Actual Result:**  
-...
-
-**Status:** ✅ / ❌
-
----
-
-## 📸 Evidence
-
-### Final Result
-
-![Final Result](./screenshots/final-result.png)
-
-### Workflow
-
-![Workflow](./screenshots/workflow.png)
-
----
-
-## ⚠️ Challenges & Failures
-
-What didn't work as expected?
-
-- ...
-- ...
-
-How did I solve it?
-
-- ...
-- ...
-
----
-
-## 📚 What I Learned
-
-### Technical Lesson
-
-...
-
-### Problem-Solving Lesson
-
-...
-
-### AI Lesson
-
-...
-
----
-
-## 🔮 Future Improvements
-
-If I continued developing this project, I would:
-
-- ...
-- ...
-- ...
-
----
+<p align="center">
+  <a href="https://portfolio-doaa-albatniji.lovable.app/">
+    <img src="https://img.shields.io/badge/Visit-Live%20Portfolio-17243A?style=for-the-badge" alt="Visit Live Portfolio" />
+  </a>
+</p>
 
 ## 🔗 Project Links
 
-**Live Demo:** [Link]
-
-**Workflow:** [Link]
-
-**Repository:** [Link]
-
----
+| Resource | Description | Link |
+|---|---|---|
+| Live Portfolio | النسخة المنشورة والنهائية من البورتفوليو. | [Open Website](https://portfolio-doaa-albatniji.lovable.app/) |
+| GitHub Repository | مستودع مشروع البورتفوليو وملفاته. | [View Repository](https://github.com/doaasami9/portfolio-play-ar) |
+| Screenshots | مجلد لقطات الشاشة والأدلة المرئية. | [View Screenshots](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/02-System%20Thinking/Independent-Project/Screenshots) |
+| GitHub Profile | حسابي على GitHub. | [@doaasami9](https://github.com/doaasami9) |
+| LinkedIn | ملفي المهني على LinkedIn. | [Doaa Sami Al-Batniji](https://www.linkedin.com/in/doaa-sami-984426271/) |
 
 ## 👩‍💻 Author
 
-**[Your Name]**
+**Doaa Sami Al-Batniji**
 
-[LinkedIn] · [GitHub]
+Computer Engineer | Data, AI & Automation
+
+- **GitHub:** [@doaasami9](https://github.com/doaasami9)
+- **LinkedIn:** [Doaa Sami Al-Batniji](https://www.linkedin.com/in/doaa-sami-984426271/)
+
+---
+
+<p align="center">
+  <strong>Built with a focus on clarity, practical problem-solving, and responsible AI.</strong>
+  <br />
+  صُمّم هذا العمل لتقديم المهارات والمشاريع المهنية بوضوح، مع التركيز على الحلول العملية والاستخدام المسؤول للذكاء الاصطناعي.
+</p>
