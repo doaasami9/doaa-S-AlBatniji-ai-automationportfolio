@@ -29,7 +29,6 @@
 - **AI App Building:** توجيه AI App Builders لبناء التطبيق وتحسينه.
 
 ---
-
 ### 1 — Guided Project
 
 **Project:** SkillBridge Lite
@@ -41,21 +40,64 @@
 - **Solution:** منصة تفاعلية تجمع بين استكشاف المهارات وتنظيمها ودعم التخطيط للتطور المهني.
 - **Tools:** Lovable، AI App Builder.
 
-[Explore the Project](https://github.com/doaasami9/skillbridge-lite)
+**Live Demo:** [Explore SkillBridge Lite](https://pixel-perfect-dream-6188.lovable.app/)
+
+**GitHub Repository:** [View Source & Documentation](https://github.com/doaasami9/skillbridge-lite)
 
 ### 02 — Independent Project
 
 **Project:** Doaa Sami Al-Batniji — Professional Portfolio
 
-تطبيق مستقل يعرض هويتي المهنية ومهاراتي وأعمالي، ويتيح للجهات وأصحاب العمل والعملاء استكشاف خبراتي ومشاريعي من خلال تجربة استخدام منظمة ومساعد ذكي للتعريف بمحتوى البورتفوليو.
+بورتفوليو تفاعلي يعرض هويتي المهنية ومهاراتي وأعمالي، ويتيح لأصحاب العمل والجهات والعملاء استكشاف خبراتي ومشاريعي من خلال تجربة استخدام منظمة ومساعد ذكي للتعريف بمحتوى البورتفوليو.
 
 - **Problem:** الحاجة إلى عرض المهارات والأعمال والخبرات المهنية بطريقة منظمة وتفاعلية تتجاوز السيرة الذاتية التقليدية.
 - **Target Users:** أصحاب العمل، والجهات والمؤسسات، والعملاء المحتملون، والمتعاونون.
 - **Solution:** بورتفوليو تفاعلي متعدد الأقسام يجمع بين عرض المعلومات المهنية والمشاريع وروابطها، مع مساعد ذكي يساعد الزائر على استكشاف المحتوى ذي الصلة.
 - **Tools:** Lovable، AI Assistant، أدوات بناء تطبيقات الويب بالذكاء الاصطناعي.
 
-[Explore the Project](https://github.com/doaasami9/portfolio-play-ar)
+**Live Demo:** [Explore My Professional Portfolio](https://portfolio-doaa-albatniji.lovable.app/)
 
+**GitHub Repository:** [View Portfolio Repository](https://github.com/doaasami9/portfolio-play-ar)
+
+---
+
+## 🔍 Engineering Focus
+
+في هذه الوحدة، أركز على:
+
+1. تحديد ما يحتاج التطبيق إلى تحقيقه.
+2. التمييز بين متطلبات المستخدم وشكل الواجهة.
+3. تصميم User Flow واضح.
+4. تحديد وظائف التطبيق وسلوكه.
+5. فهم البيانات التي يحتاجها النظام.
+6. توجيه AI لبناء الحل ومراجعة ما ينتجه.
+
+---
+
+## 📌 Key Takeaway
+
+**AI can generate an application, but the quality of the system depends on the quality of its design.**
+
+يمكن للذكاء الاصطناعي إنشاء التطبيق، لكن جودة النظام تعتمد على وضوح التصميم والمتطلبات.
+
+---
+
+## 📈 Capability Progress
+
+- تحديد المشكلة والمستخدمين.
+- كتابة المتطلبات الأساسية.
+- تصميم User Flow.
+- تحديد System Behavior.
+- تحديد البيانات المطلوبة.
+- بناء التطبيق باستخدام AI App Builder.
+- توثيق التطبيق وقرارات التصميم.
+
+---
+
+## 🔗 Related Projects
+
+- [Guided Project — SkillBridge Lite](https://pixel-perfect-dream-6188.lovable.app/)
+- [Independent Project — Professional Portfolio](https://portfolio-doaa-albatniji.lovable.app/)
 ---
 
 ## 🔍 Engineering Focus
