@@ -401,7 +401,7 @@ flowchart TD
 | **Screenshots** | [View Screenshot Folder](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/03-Evaluation%20%26%20Diagnostic%20Thinking/Independent-Project/Screenshots) |
 | **GitHub Profile** | [doaasami9](https://github.com/doaasami9) |
 | **LinkedIn** | [Doaa Sami Al-Batniji](https://www.linkedin.com/in/doaa-sami-984426271/) |
-| **Project Repository** | يُضاف رابط المستودع الخاص بالمشروع عند توفره |
+
 
 ## 👩‍💻 Author
 
