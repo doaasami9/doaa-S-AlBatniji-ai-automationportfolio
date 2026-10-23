@@ -93,7 +93,7 @@ A working demonstration is useful. Repeatable tests and documented evidence prov
 
 ## 🔗 Related Projects
 
-**[Explore the Project](https://screenshot-magic-4807.lovable.app/)**
+- **Guided Project:** [TaskBridge](https://screenshot-magic-4807.lovable.app/)
 - **Independent Project:** [FOREXY](https://forexy.lovable.app/)
 
 **Next: U4 — GROUND ITS KNOWLEDGE**
