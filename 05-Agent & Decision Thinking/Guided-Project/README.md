@@ -72,9 +72,6 @@
 
 ### Try the Agent
 
-يمكنكِ فتح البوت عبر الرابط التالي:
-
-**[Launch XYZ Real Estate AI Assistant on Telegram →](https://t.me/DSBRealEstateAssistant_bot)**
 
 جرّبي بدء محادثة جديدة، واطلبي شراء شقة أو استئجار فيلا، ثم راقبي طريقة جمع المعلومات والأسئلة التي يطرحها الوكيل.
 
