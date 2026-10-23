@@ -500,37 +500,57 @@ flowchart TD
 
 يتضمن System Prompt رسالة ترحيب محددة، لكن وجود ضمان تقني لإرسالها مرة واحدة فقط يحتاج إلى اختبار أو آلية مستقلة لإدارة حالة الترحيب.
 
-## 📸 Screenshots & Evidence
+## 🖼️ Screenshots & Evidence
 
-تُستخدم لقطات الشاشة لتوثيق إعدادات المشروع وسلوكه الفعلي.
+The following screenshots document the project implementation and supporting evidence.
 
-**Screenshots Folder:** [`Screenshots/`](./Screenshots/)
+تتضمن الصور التالية لقطات توثيقية للمشروع. ستظهر الصور مباشرة داخل صفحة README على GitHub، دون الحاجة إلى الضغط على روابط منفصلة.
 
-### Recommended Evidence
+**📂 [View All Screenshots](https://github.com/doaa-S-AlBatniji-ai-automationportfolio/tree/main/05-Agent%20%26%20Decision%20Thinking/Guided-Project/Screenshots)**
 
-| Filename | Evidence |
-|---|---|
-| `01-workflow-overview.png` | مخطط الـ Workflow كاملًا |
-| `02-ai-agent-prompt.png` | إعدادات AI Agent وSystem Prompt |
-| `03-openai-model.png` | إعدادات نموذج OpenAI |
-| `04-simple-memory.png` | إعدادات Simple Memory |
-| `05-google-sheets-tool.png` | إعدادات أداة Google Sheets وربط الحقول |
-| `06-telegram-conversation.png` | محادثة أثناء جمع المعلومات |
-| `07-final-summary.png` | الملخص النهائي قبل التأكيد |
-| `08-confirmed-record.png` | الصف المسجل في Google Sheets |
-| `09-successful-execution.png` | سجل تنفيذ ناجح |
-| `10-negative-test.png` | اختبار عدم الحفظ قبل التأكيد، إن تم التحقق منه |
-| `11-rent-request.png` | اختبار الاستئجار والقيم غير المنطبقة |
-| `12-correction-test.png` | اختبار تصحيح الإجابات وتحديث الملخص |
+### Project Screenshots
 
-### Evidence Guidelines
+**Screenshot 5.1**
 
-- استخدمي صورًا حقيقية من المشروع.
-- أخفي بيانات الاعتماد والرموز السرية.
-- استخدمي بيانات اختبار غير حقيقية في صور المحادثات.
-- لا تعرضي بيانات شخصية لعملاء حقيقيين دون ضرورة وصلاحية مناسبة.
-- لا تصفي اختبارًا بأنه ناجح دون دليل يدعمه.
+![Screenshot 5.1](./Screenshots/5.1.png)
 
+**Screenshot 5.2**
+
+![Screenshot 5.2](./Screenshots/5.2.png)
+
+**Screenshot 5.3**
+
+![Screenshot 5.3](./Screenshots/5.3.png)
+
+**Screenshot 5.4**
+
+![Screenshot 5.4](./Screenshots/5.4.png)
+
+**Screenshot 5.5**
+
+![Screenshot 5.5](./Screenshots/5.5.png)
+
+### Workflow & Integration Evidence
+
+**n8n Workflow**
+
+![n8n Workflow](./Screenshots/N8N1.png)
+
+**Google Sheets Evidence**
+
+![Google Sheets Evidence](./Screenshots/g.sh1.png)
+
+### Additional Screenshots
+
+**Additional Project Screenshot**
+
+![Additional Project Screenshot](./Screenshots/screenshot.png)
+
+**Additional Test Screenshot**
+
+![Additional Test Screenshot](./Screenshots/t2.png)
+
+> **Evidence & Privacy:** Ensure that screenshots do not expose API keys, credentials, private customer information, or other sensitive data before publishing the repository publicly.
 ## 📦 Project Deliverables
 
 يتكون التسليم من العناصر التالية بحسب ما تم تجهيزه:
