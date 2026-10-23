@@ -33,21 +33,6 @@
 
 > **الفكرة الأساسية:** تحويل مجموعة من المهام الحوارية المتكررة إلى تجربة واحدة منظمة، قابلة للاختبار والتطوير والتوسّع.
 
-## ✧ Quick Navigation
-
-| القسم | المحتوى |
-|---|---|
-| [🎯 Problem & Motivation](#-problem--motivation) | المشكلة والسياق والحاجة إلى الحل |
-| [💡 Proposed Solution](#-proposed-solution) | فكرة LinguaCare والخدمات |
-| [🧠 System Architecture](#-system-architecture) | بنية النظام ومسار البيانات |
-| [⚙️ Workflow Breakdown](#-workflow-breakdown) | دور كل مكوّن |
-| [🤖 AI Agent Design](#-ai-agent-design) | منطق الاستجابة وحدود الوكيل |
-| [🗂️ Conversation Logging](#️-conversation-logging) | تصميم سجل المحادثات |
-| [🧪 Testing & Validation](#-testing--validation) | الاختبارات والنتائج |
-| [⚠️ Limitations & Improvements](#️-limitations--improvements) | القيود والتحسينات |
-| [🖼️ Screenshots](#️-screenshots) | لقطات المشروع |
-| [🔗 Project Links](#-project-links) | الروابط |
-| [👩‍💻 Author](#-author) | معلومات المطوّرة |
 
 ---
 
@@ -512,7 +497,6 @@ flowchart TD
 
 ---
 
-## 🖼️ Screenshots
 ## 🖼️ Screenshots & Project Walkthrough
 
 <p align="center">
