@@ -609,12 +609,22 @@ The following screenshots document the project implementation and supporting evi
 
 **Doaa Sami Al-Batniji**
 
-*Computer Engineer | Data, AI & Automation*
-💼 LinkedIn: Connect with me
+Computer Engineer | Data, AI & Automation
 
-🐙 GitHub: Explore my repositories
+Focused on practical AI applications, workflow automation, structured data processing, and solutions that connect intelligent systems with real operational needs.
+
+- 💼 **LinkedIn:** [Connect with me](https://www.linkedin.com/in/doaa-sami-984426271/)
+- 🐙 **GitHub:** [Explore my repositories](https://github.com/doaasami9)
+
 ---
 
+<p align="center">
+
+**XYZ Real Estate AI Agent**
+
+*From conversation to structured leads — with context, confirmation, and automation.*
+
+</p>
 <p align="center">
   <strong>Think Beyond Chat. Design for Decisions.</strong>
   <br>
