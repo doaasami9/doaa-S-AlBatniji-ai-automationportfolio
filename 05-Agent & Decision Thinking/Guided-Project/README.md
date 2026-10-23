@@ -587,19 +587,6 @@ flowchart TD
 
 **[Open XYZ Real Estate AI Assistant on Telegram →](https://t.me/DSBRealEstateAssistant_bot)**
 
-يمكنكِ فتح البوت وتجربة المحادثة مباشرة عبر Telegram، بحسب توفر الخدمة وتشغيل الـ Workflow.
-
-### GitHub Repository
-
-- **Course Repository:** [AI Automation Course](https://github.com/doaasami9/ai-automation-course)
-- **Unit 5 — Agent & Decision Thinking:** [Open Unit 5](https://github.com/doaasami9/ai-automation-course/tree/main/05-Agent%20%26%20Decision%20Thinking)
-- **Guided Project:** [XYZ Real Estate AI Agent](https://github.com/doaasami9/ai-automation-course/tree/main/05-Agent%20%26%20Decision%20Thinking/Guided-Project)
-- **Screenshots & Evidence:** [View Project Screenshots](https://github.com/doaasami9/ai-automation-course/tree/main/05-Agent%20%26%20Decision%20Thinking/Guided-Project/Screenshots)
-
-### Additional Resources
-
-يمكن إضافة روابط تصدير الـ Workflow أو نسخة تجريبية من Google Sheets عند تجهيزها للمشاركة الآمنة. يجب مراجعة أي ملف قبل رفعه للتأكد من عدم احتوائه على رموز سرية أو بيانات عملاء حقيقية.
-
 ## 👩‍💻 Author
 
 **Doaa Sami Al-Batniji**
