@@ -513,6 +513,43 @@ flowchart TD
 ---
 
 ## 🖼️ Screenshots
+## 🖼️ Screenshots & Project Walkthrough
+
+<p align="center">
+  <strong>Explore LinguaCare in Action</strong>
+  <br />
+  توثيق بصري لمراحل المشروع وواجهاته واختباراته من خلال لقطات الشاشة المرفقة.
+</p>
+
+<p align="center">
+  <a href="Screenshots/1.5.png"><img src="Screenshots/1.5.png" width="48%" alt="LinguaCare Screenshot 1" /></a>
+  <a href="Screenshots/2.5.png"><img src="Screenshots/2.5.png" width="48%" alt="LinguaCare Screenshot 2" /></a>
+</p>
+
+<p align="center">
+  <a href="Screenshots/3.5.png"><img src="Screenshots/3.5.png" width="48%" alt="LinguaCare Screenshot 3" /></a>
+  <a href="Screenshots/4.5.png"><img src="Screenshots/4.5.png" width="48%" alt="LinguaCare Screenshot 4" /></a>
+</p>
+
+<p align="center">
+  <a href="Screenshots/5.5.png"><img src="Screenshots/5.5.png" width="48%" alt="LinguaCare Screenshot 5" /></a>
+  <a href="Screenshots/L.C.T1.png"><img src="Screenshots/L.C.T1.png" width="48%" alt="LinguaCare Test Screenshot 1" /></a>
+</p>
+
+<p align="center">
+  <a href="Screenshots/L.C.T2.png"><img src="Screenshots/L.C.T2.png" width="48%" alt="LinguaCare Test Screenshot 2" /></a>
+  <a href="Screenshots/L.C.T3.png"><img src="Screenshots/L.C.T3.png" width="48%" alt="LinguaCare Test Screenshot 3" /></a>
+</p>
+
+---
+
+### 📂 Screenshot Directory
+
+يمكن الوصول إلى جميع الصور من مجلد لقطات الشاشة في المستودع:
+
+**[📁 Browse All Screenshots](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/05-Agent%20%26%20Decision%20Thinking/Independent-Project/Screenshots)**
+
+
 
 ## 🔗 Project Links
 
