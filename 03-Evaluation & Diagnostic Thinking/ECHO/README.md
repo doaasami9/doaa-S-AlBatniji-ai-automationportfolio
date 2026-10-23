@@ -4,13 +4,12 @@
   <strong>An Interactive Humanitarian Decision-Making Simulation</strong>
   <br/>
   <sub>Unit 3 · Research Pairs · Tool Exploration</sub>
+  <br/><br/>
+  <a href="https://echo-em8lnp4h.manus.space/">
+    <strong>↗ EXPLORE ECHO</strong>
+  </a>
 </p>
 
-<p align="center">
-  <a href="https://github.com/doaasami9">GitHub Profile</a>
-  &nbsp;·&nbsp;
-  <a href="https://www.linkedin.com/in/doaa-sami-984426271/">LinkedIn</a>
-</p>
 
 ---
 
