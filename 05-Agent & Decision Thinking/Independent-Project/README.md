@@ -533,7 +533,7 @@ flowchart TD
 أعمل على بناء حلول عملية تجمع بين الذكاء الاصطناعي والأتمتة وتنظيم البيانات، مع التركيز على تصميم تدفّقات عمل واضحة، واختبار سلوك الأنظمة، وتوثيق النتائج والقيود بدقة.
 
 - **GitHub:** [doaasami9](https://github.com/doaasami9)
-- **LinkedIn:** (YOUR_LINKEDIN_URL)
+- **LinkedIn:** (https://www.linkedin.com/in/doaa-sami-984426271/)
 
 ---
 
