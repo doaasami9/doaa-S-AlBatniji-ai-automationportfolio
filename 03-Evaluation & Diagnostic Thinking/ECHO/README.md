@@ -1,130 +1,169 @@
 # ECHO | Decisions Leave a Footprint
 
 <p align="center">
-  <strong>Unit 3 · Research Pairs · Tool Exploration</strong>
+  <strong>An Interactive Humanitarian Decision-Making Simulation</strong>
+  <br/>
+  <sub>Unit 3 · Research Pairs · Tool Exploration</sub>
 </p>
 
 <p align="center">
-  <a href="https://echo-em8lnp4h.manus.space/">
-    <strong>↗ Explore the Live Application</strong>
-  </a>
+  <a href="https://github.com/doaasami9">GitHub Profile</a>
+  &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/doaa-sami-984426271/">LinkedIn</a>
 </p>
 
 ---
 
 ## 📌 Project Overview
 
-**ECHO — Decisions Leave a Footprint** هو تطبيق تفاعلي يحاكي اتخاذ القرارات في سياق العمليات الإنسانية، ويستكشف كيف يمكن للقرارات المتتابعة والموارد المحدودة وتغيّر الظروف أن تؤثر في النتائج.
+**ECHO — Decisions Leave a Footprint** هو مشروع تفاعلي يستكشف أثر القرارات في سياق يحاكي العمليات الإنسانية، حيث تتداخل الخيارات والظروف والموارد لتشكّل نتائج محتملة.
 
-جاء المشروع ضمن نشاط **Research Pairs** لاستكشاف إحدى أدوات الذكاء الاصطناعي وتجربة توظيفها في بناء تطبيق عملي انطلاقًا من فكرة واضحة.
+تم تطوير الفكرة ضمن نشاط **Unit 3 — Research Pairs** لاستكشاف أداة مدعومة بالذكاء الاصطناعي وتطبيقها عمليًا في بناء تجربة رقمية.
 
-> **الفكرة المحورية:** لكل قرار أثر، وفهم هذا الأثر يساعد على التفكير بصورة أكثر وعيًا في الخيارات والنتائج المحتملة.
-
----
+يركّز المشروع على فكرة أساسية: **كل قرار يترك أثرًا، وفهم هذا الأثر يساعد على تقييم الخيارات بصورة أكثر وعيًا.**
 
 ## 🔎 Tool Exploration
 
-### Manus — AI-Powered Application Builder
+### Manus — AI-Powered Application Creation
 
-**ما هي الأداة؟**
+**ما هي Manus؟**
 
-تُعدّ Manus أداة مدعومة بالذكاء الاصطناعي تساعد على تحويل التعليمات والأفكار إلى تجارب رقمية وتطبيقات عملية، مما يتيح الانتقال من التصور الأولي إلى نموذج يمكن استكشافه واختباره.
+Manus أداة مدعومة بالذكاء الاصطناعي تساعد على تحويل التعليمات والأفكار إلى مخرجات رقمية. استُخدمت في هذا النشاط لبناء تجربة ECHO وتحويل الفكرة إلى تطبيق يمكن للمستخدم استكشافه.
 
 ### Key Features
 
-- **AI-Assisted Creation:** تحويل وصف الفكرة إلى تجربة رقمية عملية.
-- **Interactive Prototyping:** بناء نماذج تفاعلية لاستكشاف الفكرة.
-- **Rapid Development:** تسريع الانتقال من التصور إلى النموذج الأولي.
-- **Practical Experimentation:** اختبار طريقة عرض الفكرة وتجربة المستخدم.
-
----
+- **AI-Assisted Creation:** الاستعانة بالذكاء الاصطناعي في تطوير الفكرة وتحويلها إلى مخرج عملي.
+- **Interactive Prototyping:** تقديم الفكرة ضمن تجربة رقمية قابلة للاستكشاف.
+- **Rapid Development:** تسهيل الانتقال من التصور الأولي إلى نموذج تطبيقي.
 
 ## 🎯 Problem & Purpose
 
 ### The Challenge
 
-تتطلب العمليات الإنسانية اتخاذ قرارات في ظروف قد تتسم بعدم اليقين، ومحدودية الموارد، وتغيّر الاحتياجات والأولويات. وقد تؤدي القرارات المختلفة إلى نتائج متفاوتة، مما يجعل التفكير في العواقب المحتملة جزءًا مهمًا من عملية التقييم.
+قد تتطلب العمليات الإنسانية اتخاذ قرارات في ظروف متغيرة، مع محدودية الموارد وتعدد الأولويات. لذلك، فإن التفكير في النتائج المحتملة للقرارات يُعد جانبًا مهمًا من فهم هذه التحديات.
 
 ### The Purpose
 
-يهدف ECHO إلى تقديم تجربة محاكاة تفاعلية تساعد المستخدم على استكشاف العلاقة بين القرار والنتيجة، والتفكير في أثر الخيارات ضمن سيناريو إنساني افتراضي.
-
----
+يهدف ECHO إلى تقديم سيناريو تفاعلي يتيح للمستخدم استكشاف العلاقة بين القرارات وآثارها، والتفكير في الخيارات ضمن سياق افتراضي مستوحى من العمليات الإنسانية.
 
 ## ⚙️ How It Works
 
-تعتمد فكرة التطبيق على تجربة سيناريو تفاعلي يتيح للمستخدم استكشاف القرارات وملاحظة آثارها ضمن بيئة محاكاة.
+تقوم فكرة التجربة على استكشاف سيناريو تفاعلي والتفكير في القرارات والنتائج التي تعرضها المحاكاة.
 
 | Stage | Description |
 |:---:|---|
 | **01 · Explore** | التعرّف على السيناريو والظروف المحيطة به. |
-| **02 · Decide** | التفكير في الخيارات المتاحة واتخاذ القرارات. |
-| **03 · Observe** | استكشاف النتائج التي تعرضها المحاكاة. |
+| **02 · Decide** | التفكير في الخيارات المتاحة واتخاذ القرار. |
+| **03 · Observe** | ملاحظة النتائج التي تعرضها التجربة. |
 | **04 · Reflect** | التأمل في آثار القرارات والعلاقة بينها وبين النتائج. |
 
----
+## 🖼️ Application Screenshots
+
+فيما يلي لقطات شاشة توثّق واجهات وتجربة تطبيق ECHO.
+
+### ECHO — Application Preview
+
+<p align="center">
+  <img src="screenshots/ECHO1.png" alt="ECHO application preview" width="100%" />
+</p>
+
+<p align="center">
+  <sub>معاينة لتطبيق ECHO.</sub>
+</p>
+
+### Interactive Experience
+
+<table>
+  <tr>
+    <td width="50%" align="center">
+      <img src="screenshots/ECHO2.png" alt="ECHO screenshot 2" width="100%" />
+      <br/>
+      <strong>Application View 02</strong>
+    </td>
+    <td width="50%" align="center">
+      <img src="screenshots/ECHO3.png" alt="ECHO screenshot 3" width="100%" />
+      <br/>
+      <strong>Application View 03</strong>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="screenshots/ECHO4.png" alt="ECHO screenshot 4" width="100%" />
+      <br/>
+      <strong>Application View 04</strong>
+    </td>
+    <td width="50%" align="center">
+      <img src="screenshots/E5.png" alt="ECHO screenshot 5" width="100%" />
+      <br/>
+      <strong>Application View 05</strong>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" align="center">
+      <img src="screenshots/E6.png" alt="ECHO screenshot 6" width="100%" />
+      <br/>
+      <strong>Application View 06</strong>
+    </td>
+    <td width="50%" align="center">
+      <img src="screenshots/E7.png" alt="ECHO screenshot 7" width="100%" />
+      <br/>
+      <strong>Application View 07</strong>
+    </td>
+  </tr>
+</table>
 
 ## 🌍 Humanitarian Relevance
 
-لا تقتصر أهمية المحاكاة على عرض سيناريو تفاعلي، بل تمتد إلى إتاحة مساحة للتفكير في تحديات العمل الإنساني، ومنها:
+تمنح المحاكاة فرصة لاستكشاف بعض الأفكار المرتبطة بالتفكير في القرارات ضمن سياق إنساني، ومنها:
 
-- **Resource Constraints:** مراعاة محدودية الموارد عند المفاضلة بين الخيارات.
-- **Changing Conditions:** إدراك أثر التغيّرات في الظروف والاحتياجات.
-- **Decision Evaluation:** مقارنة الخيارات والتفكير في عواقبها المحتملة.
-- **Critical Thinking:** تنمية التفكير التحليلي بدلًا من الاكتفاء بالاستجابة المباشرة للموقف.
+- **Resource Constraints:** التفكير في الخيارات عند محدودية الموارد.
+- **Changing Conditions:** مراعاة أثر تغيّر الظروف.
+- **Decision Evaluation:** التأمل في النتائج المحتملة للقرارات.
+- **Critical Thinking:** تحليل الموقف بدلًا من النظر إلى القرار بمعزل عن سياقه.
 
-*ملاحظة: يقدّم التطبيق سيناريو محاكاة تعليميًا، ولا يُمثّل نظامًا تشغيليًا حقيقيًا لإدارة العمليات الإنسانية.*
-
----
-
-## 🚀 Live Demo
-
-<p align="center">
-  <a href="https://echo-em8lnp4h.manus.space/">
-    <strong>▶ Launch ECHO</strong>
-  </a>
-</p>
-
-يمكن استكشاف التطبيق مباشرة عبر الرابط التالي:
-
-**[echo-em8lnp4h.manus.space](https://echo-em8lnp4h.manus.space/)**
-
----
+> **Scope:** ECHO تجربة محاكاة تعليمية، وليس نظامًا فعليًا لإدارة العمليات الإنسانية أو لاتخاذ القرارات التشغيلية في الميدان.
 
 ## 🧠 Learning Outcomes
 
-من خلال استكشاف الأداة والعمل على فكرة التطبيق، يركّز المشروع على:
+يرتبط هذا النشاط بعدد من جوانب التعلم والتطبيق العملي:
 
-- التعرّف على إمكانات أدوات الذكاء الاصطناعي في بناء التطبيقات.
+- استكشاف إمكانات أداة مدعومة بالذكاء الاصطناعي.
 - تحويل فكرة إلى تجربة رقمية قابلة للاستكشاف.
-- توظيف المحاكاة لعرض مشكلة وسيناريو تفاعلي.
-- ربط تصميم التجربة بالتفكير النقدي وتقييم القرارات.
+- تنظيم مفهوم المشروع وعرضه بطريقة واضحة.
+- توظيف المحاكاة في استكشاف القرارات والتفكير في نتائجها.
 
----
-
-## 🛠️ Project Details
+## 🗂️ Project Details
 
 | Category | Details |
 |---|---|
-| **Program Unit** | Unit 3 |
+| **Program** | Unit 3 |
 | **Activity** | Research Pairs |
-| **Explored Tool** | Manus |
-| **Project Name** | ECHO — Decisions Leave a Footprint |
+| **Tool Explored** | Manus |
+| **Project** | ECHO — Decisions Leave a Footprint |
 | **Application Type** | Interactive Simulation |
 | **Domain** | Humanitarian Operations |
 | **Core Focus** | Decision-Making & Critical Thinking |
-| **Demo** | [Open Application ↗](https://echo-em8lnp4h.manus.space/) |
-
----
 
 ## 🏷️ Keywords
 
-`Manus` · `Artificial Intelligence` · `Interactive Simulation` · `Humanitarian Operations` · `Decision-Making` · `Critical Thinking` · `Rapid Prototyping` · `AI-Powered Applications`
+`Manus` · `Artificial Intelligence` · `Interactive Simulation` · `Humanitarian Operations` · `Decision-Making` · `Critical Thinking` · `AI-Powered Applications`
+
+---
+
+## 👩‍💻 Project Author
+
+**Doaa Sami Al-Batniji **
+
+<p>
+  <a href="https://github.com/doaasami9">GitHub</a>
+  &nbsp;·&nbsp;
+  <a href="https://www.linkedin.com/in/doaa-sami-984426271/">LinkedIn</a>
+</p>
 
 ---
 
 <p align="center">
   <strong>DECISIONS LEAVE A FOOTPRINT.</strong>
   <br/>
-  <sub>استكشف القرار، تأمّل أثره، وتعلّم من النتيجة.</sub>
+  <sub>لكل قرار أثر، ولكل اختيار نتيجة تستحق التأمل.</sub>
 </p>
