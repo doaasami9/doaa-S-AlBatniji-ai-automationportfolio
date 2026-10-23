@@ -604,12 +604,15 @@ The following screenshots document the project implementation and supporting evi
 
 **[Open XYZ Real Estate AI Assistant on Telegram →](https://t.me/DSBRealEstateAssistant_bot)**
 
+
 ## 👩‍💻 Author
 
 **Doaa Sami Al-Batniji**
 
 *Computer Engineer | Data, AI & Automation*
+💼 LinkedIn: Connect with me
 
+🐙 GitHub: Explore my repositories
 ---
 
 <p align="center">
