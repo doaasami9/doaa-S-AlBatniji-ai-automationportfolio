@@ -44,7 +44,7 @@ Building a solution is not the same as proving it works.
 - **Testing Focus:** التحقق من الوظائف الأساسية، وصحة السلوك المتوقع، والتعامل مع الحالات المختلفة، ورصد الأخطاء.
 - **Tools:** Lovable, Supabase
 
-**[Explore the Project](https://portfolio-play-ar.lovable.app/)**
+**[Explore the Project](https://screenshot-magic-4807.lovable.app/)**
 
 ### 02 — Independent Project
 
@@ -93,7 +93,7 @@ A working demonstration is useful. Repeatable tests and documented evidence prov
 
 ## 🔗 Related Projects
 
-- **Guided Project:** [TaskBridge](https://portfolio-play-ar.lovable.app/)
+**[Explore the Project](https://screenshot-magic-4807.lovable.app/)**
 - **Independent Project:** [FOREXY](https://forexy.lovable.app/)
 
 **Next: U4 — GROUND ITS KNOWLEDGE**
