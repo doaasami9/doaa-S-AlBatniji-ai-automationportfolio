@@ -62,8 +62,6 @@
 
 🔗 [**Open the XYZ Real Estate AI Agent**](https://t.me/DSBRealEstateAssistant_bot)
 
-📁 [**Explore the Guided Project Folder**](./Guided-Project/)
-
 ---
 
 ### 02. Independent Project — LinguaCare
@@ -169,31 +167,6 @@
 
 ---
 
-## 🖼️ Screenshots
 
----
 
 ## 🚀 Next: U6 — AUTOMATION & INTEGRATION THINKING
-
-الانتقال من تصميم الوكيل ومنطق قراراته إلى فهم كيفية ربط الأنظمة والخدمات، وتبادل البيانات بينها، وبناء تدفقات أتمتة متكاملة.
-
-🔗 [**Explore Unit 6 — Automation & Integration Thinking**](https://github.com/doaasami9/ai-automation-course/tree/main/06-Automation%20%26%20Integration%20Thinking)
-
----
-
-## 👩‍💻 Author
-
-**Doaa Sami Al-Batniji**  
-*Computer Engineer | Data, AI & Automation*
-
-أعمل على تصميم حلول عملية تجمع بين الذكاء الاصطناعي والأتمتة وتكامل الأنظمة، مع التركيز على وضوح تدفقات العمل، ومنطق اتخاذ القرار، واختبار النتائج، وتوثيق القيود والتحسينات.
-
-- **GitHub:** [doaasami9](https://github.com/doaasami9)
-
----
-
-<p align="center">
-  <strong>U5 — Agent & Decision Thinking</strong>
-  <br />
-  <em>Design with Intent. Decide with Logic. Automate Responsibly.</em>
-</p>
