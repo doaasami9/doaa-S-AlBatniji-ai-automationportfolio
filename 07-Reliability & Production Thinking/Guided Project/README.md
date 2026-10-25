@@ -448,14 +448,6 @@ flowchart TD
 
 ![AI Agent Tools Knowledge Test](Screenshots/test2.png)
 
-## 24. Project Resources
-
-- **GitHub Portfolio:** [View AI & Automation Portfolio](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio)
-- **Guided Project Screenshots:** [View Project Screenshots](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/07-Reliability%20%26%20Production%20Thinking/Guided%20Project/Screenshots)
-- **n8n Documentation:** [docs.n8n.io](https://docs.n8n.io/)
-- **Supabase Documentation:** [supabase.com/docs](https://supabase.com/docs)
-- **OpenAI Embeddings Guide:** [platform.openai.com/docs/guides/embeddings](https://platform.openai.com/docs/guides/embeddings)
-- **Google Gemini Documentation:** [ai.google.dev/gemini-api/docs](https://ai.google.dev/gemini-api/docs)
 
 ## 25. Author
 
