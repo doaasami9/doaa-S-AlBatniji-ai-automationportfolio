@@ -13,11 +13,6 @@
   <img src="https://img.shields.io/badge/Embeddings-OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI Embeddings" />
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Project%20Type-Guided%20Project-263B5E?style=flat-square" alt="Guided Project" />
-  <img src="https://img.shields.io/badge/Unit%2007-Reliability%20%26%20Production%20Thinking-8A2D45?style=flat-square" alt="Unit 07" />
-  <img src="https://img.shields.io/badge/Validation-4%20Tests%20Passed-238636?style=flat-square" alt="Four tests passed" />
-</p>
 
 ---
 
