@@ -1,869 +1,465 @@
-# 🧠 RAG with n8n
-### Build a Knowledge Pipeline & RAG AI Agent
+# 🔷 RAG with n8n
+## Build a Knowledge Pipeline & RAG AI Agent
 
 <p align="center">
-  <strong>From Documents → Embeddings → Vector Database → Retrieval → AI Agent → Grounded Answers</strong>
+  <strong>From Raw Documents to Grounded, Context-Aware AI Responses</strong>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/AI-RAG-6C63FF?style=for-the-badge" alt="RAG">
-  <img src="https://img.shields.io/badge/Workflow-n8n-EA4B71?style=for-the-badge" alt="n8n">
-  <img src="https://img.shields.io/badge/Database-Supabase-3ECF8E?style=for-the-badge" alt="Supabase">
-  <img src="https://img.shields.io/badge/Architecture-Knowledge%20Retrieval-243B53?style=for-the-badge" alt="Knowledge Retrieval">
+  <img src="https://img.shields.io/badge/AI-RAG-6C63FF?style=for-the-badge" alt="RAG" />
+  <img src="https://img.shields.io/badge/Workflow-n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white" alt="n8n" />
+  <img src="https://img.shields.io/badge/Vector%20Database-Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
+  <img src="https://img.shields.io/badge/LLM-Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white" alt="Gemini" />
+  <img src="https://img.shields.io/badge/Embeddings-OpenAI-412991?style=for-the-badge&logo=openai&logoColor=white" alt="OpenAI Embeddings" />
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Project%20Type-Guided%20Project-263B5E?style=flat-square" alt="Guided Project" />
+  <img src="https://img.shields.io/badge/Unit%2007-Reliability%20%26%20Production%20Thinking-8A2D45?style=flat-square" alt="Unit 07" />
+  <img src="https://img.shields.io/badge/Validation-4%20Tests%20Passed-238636?style=flat-square" alt="Four tests passed" />
 </p>
 
 ---
 
-## 🎯 01. Learning Objectives
+## 01. Project Overview
 
-يهدف هذا المشروع إلى بناء نظام **Retrieval-Augmented Generation (RAG)** باستخدام `n8n` و`Supabase Vector Store`، وفهم المراحل الداخلية التي تحول المستندات إلى معرفة قابلة للاسترجاع، ثم تستخدم هذه المعرفة للإجابة عن أسئلة المستخدم.
+يقدّم هذا المشروع تطبيقًا عمليًا لمفهوم **Retrieval-Augmented Generation (RAG)** من خلال بناء مسار متكامل لإدخال المعرفة، ومعالجة المستندات، وتخزين تمثيلاتها المتجهية، ثم استرجاع المعلومات ذات الصلة لدعم إجابات وكيل ذكاء اصطناعي.
 
-سبق أن تعاملنا مع مفهوم RAG باستخدام Dify، حيث تتولى المنصة إدارة أجزاء من العملية خلف واجهة جاهزة. في هذه التجربة، نعيد بناء المكونات الأساسية داخل n8n لفهم كيفية عمل النظام والتحكم في تدفق البيانات بين مراحله.
+تم تنفيذ المشروع باستخدام **n8n** لربط المكونات وأتمتة العمليات، و**Supabase Vector Store** لتخزين المعرفة واسترجاعها، و**OpenAI Embeddings** لتحويل النصوص إلى تمثيلات رقمية، و**Gemini Chat Model** لتوليد الإجابات.
 
-**By the end of this project, the key concepts are:**
+لا يقتصر التركيز على بناء سير عمل يعمل فحسب، بل يشمل أيضًا فهم العلاقة بين البيانات والاسترجاع والذاكرة والأدوات، والتحقق من سلوك النظام من خلال اختبارات عملية.
 
-- معالجة المستندات واستخراج النصوص.
-- تقسيم المحتوى إلى أجزاء صغيرة (Chunking).
-- إنشاء التمثيلات الرقمية للنصوص (Embeddings).
-- تخزين المعرفة واسترجاعها باستخدام Vector Database.
-- ربط أدوات استرجاع المعرفة بـ AI Agent.
-- التمييز بين Knowledge وMemory، وبين Retrieval وGeneration.
-- اختبار سلوك النظام وتحليل الأخطاء على مستوى المكونات.
+> **Core Principle:** Retrieve relevant knowledge, provide context to the AI Agent, and generate responses grounded in the available information.
 
----
+## 02. Project Objectives & Outcomes
 
-## 🧩 02. Understanding RAG
+صُمّم المشروع لتطبيق مفاهيم بناء أنظمة الذكاء الاصطناعي المتصلة بمصادر المعرفة، مع التركيز على تكامل المكونات والتحقق من النتائج.
 
-**RAG = Retrieval-Augmented Generation**
+- بناء مسار آلي لمعالجة ملفات المعرفة وإعدادها للاسترجاع.
+- استخراج النصوص من ملفات PDF وتجهيزها للتقسيم إلى مقاطع.
+- تطبيق **Text Chunking** مع تحديد حجم المقطع والتداخل بين المقاطع.
+- إنشاء **Embeddings** باستخدام OpenAI.
+- تخزين التمثيلات المتجهية في Supabase.
+- بناء AI Agent يستقبل الأسئلة ويستخدم قاعدة المعرفة أداةً للاسترجاع.
+- دمج Gemini Chat Model وSimple Memory في مسار المحادثة.
+- التمييز بين المعرفة المسترجعة والذاكرة الحوارية.
+- اختبار استرجاع المعلومات والبحث الدلالي والتعامل مع المعلومات غير المتاحة واستمرارية سياق المحادثة.
 
-RAG هو أسلوب يتيح لنموذج الذكاء الاصطناعي الاستفادة من مصادر معرفة خارجية عند الإجابة، بدل الاعتماد على المعرفة المتاحة داخل النموذج وحدها.
+## 03. Technology Stack
 
-```text
-USER QUESTION
-      │
-      ▼
-RETRIEVE RELEVANT KNOWLEDGE
-      │
-      ▼
-AUGMENT THE CONTEXT
-      │
-      ▼
-GENERATE AN ANSWER
-```
-
-تتمثل الفكرة في البحث عن المعلومات ذات الصلة أولًا، ثم إمداد النموذج بالسياق المسترجع حتى يصوغ إجابة مرتبطة بالمصدر المتاح.
-
-> **Core Principle:** RAG is not a single node. It is a system architecture that connects knowledge ingestion, retrieval, and answer generation.
-
----
-
-## 🏗️ 03. System Architecture
-
-يتكون النظام من مسارين مترابطين، لكل منهما مسؤولية محددة.
-
-### Part A — Knowledge Ingestion Pipeline
-
-مسار تجهيز المعرفة وتحويل المستندات إلى بيانات قابلة للبحث الدلالي.
-
-```text
-Google Drive
-     │
-     ▼
-Download File
-     │
-     ▼
-Extract Text
-     │
-     ▼
-Document Loader
-     │
-     ▼
-Text Splitter
-     │
-     ▼
-OpenAI Embeddings
-     │
-     ▼
-Supabase Vector Store
-```
-
-### Part B — RAG AI Agent
-
-مسار استقبال أسئلة المستخدم، واسترجاع المعرفة ذات الصلة، وتوليد الإجابات.
-
-```text
-User Question
-     │
-     ▼
-Chat Trigger
-     │
-     ▼
-AI Agent ◄──── Gemini Chat Model
-     │
-     ├──────── Simple Memory
-     │
-     ▼
-Vector Store Tool
-     │
-     ▼
-Question Embedding
-     │
-     ▼
-Similarity Search
-     │
-     ▼
-Relevant Document Chunks
-     │
-     ▼
-AI Agent + Retrieved Context
-     │
-     ▼
-Grounded Answer
-```
-
-**Architecture Note:** المسار الأول هو Knowledge Ingestion Pipeline وليس AI Agent مستقلًا؛ أما المسار الثاني فهو RAG AI Agent الذي يستخدم قاعدة المعرفة أداةً لاسترجاع المعلومات.
-
----
-
-## 🔄 04. End-to-End Data Flow
-
-### Knowledge Preparation
-
-تبدأ العملية بمستند محفوظ في Google Drive، ثم يُحمّل ويُستخرج نصه، ويُقسّم إلى أجزاء، وتُنشأ له Embeddings قبل تخزينه في قاعدة البيانات المتجهية.
-
-```text
-PDF → Text → Chunks → Embeddings → Vector Database
-```
-
-### Knowledge Retrieval
-
-عند طرح سؤال، يُحوّل السؤال إلى تمثيل رقمي، ثم يُستخدم البحث بالتشابه لاسترجاع أجزاء المعرفة المناسبة. يستفيد النموذج من هذه النتائج لصياغة الإجابة.
-
-```text
-Question → Query Embedding → Similarity Search
-         → Relevant Chunks → LLM → Answer
-```
-
----
-
-# 🟢 PART I — KNOWLEDGE INGESTION PIPELINE
-
-## 🗄️ 05. Supabase Vector Database
-
-تُستخدم Supabase لتخزين المستندات وأجزائها والتمثيلات الرقمية المرتبطة بها، بالاعتماد على PostgreSQL وامتداد `pgvector`.
-
-### Database Preparation
-
-1. إنشاء مشروع Supabase.
-2. تفعيل امتداد `vector` من إعدادات قاعدة البيانات.
-3. تجهيز جدول المستندات ودالة البحث المتجهي وفق بنية Supabase المناسبة.
-4. التحقق من توافق أبعاد عمود `embedding` مع نموذج Embeddings المستخدم.
-
-### Data Structure
-
-| Field | Purpose |
+| Technology | Role in the Project |
 |---|---|
-| `id` | معرّف السجل |
-| `content` | محتوى الجزء النصي |
-| `metadata` | معلومات مصدر المستند |
-| `embedding` | التمثيل الرقمي للمحتوى |
+| **n8n** | ربط المكونات وأتمتة مسارات العمل |
+| **Google Drive** | مصدر ملفات المعرفة |
+| **PDF Processing** | استخراج النصوص من الملفات |
+| **Default Data Loader** | تحميل المستندات وتجهيزها لمعالجة المعرفة |
+| **Recursive Character Text Splitter** | تقسيم النصوص إلى مقاطع متداخلة |
+| **OpenAI Embeddings** | إنشاء التمثيلات الرقمية للنصوص |
+| **Supabase Vector Store** | تخزين المعرفة المتجهية واسترجاعها |
+| **AI Agent** | تنسيق خطوات الاستجابة واستخدام الأدوات |
+| **Gemini Chat Model** | توليد الإجابات |
+| **Simple Memory** | الاحتفاظ بسياق المحادثة وفق إعدادات الذاكرة |
+| **Chat Trigger** | استقبال رسائل المستخدم وبدء مسار المحادثة |
 
-يمكن أن تتضمن `metadata` معلومات مثل اسم الملف ومعرّفه ومصدره، مما يساعد على تتبع مصدر المعلومات المسترجعة.
+## 04. RAG Architecture
 
-### Similarity Search
+يعتمد المشروع على فصل عملية إدخال المعرفة عن عملية استخدامها في المحادثة. يتيح هذا الفصل تجهيز البيانات وتخزينها أولًا، ثم استرجاع الأجزاء المناسبة عند طرح سؤال.
 
-تُستخدم دالة مثل `match_documents` للبحث عن الأجزاء الأقرب دلاليًا إلى السؤال، بشرط أن يتوافق اسم الدالة وتوقيعها مع إعدادات قاعدة البيانات المستخدمة في n8n.
+```mermaid
+flowchart TD
+    A[Google Drive] --> B[File Trigger & Download]
+    B --> C[Extract Text from PDF]
+    C --> D[Document Loader]
+    D --> E[Recursive Character Text Splitter]
+    E --> F[OpenAI Embeddings]
+    F --> G[(Supabase Vector Store)]
 
-**Engineering Consideration:** يجب أن تتوافق أبعاد المتجهات المخزنة مع النموذج المستخدم لإنشائها؛ فاختلاف الأبعاد قد يؤدي إلى أخطاء أثناء الإدخال أو البحث.
-
----
-
-## 🔵 06. Google Drive Trigger
-
-تبدأ عملية الأتمتة بمراقبة مجلد محدد في Google Drive.
-
-**Example Folder Structure**
-
-```text
-AI Automation Knowledge/
-├── RAG.pdf
-├── AI Agents.pdf
-└── Automation.pdf
+    H[User Question] --> I[Chat Trigger]
+    I --> J[AI Agent]
+    J <--> K[Gemini Chat Model]
+    J <--> L[Simple Memory]
+    J --> M[Supabase Vector Store Tool]
+    M --> G
+    G --> M
+    M --> J
+    J --> N[AI Response]
 ```
 
-عند اكتشاف ملف جديد أو تغيير يطابق إعدادات المشغّل، يبدأ سير العمل وفق آلية التشغيل والجدولة المتاحة في إصدار n8n المستخدم.
+يوضح المخطط العلاقة المنطقية بين مرحلتي إدخال المعرفة واسترجاعها. أما التوصيلات الفعلية بين العقد، فتُعرض في صور سير العمل المرفقة في قسم لقطات الشاشة.
 
-توضح هذه الخطوة مفهوم **Event-Driven Automation**، حيث يبدأ التنفيذ استجابةً لحدث بدل الحاجة إلى تشغيل العملية يدويًا في كل مرة.
+## 05. End-to-End Data Flow
 
----
+يتكون النظام من مسارين متكاملين:
 
-## 🟣 07. File Identification & Download
+### A. Knowledge Ingestion
 
-### Edit Fields
+1. مراقبة مصدر الملفات في Google Drive وفق إعدادات الـ Trigger.
+2. تحديد الملف المطلوب وتنزيله.
+3. استخراج النص من ملف PDF.
+4. تحميل المستندات وتجهيزها للمعالجة.
+5. تقسيم النص إلى مقاطع باستخدام Recursive Character Text Splitter.
+6. إنشاء Embeddings للمقاطع النصية.
+7. تخزين المعرفة في Supabase Vector Store.
 
-يُستخرج معرّف الملف `file_id` من بيانات Google Drive، لاستخدامه في تحميل الملف وربط أجزاء المعرفة بمصدرها.
+### B. Retrieval & Response
 
-### Google Drive — Download File
+1. استقبال سؤال المستخدم عبر Chat Trigger.
+2. تمرير السؤال إلى AI Agent.
+3. استخدام Gemini Chat Model لتفسير السؤال وصياغة الإجابة.
+4. الاستعانة بأداة Supabase Vector Store لاسترجاع المعلومات ذات الصلة.
+5. الاستفادة من سياق المحادثة عبر Simple Memory.
+6. استخدام المعلومات المسترجعة ضمن السياق المتاح لتوليد الإجابة.
 
-يُستخدم `file_id` لتحديد المستند المطلوب وتحميل محتواه إلى سير العمل.
+## 06. Knowledge Ingestion Pipeline
 
-```text
-Google Drive Trigger
-        │
-        ▼
-Extract file_id
-        │
-        ▼
-Download File
-        │
-        ▼
-PDF Binary Data
-```
+يمثل مسار إدخال المعرفة المرحلة التي تتحول فيها الملفات إلى محتوى قابل للاسترجاع.
 
-**Why It Matters:** بيانات الملف الوصفية لا تعادل محتوى المستند نفسه؛ لذلك يجب تحميل الملف قبل تنفيذ عملية استخراج النص.
+تتضمن هذه المرحلة التعامل مع الملفات، واستخراج النصوص، وتقسيمها، وإنشاء التمثيلات الرقمية، ثم تخزينها في قاعدة البيانات المتجهية.
 
----
-
-## 🟡 08. Extract From File
-
-بعد تحميل ملف PDF، تُستخدم عقدة `Extract From File` لاستخراج النص الذي ستتم معالجته في المراحل التالية.
-
-```text
-PDF Binary Data
-       │
-       ▼
-Extract From File
-       │
-       ▼
-Raw Text
-```
-
-لا يمكن الانتقال مباشرةً من ملف PDF ثنائي إلى Embeddings دون توفير المحتوى النصي المناسب؛ إذ يحتاج النظام إلى نص يمكن تقسيمه ومعالجته.
-
----
-
-## 🧩 09. Supabase Vector Store — Document Ingestion
-
-تُستخدم عقدة `Supabase Vector Store` لإدخال المستندات وأجزائها وتمثيلاتها الرقمية إلى قاعدة البيانات.
-
-### Core Configuration
-
-| Setting | Purpose |
-|---|---|
-| Credential | إعداد اتصال Supabase بأمان |
-| Table Name | تحديد جدول المستندات |
-| Query Name | تحديد دالة البحث المتجهي عند الحاجة |
-| Operation | اختيار عملية إدخال المستندات |
-
-عند اتباع بنية Supabase Quick Start الافتراضية، قد يكون اسم الجدول `documents` واسم الدالة `match_documents`. يجب التحقق من أن البنية الفعلية تتطابق مع إعدادات n8n.
-
-**Security:** تحفظ مفاتيح API وبيانات الاتصال الحساسة داخل نظام Credentials المناسب. لا تُضمّن مفاتيح Supabase السرية أو مفاتيح Service Role في ملفات GitHub أو صور الشاشة المنشورة.
-
----
-
-## 🟠 10. Document Loader & Text Splitter
-
-### Default Data Loader
-
-يتولى تحويل المحتوى إلى Document objects تحتوي على النص وبيانات المصدر اللازمة للمعالجة والتخزين.
-
-### Recursive Character Text Splitter
-
-يقسّم النص إلى أجزاء أصغر تسمى `Chunks`، مما يتيح استرجاع المقاطع الأكثر صلة بالسؤال بدل التعامل مع المستند كاملًا كوحدة واحدة.
-
-```text
-Extracted Document
-        │
-        ▼
-Document Loader
-        │
-        ▼
-Recursive Character Text Splitter
-        │
-        ├── Chunk 1
-        ├── Chunk 2
-        ├── Chunk 3
-        └── ...
-```
-
-### Chunk Size & Overlap
-
-يمكن البدء بقيم تجريبية مثل:
-
-| Parameter | Example | Purpose |
-|---|---:|---|
-| Chunk Size | 500 | تحديد الحجم الابتدائي للجزء |
-| Chunk Overlap | 50 | الاحتفاظ بتداخل محدود بين الأجزاء |
-
-هذه القيم أمثلة أولية وليست إعدادات مثالية لكل المستندات. يعتمد الاختيار على طبيعة المحتوى وطول الفقرات والأسئلة وجودة نتائج الاسترجاع.
-
-> **Engineering Insight:** Chunking is an engineering decision, not a magic number.
-
----
-
-## 🔢 11. OpenAI Embeddings
-
-تُستخدم Embeddings لتحويل النص إلى تمثيل رقمي يمكن استخدامه في البحث عن التشابه الدلالي.
-
-**Example Model:** `text-embedding-3-small`
-
-```text
-"AI Agent uses external tools"
-               │
-               ▼
-       Embedding Model
-               │
-               ▼
-       Numerical Vector
-```
-
-لا يعتمد البحث الدلالي على تطابق الكلمات حرفيًا فقط، بل يقارن التمثيلات الرقمية للعثور على محتوى ذي صلة بالمعنى.
-
-يجب استخدام إعدادات متوافقة بين نموذج Embeddings المستخدم عند تخزين المستندات والنموذج المستخدم عند البحث عنها.
-
----
-
-## 🧪 12. Ingestion Verification
-
-بعد إعداد العقد، تُشغّل عملية الإدخال وفق إعدادات الاختبار أو المشغّل المتاحة.
-
-### Verification Checklist
-
-- [ ] استقبال بيانات الملف من Google Drive.
-- [ ] استخراج `file_id` الصحيح.
-- [ ] تحميل ملف PDF.
-- [ ] استخراج النص بنجاح.
-- [ ] تحويل المحتوى إلى Documents وChunks.
-- [ ] إنشاء Embeddings.
-- [ ] إدخال السجلات إلى Supabase.
-- [ ] التحقق من ظهور السجلات في جدول المستندات.
-
-**Expected Evidence:** ظهور سجلات تتضمن المحتوى والبيانات الوصفية والـ Embeddings المتوافقة مع إعدادات قاعدة البيانات.
-
-نجاح هذه المرحلة يعني أن المعرفة أصبحت مخزنة وقابلة للاستخدام في مرحلة الاسترجاع، لكنه لا يثبت وحده أن إجابات الوكيل دقيقة؛ فهذا يتطلب اختبارات مستقلة.
-
----
-
-# 🤖 PART II — RAG AI AGENT
-
-## 🎯 13. Agent Objective
-
-الهدف هو بناء وكيل يستقبل أسئلة المستخدم، ويسترجع المعرفة ذات الصلة من قاعدة البيانات، ثم يستخدم النموذج اللغوي لصياغة إجابة تستند إلى المحتوى المسترجع.
-
-```text
-Understand Question
-        │
-        ▼
-Select Knowledge Tool
-        │
-        ▼
-Retrieve Relevant Chunks
-        │
-        ▼
-Use Retrieved Context
-        │
-        ▼
-Generate Answer
-```
-
----
-
-## 🟢 14. Chat Trigger
-
-تُستخدم عقدة `When Chat Message Received` أو التسمية المقابلة في إصدار n8n لاستقبال رسالة المستخدم وبدء مسار الإجابة.
-
-**Example Input**
-
-`What is RAG?`
-
-يمر السؤال إلى AI Agent ليقرر كيفية التعامل معه، بما في ذلك استخدام أداة المعرفة عند الحاجة.
-
----
-
-## 🧠 15. AI Agent & Gemini Chat Model
-
-يمثل AI Agent مركز اتخاذ القرار داخل هذا المسار، بينما يتولى نموذج المحادثة فهم السؤال وصياغة الإجابة باستخدام السياق المتاح.
-
-### Agent Components
+### Pipeline Components
 
 | Component | Responsibility |
 |---|---|
-| AI Agent | تنسيق خطوات الاستجابة واستخدام الأدوات |
-| Gemini Chat Model | فهم السؤال وتوليد الإجابة |
-| Simple Memory | الحفاظ على سياق المحادثة |
-| Supabase Vector Store Tool | استرجاع المعلومات من قاعدة المعرفة |
-| OpenAI Embeddings | تمثيل السؤال رقميًا لأغراض البحث |
+| Google Drive Trigger | بدء المعالجة عند تحقق شرط تشغيل الـ Workflow |
+| File Download | إتاحة الملف لخطوات المعالجة |
+| Extract From File | استخراج المحتوى النصي |
+| Default Data Loader | تحميل المستندات إلى مسار معالجة المعرفة |
+| Recursive Character Text Splitter | تقسيم النص إلى مقاطع |
+| OpenAI Embeddings | تحويل المقاطع إلى تمثيلات متجهية |
+| Supabase Vector Store | تخزين المقاطع وتمثيلاتها للاسترجاع |
 
-**Important Distinction:** Gemini هو نموذج لغوي، وليس قاعدة المعرفة نفسها. مصدر المعرفة في هذا المشروع هو المستندات المخزنة في Supabase.
+## 07. Document Processing & Chunking
 
----
+تُعدّ طريقة تقسيم النصوص عاملًا مهمًا في جودة الاسترجاع؛ إذ تؤثر في مقدار السياق المتاح لكل مقطع وفي العلاقة بين الأجزاء المتجاورة من المستند.
 
-## 🧠 16. Simple Memory vs Knowledge Base
+استخدم المشروع عقدة **Recursive Character Text Splitter** بالإعدادات التالية:
 
-تساعد `Simple Memory` على الاحتفاظ بسياق المحادثة، بما يتيح فهم الأسئلة اللاحقة التي تعتمد على رسائل سابقة.
+| Setting | Implemented Value |
+|---|---:|
+| Chunk Size | `200` |
+| Chunk Overlap | `20` |
 
-**Example Conversation**
+### Why Chunking Matters
 
-```text
-User: What is RAG?
-Agent: RAG retrieves relevant knowledge to support an answer.
+- **Context Preservation:** الحفاظ على قدر مناسب من السياق داخل كل مقطع.
+- **Retrieval Granularity:** إتاحة استرجاع أجزاء محددة بدلًا من التعامل مع المستند كاملًا في كل مرة.
+- **Overlap:** تقليل احتمال فقدان السياق الموجود عند حدود المقاطع المتجاورة.
+- **Retrieval Relevance:** دعم البحث عن الأجزاء الأكثر ارتباطًا بالسؤال.
 
-User: Why is it useful?
-Agent: The follow-up question is interpreted in context.
-```
+هذه القيم هي الإعدادات التي ظهرت في المشروع، وليست ادعاءً بأنها القيم المثلى لكل نوع من المستندات.
 
-| Memory | Vector Store |
-|---|---|
-| يحتفظ بسياق المحادثة | يخزن المعرفة الخارجية |
-| يدعم فهم الأسئلة اللاحقة | يسترجع أجزاء من المستندات |
-| يرتبط بالتفاعل مع المستخدم | يرتبط بقاعدة المعرفة |
-| لا يحل محل المستندات | لا يحل محل ذاكرة المحادثة |
+## 08. Embeddings & Vector Representation
 
----
+استخدم المشروع **OpenAI Embeddings** لتحويل النصوص إلى تمثيلات رقمية يمكن استخدامها في البحث الدلالي.
 
-## 🔵 17. Supabase Vector Store as an AI Tool
+بدلًا من الاعتماد على التطابق الحرفي بين كلمات السؤال والمستند، تتيح التمثيلات المتجهية مقارنة المعنى الدلالي للنصوص وفق آلية البحث والاسترجاع المستخدمة.
 
-في هذا المسار، تُستخدم عقدة `Supabase Vector Store` أداةً للوكيل بدل استخدامها لإدخال المستندات.
+### Embedding Configuration
 
-### Tool Configuration
+| Setting | Implemented Value |
+|---|---:|
+| Embedding Provider | OpenAI |
+| Embedding Batch Size | `200` |
 
-| Setting | Example |
-|---|---|
-| Operation | Retrieve Documents (As Tool for AI Agent) |
-| Tool Name | `search_course_knowledge_base` |
-| Tool Description | `Search the course knowledge base to retrieve relevant information for answering questions about the course.` |
-| Result Limit | 4 — قيمة ابتدائية للاختبار |
+يحدد حجم الدفعة عدد العناصر التي تتم معالجتها في كل دفعة وفق إعدادات العقدة. ولا يعني هذا الرقم أن جميع عمليات التضمين تتم دفعة واحدة، أو أنه يمثل عدد المقاطع المخزنة في قاعدة البيانات.
 
-يساعد اسم الأداة ووصفها الواضحان النموذج على فهم وظيفتها وتحديد الحالات التي تحتاج إلى استخدامها.
+## 09. Supabase Vector Database
 
-يمكن تجربة حدود استرجاع مختلفة، مثل 3 أو 4 أو 5 نتائج، ومقارنة جودة المقاطع المسترجعة قبل اعتماد الإعداد المناسب.
+يستخدم المشروع **Supabase Vector Store** لتخزين المعرفة بصيغة تدعم الاسترجاع الدلالي.
 
----
+تتيح قاعدة البيانات المتجهية ربط المحتوى النصي بتمثيلاته الرقمية، ثم إتاحة هذه المعرفة لمسار الاسترجاع عند معالجة أسئلة المستخدمين.
 
-## 🔢 18. Query Embeddings & Retrieval
+### Database Responsibilities
 
-عندما يطرح المستخدم سؤالًا، يُحوّل السؤال إلى Embedding باستخدام نموذج متوافق مع النموذج المستخدم في تجهيز المستندات.
+- حفظ المعرفة المجهزة من المستندات.
+- إتاحة المقاطع المخزنة لمسار البحث الدلالي.
+- دعم استرجاع المعلومات من خلال أداة مرتبطة بالـ AI Agent.
+- الفصل بين تخزين المعرفة طويلة الأجل وسياق المحادثة.
 
-```text
-USER QUESTION
-      │
-      ▼
-OpenAI Embeddings
-      │
-      ▼
-QUERY VECTOR
-      │
-      ▼
-SUPABASE SIMILARITY SEARCH
-      │
-      ▼
-TOP-K RELEVANT CHUNKS
-      │
-      ▼
-AI AGENT
-```
+**Important Distinction:** وجود قاعدة بيانات متجهية لا يضمن وحده صحة الإجابة؛ إذ تعتمد النتيجة أيضًا على جودة المستندات، والتقسيم، والاسترجاع، وطريقة استخدام المعلومات المسترجعة في توليد الإجابة.
 
-### Two Embedding Operations
+## 10. Retrieval Configuration
 
-**During Ingestion:** تُنشأ Embeddings لأجزاء المستندات وتُخزّن في قاعدة البيانات.
+في مسار **RAG AI Agent**، استُخدمت عقدة Supabase Vector Store أداةً للبحث في قاعدة المعرفة.
 
-**During Retrieval:** يُنشأ Embedding للسؤال، ثم يُقارن بالتمثيلات المخزنة للعثور على المقاطع ذات الصلة.
+### Retrieval Limit
 
-هذا الفصل أساسي لفهم كيفية انتقال المعرفة من المستندات إلى الإجابة.
+| Setting | Implemented Value |
+|---|---:|
+| Retrieval Limit | `4` |
 
----
+يحدد هذا الإعداد الحد الأقصى لعدد النتائج التي يمكن إرجاعها وفق إعدادات الاسترجاع الفعلية للعقدة.
 
-## 🛡️ 19. Grounded Answering & System Instructions
+ولا يعني استرجاع أربع نتائج بالضرورة أن النتائج الأربع متساوية في الصلة، أو أن الإجابة النهائية يجب أن تحتوي على أربع نقاط. تظل جودة النتائج مرتبطة بمحتوى قاعدة المعرفة وآلية البحث.
 
-يحتاج الوكيل إلى تعليمات تحدد مصدر المعلومات المقبول، ومتى يستخدم أداة المعرفة، وكيف يتصرف عندما لا يجد معلومات كافية.
+## 11. RAG AI Agent Workflow
 
-### Instruction Design
+يمثل هذا المسار طبقة التفاعل واتخاذ خطوات المعالجة اللازمة للإجابة عن أسئلة المستخدم.
 
-```text
-You are a helpful course assistant.
+يتلقى الوكيل السؤال، ويعمل مع نموذج المحادثة، ويستطيع الاستعانة بأداة استرجاع المعرفة والذاكرة الحوارية وفق التوصيلات والإعدادات المنفذة.
 
-Use the search_course_knowledge_base tool whenever
-the user's question requires information from the course
-knowledge base.
+### Core Components
 
-Answer using the retrieved knowledge.
+- **Chat Trigger:** استقبال الرسائل وبدء تنفيذ المسار.
+- **AI Agent:** تنسيق الاستجابة واستخدام الأدوات المتاحة.
+- **Gemini Chat Model:** دعم فهم السؤال وتوليد الإجابة.
+- **Supabase Vector Store Tool:** استرجاع المعرفة ذات الصلة.
+- **Simple Memory:** دعم الاحتفاظ بسياق المحادثة.
 
-Do not invent information that is not supported
-by the retrieved content.
+## 12. AI Agent & Tool Calling
 
-If the required information cannot be found in the
-knowledge base, clearly say that you do not have
-enough information to answer.
-```
+من أهم مفاهيم المشروع التمييز بين نموذج لغوي يولّد النصوص ووكيل يستطيع استخدام الأدوات المتاحة له ضمن سير العمل.
 
-### Grounding Principles
+يتيح ربط Supabase Vector Store بالـ AI Agent الاستعانة بمصدر معرفة خارجي عند الحاجة، بدلًا من الاعتماد على المعرفة المضمّنة في النموذج وحدها.
 
-- استخدام قاعدة المعرفة عند الحاجة إلى معلومات منها.
-- الاستناد إلى المحتوى المسترجع عند الإجابة عن الأسئلة المعرفية.
-- عدم تقديم معلومات غير مدعومة على أنها حقائق مؤكدة.
-- التصريح بعدم كفاية المعلومات عند غياب الدليل المناسب.
-- عدم افتراض أن كل رسالة تحتاج إلى بحث؛ فالتحيات والرسائل العامة لا تتطلب بالضرورة استرجاع المعرفة.
+### The Agent Execution Model
 
-**Reliability Principle:** وجود RAG في النظام لا يضمن صحة كل إجابة تلقائيًا؛ إذ تعتمد الجودة على المحتوى المسترجع، وإعدادات البحث، وتعليمات الوكيل، وطريقة تقييم النتائج.
+1. **Understand:** تفسير السؤال وسياقه.
+2. **Select:** اختيار الأداة المناسبة من الأدوات المتاحة، وفق منطق الوكيل.
+3. **Retrieve:** طلب المعلومات من مصدر المعرفة عند الحاجة.
+4. **Process:** استخدام النتائج ضمن سياق الاستجابة.
+5. **Respond:** صياغة الإجابة للمستخدم.
 
----
+هذه المراحل تصف النموذج المفاهيمي لاستخدام الأدوات؛ ولا تعني أن كل سؤال يجب أن يمر حتمًا بجميع الخطوات بالترتيب نفسه.
 
-## 🧪 20. RAG Agent Testing Strategy
+## 13. Simple Memory vs. Knowledge Base
 
-يجب تقييم النظام عبر حالات مختلفة، وليس الاكتفاء باختبار سؤال واحد أو التأكد من أن الوكيل يعيد إجابة.
+على الرغم من إمكانية استخدام الذاكرة وقاعدة المعرفة معًا، فإن لكل منهما وظيفة مختلفة.
 
-### Test 1 — Known Information
-
-**Input**
-
-`What is RAG?`
-
-**Expected Behavior**
-
-- العثور على محتوى ذي صلة في قاعدة المعرفة.
-- تمرير المقاطع المسترجعة إلى الوكيل.
-- صياغة إجابة مدعومة بالمحتوى المتاح.
-
-**What It Validates:** استرجاع المعلومات المعروفة واستخدامها في الإجابة.
-
-### Test 2 — Semantic Search
-
-**Source Statement**
-
-`AI Agents can use external tools.`
-
-**Input**
-
-`Can an AI Agent interact with external systems?`
-
-**Expected Behavior**
-
-العثور على المحتوى ذي الصلة رغم اختلاف صياغة السؤال عن صياغة النص الأصلي.
-
-**What It Validates:** قدرة البحث الدلالي على استرجاع محتوى ذي معنى مرتبط بالسؤال، وليس مجرد تطابق حرفي للكلمات.
-
-### Test 3 — Unknown Information
-
-**Input**
-
-`What is the admission policy of Harvard University?`
-
-**Expected Behavior**
-
-إذا لم تتضمن قاعدة المعرفة معلومات كافية عن سياسة القبول، ينبغي للوكيل توضيح عدم توفر المعلومات اللازمة بدل اختلاق إجابة.
-
-**What It Validates:** التعامل مع المعلومات غير الموجودة والحد من الإجابات غير المدعومة.
-
-### Test 4 — Conversation Memory
-
-**First Message**
-
-`What is RAG?`
-
-**Follow-up**
-
-`Why is it useful?`
-
-**Expected Behavior**
-
-فهم السؤال اللاحق في سياق المحادثة، مع استخدام قاعدة المعرفة عند الحاجة إلى معلومات إضافية.
-
-**What It Validates:** التفاعل بين ذاكرة المحادثة واسترجاع المعرفة.
-
-### Test Evidence
-
-تُوثق لكل حالة المدخلات، والنتيجة المتوقعة، والنتيجة الفعلية، وأي ملاحظات أو أخطاء ظهرت أثناء التنفيذ.
-
-> **Testing Note:** هذه حالات الاختبار ومعايير نجاحها المتوقعة. تُسجّل الحالة على أنها Passed فقط بعد تنفيذها والتحقق من النتيجة الفعلية.
-
----
-
-## 🔍 21. Debugging & Failure Analysis
-
-يساعد تقسيم النظام إلى طبقات مستقلة على تحديد موقع المشكلة بدل اعتبار سير العمل كله وحدة واحدة.
-
-| Symptom | What to Inspect |
-|---|---|
-| عدم ظهور سجلات في Supabase | Trigger، تحميل الملف، استخراج النص، Loader، Splitter، Embeddings |
-| فشل البحث في قاعدة البيانات | اسم الجدول، دالة البحث، إعدادات الاتصال، بنية قاعدة البيانات |
-| خطأ في أبعاد المتجهات | توافق نموذج Embeddings مع تعريف عمود `vector` |
-| إجابة غير مدعومة | المقاطع المسترجعة، وصف الأداة، تعليمات الوكيل |
-| نتائج استرجاع ضعيفة | Chunk Size، Chunk Overlap، Result Limit، جودة المستندات |
-| عدم فهم السؤال اللاحق | إعدادات الذاكرة ومعرّف الجلسة وسياق المحادثة |
-
-### Debugging Method
-
-1. تحديد الطبقة التي يظهر عندها الخطأ.
-2. مراجعة مدخلات العقدة ومخرجاتها.
-3. التحقق من إعدادات الاتصال وأسماء الجداول والدوال.
-4. تعديل متغير واحد في كل مرة.
-5. إعادة الاختبار وتوثيق النتيجة.
-
----
-
-## 🧠 22. RAG Mental Model
-
-يلخص المخطط التالي العلاقة بين المعرفة المخزنة وسؤال المستخدم وعملية توليد الإجابة.
-
-```text
-                KNOWLEDGE
-                    │
-                Documents
-                    │
-                    ▼
-               Extract Text
-                    │
-                    ▼
-                 Chunking
-                    │
-                    ▼
-                Embeddings
-                    │
-                    ▼
-              Vector Database
-                    ▲
-                    │
-USER ──────► Question Embedding
-                    │
-                    ▼
-             Similarity Search
-                    │
-                    ▼
-             Relevant Chunks
-                    │
-                    ▼
-             Context + Question
-                    │
-                    ▼
-                   LLM
-                    │
-                    ▼
-                 Answer
-```
-
-الهدف هو فهم أن الإجابة تنتج عن تفاعل عدة مكونات؛ فقاعدة البيانات تسترجع المعرفة، بينما يتولى النموذج اللغوي صياغة الإجابة باستخدام السياق المتاح.
-
----
-
-## 🔄 23. Retrieval vs Generation
-
-| Retrieval | Generation |
-|---|---|
-| يبحث عن المعلومات ذات الصلة | يصوغ الإجابة |
-| يعتمد على قاعدة المعرفة وآلية البحث | يعتمد على النموذج والسياق المتاح |
-| يعيد المقاطع المناسبة | يحول السؤال والسياق إلى استجابة |
-| تتأثر جودته بالمستندات والتقسيم والبحث | تتأثر جودته بالسياق والتعليمات والنموذج |
-
-**Retrieval**
-
-```text
-Question → Embedding → Vector Search → Relevant Chunks
-```
-
-**Generation**
-
-```text
-Question + Retrieved Context → LLM → Answer
-```
-
-الفصل بين المرحلتين يسهل تشخيص المشكلات: فقد يكون الخلل في العثور على المعلومة، أو في استخدام المعلومة المسترجعة لصياغة الإجابة.
-
----
-
-## 🔄 24. Dify RAG vs n8n RAG
-
-تعرض المقارنة التالية اختلاف طريقة البناء، وليس حكمًا بأن إحدى المنصتين أفضل في جميع الحالات.
-
-| Concept | Dify | n8n Implementation |
+| Dimension | Simple Memory | Vector Knowledge Base |
 |---|---|---|
-| Knowledge Base | إدارة المعرفة داخل Dify | Supabase Vector Store |
-| Document Processing | إمكانات مدمجة حسب الإعداد | Workflow Nodes |
-| Chunking | إعدادات تقسيم المعرفة | Text Splitter |
-| Embeddings | مزود النموذج وإعداداته | OpenAI Embeddings |
-| Vector Storage | إدارة المنصة أو إعداداتها | Supabase |
-| Retrieval | إمكانات الاسترجاع في Dify | Vector Store |
-| LLM | النموذج المهيأ | Gemini Chat Model |
-| Memory | حسب التطبيق والإعداد | Simple Memory |
-| Agent | تطبيق أو وكيل Dify | AI Agent |
-| Tool Integration | إمكانات المنصة | Vector Store Tool |
+| Primary Purpose | الاحتفاظ بسياق المحادثة | استرجاع معلومات من المستندات |
+| Information Source | سياق التفاعل | الملفات المعالجة والمخزنة |
+| Main Benefit | دعم استمرارية الحوار | دعم الإجابات المستندة إلى المعرفة |
+| Typical Use | تذكّر سياق الرسائل السابقة ضمن إعدادات الذاكرة | العثور على معلومات ذات صلة بسؤال جديد |
 
-**Learning Insight:** استخدام Dify يساعد على بناء التطبيقات، بينما يتيح تنفيذ المسار داخل n8n دراسة تدفق البيانات والتكاملات والمكونات التي تعمل خلف عملية RAG.
+**Key Insight:** الذاكرة الحوارية ليست بديلًا عن قاعدة المعرفة، وقاعدة المعرفة ليست بديلًا عن الذاكرة. يمكن أن تتكامل الوظيفتان ضمن النظام نفسه.
 
----
+## 14. Grounded Answering
 
-## 🏗️ 25. Final Architecture
+يهدف RAG إلى تحسين ارتباط الإجابات بالمعلومات المتاحة من خلال استرجاع سياق مناسب قبل توليد الرد.
 
-### Knowledge Ingestion
+في هذا المشروع، تم تصميم مسار الاستجابة للاستفادة من نتائج استرجاع المعرفة إلى جانب قدرات النموذج اللغوي.
 
-```text
-Google Drive Trigger
-        │
-        ▼
-Edit Fields — File ID
-        │
-        ▼
-Google Drive — Download
-        │
-        ▼
-Extract From File
-        │
-        ▼
-Default Data Loader
-        │
-        ├── Recursive Character Text Splitter
-        │
-        └── OpenAI Embeddings
-                    │
-                    ▼
-          Supabase Vector Store
-```
+تشمل المبادئ المهمة:
 
-### RAG AI Agent
+- ربط الإجابة بالمعلومات المسترجعة عندما تكون ذات صلة.
+- التمييز بين المعلومات المتاحة والمعلومات غير الموجودة في مصدر المعرفة.
+- عدم اعتبار الإجابة الواثقة دليلًا كافيًا على صحتها.
+- التحقق من سلوك النظام باستخدام أسئلة ذات نتائج متوقعة ومعروفة.
 
-```text
-Chat Trigger
-     │
-     ▼
-AI Agent ◄──── Gemini Chat Model
-     │
-     ├──────── Simple Memory
-     │
-     ▼
-Supabase Vector Store Tool
-     │
-     ▼
-OpenAI Embeddings
-     │
-     ▼
-Similarity Search
-     │
-     ▼
-Relevant Documents
-     │
-     ▼
-AI Agent + Retrieved Context
-     │
-     ▼
-Final Answer
-```
+وجود RAG يقلل الاعتماد على التوليد غير المرتبط بالمصدر، لكنه لا يلغي احتمال الخطأ أو الاستنتاج غير الدقيق بصورة مطلقة.
 
-**Implementation Note:** المخططات توضح العلاقات المنطقية بين المكونات. قد تختلف أسماء العقد والتوصيلات التفصيلية بحسب إصدار n8n والإعدادات المستخدمة.
+## 15. Testing & Validation Strategy
 
----
+تم اختبار سلوك المشروع من خلال أربع حالات للتحقق من جوانب مختلفة من الاسترجاع والمحادثة.
 
-## 📚 26. Key Engineering Takeaways
+| Test | Purpose | Result |
+|---|---|---|
+| Known Information | التحقق من الإجابة عن سؤال تتوفر معلوماته في قاعدة المعرفة | **PASS** |
+| Semantic Search | التحقق من استرجاع المعلومات ذات الصلة الدلالية بالسؤال | **PASS** |
+| Unknown Information | اختبار التعامل مع سؤال لا تتوفر إجابته في المعرفة المتاحة | **PASS** |
+| Conversation Memory | التحقق من الاحتفاظ بسياق المحادثة واستخدامه | **PASS** |
 
-| Question | Key Understanding |
+<p align="center">
+  <img src="https://img.shields.io/badge/Validation-4%2F4%20Tests%20Passed-238636?style=for-the-badge" alt="Four out of four tests passed" />
+</p>
+
+توضح النتائج نجاح حالات الاختبار الأربع التي نُفذت ضمن نطاق المشروع. ولا تمثل هذه النتائج وحدها اختبارًا شاملًا للأداء أو الأمان أو جاهزية الإنتاج.
+
+## 16. Test Interpretation
+
+### Known Information
+
+التحقق من قدرة النظام على الإجابة عن سؤال تتوفر معلوماته في مصدر المعرفة، بدلًا من الاكتفاء بإجابة عامة غير مرتبطة بالمحتوى.
+
+### Semantic Search
+
+التحقق من قدرة الاسترجاع على العثور على محتوى ذي صلة بمعنى السؤال، وليس فقط اعتمادًا على تطابق الكلمات حرفيًا.
+
+### Unknown Information
+
+اختبار كيفية تعامل النظام مع سؤال لا تتوفر له معلومات داعمة في المعرفة المتاحة. ويهدف هذا الاختبار إلى فحص حدود الإجابة والتمييز بين المعلومات المتوفرة وغير المتوفرة.
+
+### Conversation Memory
+
+التحقق من قدرة النظام على استخدام سياق المحادثة وفق إعدادات Simple Memory، بما يدعم استمرارية التفاعل بين الرسائل.
+
+## 17. Additional AI Agent Knowledge Test
+
+تتضمن لقطات المشروع أيضًا اختبارًا معرفيًا حول قدرة وكلاء الذكاء الاصطناعي على استخدام الأدوات الخارجية.
+
+يتناول السؤال العبارة:
+
+> AI Agents can use external tools.
+
+والإجابة الصحيحة هي أن الوكلاء الذكيين يستطيعون استخدام الأدوات الخارجية المتاحة لهم ضمن التكوين والصلاحيات المحددة.
+
+يدعم هذا المفهوم فهم الدور الذي تؤديه الأدوات في توسيع قدرات الوكيل، مثل استرجاع البيانات أو التفاعل مع أنظمة خارجية عبر سير عمل متصل.
+
+**Note:** هذا اختبار معرفي إضافي حول مفهوم AI Agents، وليس واحدًا من اختبارات التحقق الأربعة المذكورة أعلاه.
+
+## 18. Debugging & Failure Analysis
+
+من المبادئ المهمة في بناء مسارات RAG أن ظهور إجابة غير صحيحة لا يعني بالضرورة أن المشكلة في النموذج اللغوي وحده.
+
+يمكن أن تتأثر النتيجة بمراحل متعددة:
+
+| Layer | Potential Issue to Investigate |
 |---|---|
-| لماذا نحتاج Vector Database؟ | لتخزين المتجهات وإجراء البحث الدلالي. |
-| لماذا نستخدم Chunking؟ | لاسترجاع أجزاء محددة بدل تحميل المستند كاملًا إلى سياق الإجابة. |
-| ما وظيفة Embeddings؟ | تحويل النص إلى تمثيل رقمي قابل للمقارنة الدلالية. |
-| لماذا نستخدم Embeddings مرتين؟ | لتمثيل المستندات أثناء الإدخال والأسئلة أثناء الاسترجاع. |
-| ما دور Supabase؟ | تخزين المستندات والمتجهات وإتاحة البحث فيها وفق الإعدادات. |
-| ما دور AI Agent؟ | تنسيق الاستجابة واختيار الأدوات واستخدام نتائجها. |
-| ما دور Memory؟ | الحفاظ على سياق المحادثة. |
-| ما دور Vector Store Tool؟ | تمكين الوكيل من البحث في قاعدة المعرفة. |
-| ما الفرق بين Retrieval وGeneration؟ | الاسترجاع يعثر على المعلومات، والتوليد يصوغ الإجابة. |
-| ما مفهوم RAG؟ | استرجاع المعرفة، وإضافتها إلى السياق، ثم توليد الإجابة. |
+| File Processing | فشل تنزيل الملف أو استخراج النص |
+| Chunking | تقسيم يضعف ترابط السياق أو يفصل المعلومات المهمة |
+| Embeddings | عدم توافق إعدادات التضمين أو فشل إنشاء التمثيلات |
+| Vector Storage | عدم إدخال المعرفة أو عدم إتاحتها للاسترجاع |
+| Retrieval | استرجاع نتائج غير ملائمة للسؤال |
+| Agent Configuration | عدم استخدام الأداة بالشكل المتوقع |
+| Generation | صياغة إجابة تتجاوز المعلومات المتاحة |
+| Memory | عدم الاحتفاظ بالسياق أو استعادته كما هو متوقع |
 
----
+يمثل هذا الجدول إطارًا لتحليل الأعطال المحتملة، وليس قائمة بأعطال ثبت وقوعها في المشروع.
 
-## ⚠️ 27. Security & Reliability Considerations
+## 19. Reliability & Production Considerations
 
-يتطلب نقل التجربة من بيئة التعلم إلى استخدام تشغيلي الاهتمام بأكثر من نجاح تنفيذ العقد.
+يركز التفكير الإنتاجي على ما يتجاوز نجاح تجربة واحدة، ليشمل استقرار النظام، وسلامة البيانات، والقدرة على اكتشاف المشكلات ومعالجتها.
 
-- **Credential Security:** تخزين المفاتيح والبيانات الحساسة في Credentials وعدم نشرها داخل المستودع.
-- **Knowledge Quality:** التأكد من صلاحية المستندات ومحتواها قبل إدخالها إلى قاعدة المعرفة.
-- **Grounding:** اختبار مدى ارتباط الإجابات بالمقاطع المسترجعة.
-- **Failure Handling:** تسجيل الأخطاء وتحديد كيفية التعامل مع فشل التحميل أو الإدخال أو البحث.
-- **Observability:** الاحتفاظ بمعلومات تشغيل كافية لتشخيص المشكلات دون كشف الأسرار.
-- **Evaluation:** اختبار المعلومات المعروفة، والأسئلة المعاد صياغتها، والمعلومات غير الموجودة، والأسئلة المتتابعة.
-- **Configuration Consistency:** الحفاظ على توافق نماذج Embeddings وأبعاد المتجهات وإعدادات قاعدة البيانات بين الإدخال والاسترجاع.
+### Reliability
 
-هذه اعتبارات تصميم وتحقق؛ ولا يعني إدراجها أن جميع آليات الحماية والمراقبة والإنتاج قد نُفذت بالفعل.
+- التحقق من نجاح مراحل معالجة الملفات قبل الاعتماد على نتائجها.
+- التأكد من أن المعرفة المطلوبة موجودة في قاعدة البيانات.
+- اختبار الاسترجاع باستخدام أسئلة متنوعة.
+- مراقبة الأخطاء الناتجة عن فشل العقد أو الخدمات الخارجية.
+- إعادة اختبار السلوك بعد أي تغيير في الإعدادات.
 
----
+### Security
 
-## 🚀 28. Future Improvements
+- عدم تضمين مفاتيح API أو بيانات الاعتماد في README أو لقطات الشاشة العامة.
+- عدم نشر روابط تشغيل أو مشاركة تتيح الوصول إلى بيانات حساسة.
+- مراجعة صلاحيات الوصول إلى الملفات وقاعدة البيانات.
+- الاحتفاظ بأسرار الاتصال ضمن إعدادات آمنة، وعدم إضافتها إلى مستودع GitHub.
 
-يمكن تطوير المشروع لاحقًا من خلال:
+### Production Readiness
 
-1. مقارنة أحجام Chunks مختلفة وقياس أثرها في جودة الاسترجاع.
-2. اختبار قيم مختلفة لـ Top K ومقارنة المقاطع الناتجة.
-3. تحسين تتبع مصدر المعلومة باستخدام Metadata.
-4. توثيق نتائج الاختبارات بأدلة قابلة للمراجعة.
-5. إضافة معالجة واضحة للأخطاء وإعادة المحاولة عند الحاجة.
-6. اختبار التكرار عند إعادة إدخال المستند نفسه لتجنب السجلات غير المرغوبة.
-7. تطوير آلية تقييم تقيس جودة Retrieval ومدى استناد الإجابات إلى المصادر.
-8. مراجعة الصلاحيات وسياسات الاحتفاظ بالبيانات قبل الاستخدام الفعلي.
+نجاح الاختبارات المحددة يثبت النتائج ضمن نطاقها، لكنه لا يكفي وحده لإثبات جاهزية الإنتاج. يتطلب ذلك اختبارات إضافية للأداء، والتعامل مع الأعطال، والصلاحيات، والخصوصية، وتكلفة التشغيل، ومراقبة النتائج.
 
----
+## 20. Implemented Configuration Summary
 
-## 🖼️ 29. Project Screenshots
+يجمع الجدول التالي القيم التي تم التحقق منها في إعدادات المشروع:
 
-تعرض الصور التالية المكونات الأساسية للمشروع، وتساعد على مراجعة بنية مسارات العمل وقاعدة البيانات وأدلة الاختبار.
+| Configuration | Value |
+|---|---|
+| Chunk Size | `200` |
+| Chunk Overlap | `20` |
+| Embedding Batch Size | `200` |
+| Retrieval Limit | `4` |
+| Embedding Provider | OpenAI |
+| Chat Model | Gemini |
+| Vector Database | Supabase |
+| Workflow Automation | n8n |
+| Conversation Memory | Simple Memory |
+
+## 21. Key Engineering Insights
+
+يبرز المشروع عددًا من المبادئ المهمة في تصميم أنظمة الذكاء الاصطناعي المتصلة بالبيانات:
+
+**1. Data Quality Comes First**
+
+لا يمكن لمسار الاسترجاع أن يعوّض عن مستندات ناقصة أو نصوص لم تتم معالجتها بصورة صحيحة.
+
+**2. Retrieval and Generation Are Different Stages**
+
+استرجاع المعلومات عملية مختلفة عن توليد الإجابة، ولكل مرحلة أسبابها المحتملة للأخطاء.
+
+**3. Tools Extend Agent Capabilities**
+
+ربط الوكيل بأداة مناسبة يتيح له الاستفادة من مصادر بيانات ووظائف تتجاوز قدرات توليد النص وحدها.
+
+**4. Memory Is Not the Knowledge Base**
+
+الذاكرة الحوارية تدعم سياق التفاعل، بينما تتيح قاعدة المعرفة البحث في المحتوى المخزن.
+
+**5. Validation Must Be Explicit**
+
+تحديد حالات اختبار واضحة وتوثيق نتائجها يجعل سلوك النظام أسهل في الفهم والمراجعة.
+
+**6. Reliability Requires More Than a Successful Run**
+
+تشغيل الـ Workflow بنجاح خطوة مهمة، لكنه لا يغني عن فحص البيانات والأخطاء والصلاحيات والنتائج.
+
+## 22. Future Improvements
+
+تمثل العناصر التالية فرصًا للتحسين والتطوير اللاحق، وليست ادعاءً بأنها نُفذت ضمن النسخة الحالية.
+
+- إضافة آلية واضحة لتوثيق مصادر المعلومات المسترجعة في الإجابات.
+- اختبار استراتيجيات مختلفة لتقسيم المستندات ومقارنة جودة الاسترجاع.
+- توسيع مجموعة الاختبارات لتشمل أسئلة ملتبسة ومستندات طويلة.
+- إضافة تسجيل منظم للأخطاء ومراحل فشل المعالجة.
+- تقييم جودة الاسترجاع باستخدام مجموعة أسئلة وإجابات مرجعية.
+- قياس زمن الاستجابة وتكلفة الاستدعاءات الخارجية.
+- تحسين التعامل مع المستندات المحدثة أو المحذوفة.
+- مراجعة ضوابط الوصول وأمان البيانات قبل أي نشر إنتاجي.
+
+## 23. Project Screenshots
+
+توثّق الصور التالية البنية التقنية للمشروع، ومسارات إدخال المعرفة واسترجاعها، وبعض نتائج التحقق العملي.
 
 ### 01 — Knowledge Ingestion Pipeline
 
-![Knowledge Ingestion Pipeline](Screenshots/01%20%E2%80%94%20Knowledge%20Ingestion%20Pipeline.png)
+يوضّح مسار تجهيز ملفات المعرفة، واستخراج النصوص وتقسيمها، وإنشاء التضمينات الرقمية، ثم تخزينها في قاعدة البيانات المتجهية.
 
-*مسار تجهيز المستندات وتحويلها إلى معرفة قابلة للبحث.*
+![Knowledge Ingestion Pipeline](Screenshots/01%20%E2%80%94%20Knowledge%20Ingestion%20Pipeline.png)
 
 ### 02 — RAG AI Agent Workflow
 
-![RAG AI Agent Workflow](Screenshots/02%20%E2%80%94%20RAG%20AI%20Agent%20Workflow.png)
+يعرض سير عمل الوكيل الذكي واستقبال الأسئلة واستخدام أداة استرجاع المعرفة ضمن مسار الإجابة.
 
-*بنية الوكيل الذكي واتصاله بنموذج المحادثة والذاكرة وأداة استرجاع المعرفة.*
+![RAG AI Agent Workflow](Screenshots/02%20%E2%80%94%20RAG%20AI%20Agent%20Workflow.png)
 
 ### 03 — Supabase Vector Database
 
+توثّق الصورة قاعدة البيانات المتجهية المستخدمة لتخزين المعرفة وإتاحتها للاسترجاع الدلالي.
+
 ![Supabase Vector Database](Screenshots/03%20%E2%80%94%20Supabase%20Vector%20Database.png)
 
-*عرض قاعدة البيانات المتجهية والسجلات المستخدمة في تخزين المعرفة.*
+### 04 — Knowledge Retrieval Test
 
-### 04 — Test Evidence
-
-![Test 2](Screenshots/test2.png)
-
-*دليل اختبار إضافي — يُحدد وصفه النهائي وفق محتوى الصورة الفعلي.*
-
-### 05 — Knowledge Retrieval Test
+توثّق اختبار التحقق من وجود المعلومة في المعرفة المتاحة.
 
 ![Knowledge Retrieval Test](Screenshots/%D8%A7%D8%AE%D8%AA%D8%A8%D8%A7%D8%B1%20%D9%88%D8%AC%D9%88%D8%AF%20%D8%A7%D9%84%D9%85%D8%B9%D9%84%D9%88%D9%85%D8%A9.png)
 
-*صورة مرتبطة باختبار وجود المعلومة — تُراجع النتيجة الظاهرة فيها قبل توثيقها بوصفها حالة ناجحة.*
+### 05 — AI Agent Tools Knowledge Test
 
-[View All Screenshots](Screenshots/)
+توثّق اختبارًا معرفيًا حول قدرة AI Agents على استخدام الأدوات الخارجية لتنفيذ المهام.
 
----
+![AI Agent Tools Knowledge Test](Screenshots/test2.png)
 
-## 🔗 30. Project Resources
+## 24. Project Resources
 
-- **Workflow Platform:** [n8n](https://n8n.io/)
-- **Vector Database:** [Supabase](https://supabase.com/)
-- **Embedding Model Documentation:** [OpenAI Embeddings](https://platform.openai.com/docs/guides/embeddings)
-- **Project Screenshots:** [View Screenshots](Screenshots/)
-- **GitHub Repository:** [AI Automation Portfolio](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio)
+- **Project Repository:** [AI & Automation Portfolio](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio)
+- **Guided Project Screenshots:** [View Screenshots on GitHub](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/07-Reliability%20%26%20Production%20Thinking/Guided%20Project/Screenshots)
+- **n8n Documentation:** [docs.n8n.io](https://docs.n8n.io/)
+- **Supabase Documentation:** [supabase.com/docs](https://supabase.com/docs)
+- **OpenAI Embeddings Guide:** [platform.openai.com/docs/guides/embeddings](https://platform.openai.com/docs/guides/embeddings)
+- **Google Gemini Documentation:** [ai.google.dev/gemini-api/docs](https://ai.google.dev/gemini-api/docs)
 
----
+## 25. Author
 
-## 👩‍💻 31. Author
-
-**DOAA SAMI AL-BATNIJI**
-
-*Computer Engineer | Data, AI & Automation*
-
-[LinkedIn](#) · [GitHub](https://github.com/doaasami9)
+<p align="center">
+  <strong>DOAA SAMI AL-BATNIJI</strong>
+  <br />
+  Computer Engineer | Data, AI & Automation
+  <br /><br />
+  <a href="https://github.com/doaasami9">
+    <img src="https://img.shields.io/badge/GitHub-View%20Profile-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile" />
+  </a>
+  <a href="https://www.linkedin.com/in/doaa-sami-984426271/">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Profile" />
+  </a>
+</p>
 
 ---
 
 <p align="center">
-  <strong>RAG is not just about generating answers.</strong>
-  <br>
-  It is about retrieving the right knowledge, using it responsibly, and evaluating the result.
+  <sub>Unit 07 — Reliability & Production Thinking</sub>
+  <br />
+  <sub>Guided Project | RAG with n8n</sub>
 </p>
-
-<p align="center">
-  <sub>Unit 07 — Reliability & Production Thinking · Guided Project</sub>
-</p>
-
