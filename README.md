@@ -13,19 +13,6 @@ A technical portfolio showcasing my journey in **AI Automation, intelligent appl
 
 ---
 
-## 📑 Table of Contents
-
-- [About Me](#-about-me)
-- [Engineering Philosophy](#-engineering-philosophy)
-- [Portfolio Overview](#-portfolio-overview)
-- [Featured Projects](#-featured-projects)
-- [Learning Architecture](#-learning-architecture)
-- [Technical Toolkit](#-technical-toolkit)
-- [Engineering Principles](#-engineering-principles)
-- [Beyond the Course](#-beyond-the-course)
-- [Documentation Standards](#-documentation-standards)
-- [Connect](#-connect)
-
 ---
 
 ## 👩‍💻 About Me
