@@ -1,439 +1,315 @@
-# 🚀 AI Automation Portfolio
+# 🚀 AI AUTOMATION PORTFOLIO
+### Engineering Intelligent Solutions | From Problem Understanding to Reliable Systems
 
-> A professional portfolio documenting my journey in designing, building, testing, and improving AI-powered solutions.
+A technical portfolio showcasing my journey in **AI Automation, intelligent application development, workflow integration, and AI-powered system engineering** through practical projects, structured experimentation, and continuous improvement.
 
-**AI Automation | AI-Powered Solutions | Workflow Automation | AI Agents**
+<p align="center">
+  <strong>PROCESS DESIGN</strong> &nbsp; ◆ &nbsp;
+  <strong>AI APPLICATIONS</strong> &nbsp; ◆ &nbsp;
+  <strong>WORKFLOW AUTOMATION</strong> &nbsp; ◆ &nbsp;
+  <strong>AI AGENTS</strong> &nbsp; ◆ &nbsp;
+  <strong>SYSTEM RELIABILITY</strong>
+</p>
+
+---
+
+## 📑 Table of Contents
+
+- [About Me](#-about-me)
+- [Engineering Philosophy](#-engineering-philosophy)
+- [Portfolio Overview](#-portfolio-overview)
+- [Featured Projects](#-featured-projects)
+- [Learning Architecture](#-learning-architecture)
+- [Technical Toolkit](#-technical-toolkit)
+- [Engineering Principles](#-engineering-principles)
+- [Beyond the Course](#-beyond-the-course)
+- [Documentation Standards](#-documentation-standards)
+- [Connect](#-connect)
 
 ---
 
 ## 👩‍💻 About Me
 
-Hi, I'm **[Your Name]**.
+I'm **Doaa Sami Al-Batniji**, a Computer Engineer focused on AI, data, automation, and practical digital solutions.
 
-I am a **[Your Professional Title]** interested in building AI-powered solutions that solve real-world problems and create meaningful impact.
+This repository documents my technical development throughout an AI Automation course. It brings together projects that explore how to understand real-world problems, design purposeful systems, build AI-powered applications, connect services, evaluate outputs, and improve reliability.
 
-Through this portfolio, I document the systems and solutions I design and build throughout my AI Automation journey.
+My approach combines AI capabilities with structured thinking, technical judgment, and a focus on practical outcomes.
 
-### My Focus
+### Core Areas
 
-- AI Automation
-- AI-Powered Solutions
-- Workflow Automation
-- AI Applications
-- AI Agents
-- Human-Centered Technology
-
-### Connect With Me
-
-- 💼 LinkedIn: [Your LinkedIn]
-- 🌐 Portfolio: [Your Portfolio]
-- 📧 Email: [Your Email]
-- 🐙 GitHub: [Your GitHub]
+| AI & Intelligent Systems | Engineering & Integration |
+|:---|:---|
+| AI Automation & LLM Applications | Workflow Design & Process Analysis |
+| AI Agents & Decision Systems | APIs & Webhooks |
+| Knowledge-Grounded AI | System Integration |
+| Prompt Engineering | Testing & Diagnostic Thinking |
+| AI-Powered Web Applications | Reliability & Production Considerations |
 
 ---
 
-# 🧠 My Engineering Philosophy
+## 🧠 Engineering Philosophy
 
-> **We don't teach AI to build everything for us.**
->
-> **We learn to understand, design, direct, evaluate, and improve what AI builds.**
+> **AI can accelerate implementation. Engineering judgment determines whether the solution is appropriate, useful, and dependable.**
 
-My approach throughout this portfolio is:
+I believe building with AI involves more than generating outputs. It requires understanding the problem, defining constraints, selecting suitable tools, evaluating behavior, and improving the system through evidence and iteration.
 
-**Understand → Design → Build → Debug → Explain → Improve**
+### The Engineering Cycle
 
----
+<p align="center">
+  <strong>01 UNDERSTAND</strong>
+  &nbsp; → &nbsp;
+  <strong>02 DESIGN</strong>
+  &nbsp; → &nbsp;
+  <strong>03 BUILD</strong>
+  &nbsp; → &nbsp;
+  <strong>04 TEST</strong>
+  &nbsp; → &nbsp;
+  <strong>05 IMPROVE</strong>
+</p>
 
-# 🎯 Portfolio Overview
-
-This repository contains the projects I developed throughout the **AI Automation Course**.
-
-The projects demonstrate my progression from understanding real-world work to designing and building AI-powered systems.
-
-| Unit | Capability | Projects | Status |
-|---|---|---|---|
-| U1 | Process & Data Thinking | 2 Projects | ⬜ |
-| U2 | AI-Powered Solution Building | 2 Projects | ⬜ |
-| U3 | Quality Thinking | 2 Projects | ⬜ |
-| U4 | Knowledge Grounding | 2 Projects | ⬜ |
-| U5 | Agent & Decision Thinking | 2 Projects | ⬜ |
-| U6 | Integration Thinking | 2 Projects | ⬜ |
-| U7 | Reliability Thinking | 2 Projects | ⬜ |
-| U8 | Solution Engineering | 2 Projects | ⬜ |
+Every project represents an opportunity to apply these principles in a different technical context.
 
 ---
 
-# ⭐ Featured Projects
+## 🎯 Portfolio Overview
 
-> My strongest projects will be highlighted here after completing the course.
+The repository is organized into seven learning units, progressing from process understanding to reliability-focused system development.
 
-### ⭐ Project 01 — [Project Name]
+| Unit | Engineering Capability | Guided Project | Independent Project |
+|:---:|---|:---:|:---:|
+| 01 | Process & Data Thinking | RAHEEQ | Client Intake & Routing |
+| 02 | System Thinking | SkillBridge Lite | Professional Portfolio |
+| 03 | Evaluation & Diagnostic Thinking | TaskBridge | FOREXY |
+| 04 | Grounding Thinking | TECHFIX | TAHQAQ |
+| 05 | Agent & Decision Thinking | XYZ Real Estate AI Agent | LinguaCare |
+| 06 | Automation & Integration Thinking | To be added | — |
+| 07 | Reliability & Production Thinking | RAG with n8n | — |
 
-**What it solves:**  
-[Short description]
-
-**Tools:**  
-[Tools]
-
-**My role:**  
-[What I designed/built]
-
-🔗 [View Project](./path-to-project)
-
----
-
-### ⭐ Project 02 — [Project Name]
-
-**What it solves:**  
-[Short description]
-
-**Tools:**  
-[Tools]
-
-**My role:**  
-[What I designed/built]
-
-🔗 [View Project](./path-to-project)
+**Repository structure:** 11 documented projects across six units with project links, with Unit 6 reserved for a future project.
 
 ---
 
-### ⭐ Project 03 — [Project Name]
+## ⭐ Featured Projects
 
-**What it solves:**  
-[Short description]
+The following projects showcase different aspects of my AI Automation journey, from structured request processing to knowledge-grounded AI workflows.
 
-**Tools:**  
-[Tools]
+### 01 / RAHEEQ
+#### AI-Powered Client Request Management
 
-**My role:**  
-[What I designed/built]
+A client request management solution focused on organizing incoming requests, identifying missing information, and routing requests according to defined conditions.
 
-🔗 [View Project](./path-to-project)
+**Engineering focus**
+- Structured request intake
+- AI-assisted information processing
+- Conditional routing and workflow design
 
----
-
-# 🧩 My Projects
-
-## U1 — UNDERSTAND THE WORK
-
-### Capability
-
-**Process & Data Thinking**
-
-I learned how to understand real-world work, decompose processes, identify inputs, design AI-powered decisions, and turn the solution into an automation.
-
-### Projects
-
-#### 01 — [Course Project Name]
-
-**Type:** Guided Project
-
-🔗 [View Project](./01-process-and-data/course-project)
-
-#### 02 — [Independent Project Name]
-
-**Type:** Independent Project
-
-🔗 [View Project](./01-process-and-data/independent-project)
+**Project documentation:** [Explore RAHEEQ →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/01-Process%20%26%20Data%20Thinking/Course-Project)
 
 ---
 
-## U2 — BUILD THE SYSTEM
+### 02 / SkillBridge Lite
+#### AI-Powered Career & Skills Platform
 
-### Capability
+An AI-powered application designed to connect professional skills and profile information with relevant career opportunities and actionable development recommendations.
 
-**AI-Powered Solution Building**
+**Engineering focus**
+- Skills and opportunity analysis
+- AI-assisted career recommendations
+- User-centered application design
 
-I learned how to transform a problem into a system and use AI-powered tools to design and build an AI-powered application.
-
-### Projects
-
-#### 01 — [Course Project Name]
-
-**Type:** Guided Project
-
-🔗 [View Project](./02-build-the-system/course-project)
-
-#### 02 — [Independent Project Name]
-
-**Type:** Independent Project
-
-🔗 [View Project](./02-build-the-system/independent-project)
+**Project documentation:** [Explore SkillBridge Lite →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/02-System%20Thinking/Course-Project)
 
 ---
 
-## U3 — PROVE IT WORKS
+### 03 / FOREXY
+#### AI-Powered Market Intelligence
 
-### Capability
+A finance and trading learning platform combining market-related information with interactive educational experiences.
 
-**Quality Thinking**
+**Engineering focus**
+- Financial learning experiences
+- Market information presentation
+- Interactive web application development
 
-I learned how to test AI-powered systems, identify failures, evaluate outputs, and improve solution quality.
-
-### Projects
-
-#### 01 — [Course Project Name]
-
-**Type:** Guided Project
-
-🔗 [View Project](./03-prove-it-works/course-project)
-
-#### 02 — [Independent Project Name]
-
-**Type:** Independent Project
-
-🔗 [View Project](./03-prove-it-works/independent-project)
+**Project documentation:** [Explore FOREXY →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/03-Evaluation%20%26%20Diagnostic%20Thinking/Independent-Project)
 
 ---
 
-## U4 — GROUND ITS KNOWLEDGE
+### 04 / RAG with n8n
+#### Build a Knowledge Pipeline & RAG AI Agent
 
-### Capability
+A Retrieval-Augmented Generation (RAG) project exploring how knowledge pipelines and retrieval workflows can support context-aware AI responses.
 
-**Knowledge & Context Thinking**
+**Engineering focus**
+- Knowledge pipeline design
+- Information retrieval and contextual responses
+- AI workflow orchestration
+- Reliability considerations for knowledge-grounded systems
 
-I learned how AI systems can work with external knowledge and how to design solutions that use relevant, controlled information.
-
-### Projects
-
-#### 01 — AI Knowledge Assistant
-
-**Type:** Guided Project
-
-🔗 [View Project](./04-ground-its-knowledge/course-project)
-
-#### 02 — [Independent Project Name]
-
-**Type:** Independent Project
-
-🔗 [View Project](./04-ground-its-knowledge/independent-project)
+**Project documentation:** [Explore RAG with n8n →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/07-Reliability%20%26%20Production%20Thinking/Guided%20Project)
 
 ---
 
-## U5 — CONTROL ITS AGENCY
+## 🏗️ Learning Architecture
 
-### Capability
+Each unit represents a different engineering capability and contains links to its corresponding project documentation.
 
-**Agent & Decision Thinking**
+### 01 — Process & Data Thinking
+*Understand the Work*
 
-I learned when an Agent is appropriate, how AI can make decisions, and how to keep autonomous behavior controlled.
+Focus: Understanding operational needs, decomposing workflows, identifying inputs and outputs, and translating problems into structured process logic.
 
-### Projects
+| Project Type | Project | Documentation |
+|---|---|---|
+| Guided | **RAHEEQ** — AI-Powered Client Request Management | [View Project →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/01-Process%20%26%20Data%20Thinking/Course-Project) |
+| Independent | **AI Client Intake & Request Routing System** | [View Project →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/01-Process%20%26%20Data%20Thinking/Independent-Project) |
 
-#### 01 — [Course Project Name]
+### 02 — System Thinking
+*Build the System*
 
-**Type:** Guided Project
+Focus: Translating requirements into structured applications, organizing functionality, and designing systems around user needs and intended outcomes.
 
-🔗 [View Project](./05-control-its-agency/course-project)
+| Project Type | Project | Documentation |
+|---|---|---|
+| Guided | **SkillBridge Lite** — AI-Powered Career & Skills Platform | [View Project →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/02-System%20Thinking/Course-Project) |
+| Independent | **Doaa Sami Al-Batniji** — Professional Portfolio | [View Project →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/02-System%20Thinking/Independent-Project) |
 
-#### 02 — [Independent Project Name]
+### 03 — Evaluation & Diagnostic Thinking
+*Prove It Works*
 
-**Type:** Independent Project
+Focus: Examining system behavior, evaluating outputs, identifying potential issues, and applying structured reasoning to improve solution quality.
 
-🔗 [View Project](./05-control-its-agency/independent-project)
+| Project Type | Project | Documentation |
+|---|---|---|
+| Guided | **TaskBridge** — Turn Unclear Requests Into Clear, Actionable Plans | [View Project →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/03-Evaluation%20%26%20Diagnostic%20Thinking/Course-Project) |
+| Independent | **FOREXY** — AI-Powered Market Intelligence | [View Project →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/03-Evaluation%20%26%20Diagnostic%20Thinking/Independent-Project) |
 
----
+### 04 — Grounding Thinking
+*Ground Its Knowledge*
 
-## U6 — CONNECT IT TO THE WORLD
+Focus: Connecting AI systems to relevant knowledge sources, grounding responses in available information, and recognizing uncertainty when evidence is insufficient.
 
-### Capability
+| Project Type | Project | Documentation |
+|---|---|---|
+| Guided | **TECHFIX** — Knowledge-Grounded Technical Support | [View Project →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/04-Grounding%20Thinking/Guided-Project) |
+| Independent | **TAHQAQ** — Knowledge-Grounded Verification Assistant | [View Project →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/04-Grounding%20Thinking/Guided-Project/Independent-Project) |
 
-**Integration Thinking**
+### 05 — Agent & Decision Thinking
+*Control Its Agency*
 
-I learned how AI-powered systems communicate with external applications, services, APIs, and data sources.
+Focus: Exploring AI agents, tool-assisted workflows, decision boundaries, and the design of AI behavior around defined objectives.
 
-### Projects
+| Project Type | Project | Documentation |
+|---|---|---|
+| Guided | **XYZ Real Estate AI Agent** | [View Project →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/05-Agent%20%26%20Decision%20Thinking/Guided-Project) |
+| Independent | **LinguaCare** — Multilingual AI Telegram Assistant | [View Project →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/05-Agent%20%26%20Decision%20Thinking/Independent-Project) |
 
-#### 01 — [Course Project Name]
+### 06 — Automation & Integration Thinking
+*Connect It to the World*
 
-**Type:** Guided Project
+Focus: Connecting applications, databases, external services, APIs, and webhooks to support communication between systems and automate multi-step workflows.
 
-🔗 [View Project](./06-connect-it-to-the-world/course-project)
+**Guided Project:** To be added.
 
-#### 02 — [Independent Project Name]
+The project section will be updated when the unit's project is ready.
 
-**Type:** Independent Project
+### 07 — Reliability & Production Thinking
+*Make It Reliable*
 
-🔗 [View Project](./06-connect-it-to-the-world/independent-project)
+Focus: Exploring knowledge pipelines, retrieval workflows, error handling, output validation, and the engineering considerations involved in making AI-powered systems more dependable.
 
----
-
-## U7 — MAKE IT RELIABLE
-
-### Capability
-
-**Reliability Thinking**
-
-I learned how to design AI-powered systems that handle errors, unexpected inputs, failures, and operational risks.
-
-### Projects
-
-#### 01 — [Course Project Name]
-
-**Type:** Guided Project
-
-🔗 [View Project](./07-make-it-reliable/course-project)
-
-#### 02 — [Independent Project Name]
-
-**Type:** Independent Project
-
-🔗 [View Project](./07-make-it-reliable/independent-project)
-
----
-
-## U8 — ENGINEER THE RIGHT SOLUTION
-
-### Capability
-
-**Solution Engineering**
-
-I learned how to choose the right solution for a real-world problem by considering the problem, users, constraints, AI capabilities, automation, reliability, and impact.
-
-### Projects
-
-#### 01 — [Course Project Name]
-
-**Type:** Guided Project
-
-🔗 [View Project](./08-engineer-the-right-solution/course-project)
-
-#### 02 — [Independent Project Name]
-
-**Type:** Independent Project
-
-🔗 [View Project](./08-engineer-the-right-solution/independent-project)
+| Project Type | Project | Documentation |
+|---|---|---|
+| Guided | **RAG with n8n** — Build a Knowledge Pipeline & RAG AI Agent | [View Project →](https://github.com/doaasami9/doaa-S-AlBatniji-ai-automationportfolio/tree/main/07-Reliability%20%26%20Production%20Thinking/Guided%20Project) |
 
 ---
 
-# 🛠️ Technical Toolkit
+## 🛠️ Technical Toolkit
 
-Tools and technologies I worked with throughout the course:
+The technologies represented across my project portfolio include the following tools and technical concepts.
 
-### AI & Automation
-
-- AI Automation
-- LLMs
-- AI Agents
-- Workflow Automation
-- Prompt Engineering
-
-### AI-Powered Application Building
-
-- AI App Builders
-- Lovable
-- Supabase
-
-### Automation & Integration
-
-- Zapier
-- APIs
-- Webhooks
-- External Services
-
-### Other Tools
-
-- GitHub
-- [Add your tools]
-
----
-
-# 📈 My Learning Journey
-
-My progression throughout the course:
-
-```text
-U1
-Understand the Work
-        ↓
-U2
-Build the System
-        ↓
-U3
-Prove It Works
-        ↓
-U4
-Ground Its Knowledge
-        ↓
-U5
-Control Its Agency
-        ↓
-U6
-Connect It to the World
-        ↓
-U7
-Make It Reliable
-        ↓
-U8
-Engineer the Right Solution
-```
-
----
-
-# 💡 Key Lessons
-
-Throughout the course, I learned that building with AI is not simply about generating outputs.
-
-It is about:
-
-- Understanding the real problem
-- Designing before building
-- Choosing the right level of automation
-- Knowing where AI should and should not be used
-- Controlling AI behavior
-- Testing assumptions
-- Handling failure
-- Connecting systems
-- Evaluating results
-- Improving continuously
-
-### My Most Important Lesson
-
-> **[Write your own most important lesson from the course.]**
-
----
-
-# 🚀 Beyond the Course
-
-This repository will continue to grow beyond the course.
-
-Future projects, experiments, and AI-powered solutions will be added here as I continue developing my skills.
-
-### Future Projects
-
-- [Project]
-- [Project]
-- [Project]
-
----
-
-# 📊 Portfolio Status
-
-| Area | Progress |
+| Technical Domain | Tools & Technologies |
 |---|---|
-| Process & Data | ⬜ |
-| System Building | ⬜ |
-| Quality | ⬜ |
-| Knowledge | ⬜ |
-| Agency | ⬜ |
-| Integration | ⬜ |
-| Reliability | ⬜ |
-| Solution Engineering | ⬜ |
+| AI & Language Models | LLMs, Prompt Engineering |
+| AI Application Development | Lovable, Dify |
+| Backend & Database | Supabase |
+| Workflow Automation | Zapier, n8n |
+| System Integration | APIs, Webhooks |
+| Version Control & Documentation | GitHub |
+
+Specific implementation details and technology combinations are documented in the corresponding project folders.
 
 ---
 
-# 📜 About This Repository
+## 💡 Engineering Principles
 
-This repository was developed as part of my journey through an **AI Automation Course**.
+My learning journey reinforces several principles that guide the development of practical AI-powered solutions.
 
-The projects are presented as documented engineering work, including the problem, solution, tools, design decisions, implementation, testing, evidence, and lessons learned.
+| Principle | Engineering Application |
+|---|---|
+| Problem First | Understand the actual need before selecting a tool. |
+| Design Before Building | Define the workflow, inputs, outputs, and constraints. |
+| Appropriate Automation | Apply AI where it adds value rather than automating indiscriminately. |
+| Grounded Responses | Use relevant information sources when the solution requires evidence-based answers. |
+| Controlled Decisions | Establish clear boundaries for AI-assisted decisions and actions. |
+| Systematic Evaluation | Examine outputs and investigate unexpected behavior. |
+| Integration by Design | Connect systems through well-defined interfaces and data flows. |
+| Reliability Awareness | Consider errors, uncertainty, and operational risks. |
+| Continuous Improvement | Use observations and test results to guide refinements. |
+
+### My Core Engineering Lesson
+
+> **AI is a capability, not a substitute for engineering judgment.**
+
+The value of an AI-powered solution depends on how well the problem is understood, how carefully the system is designed, and how effectively its behavior is evaluated and improved.
 
 ---
 
-## 👩‍💻 Author
+## 🔭 Beyond the Course
 
-**[Your Name]**
+This portfolio is a foundation for continued development in AI automation, intelligent applications, workflow integration, and practical digital solutions.
 
-AI Automation | AI-Powered Solutions | Human-Centered Innovation
+Future additions will expand the repository with new projects, experiments, and documented engineering improvements as my technical capabilities continue to grow.
 
-[LinkedIn] · [GitHub] · [Portfolio]
+---
+
+## 📚 Documentation Standards
+
+The repository is organized to make project work easy to navigate and understand.
+
+Where applicable, individual project documentation covers:
+
+- Problem statement and intended users
+- Proposed solution and workflow design
+- Technologies and integrations
+- Implementation details and design decisions
+- Testing approach and observed results
+- Screenshots and supporting evidence
+- Limitations, lessons learned, and future improvements
+
+The objective is to present engineering work with clear explanations, traceable project links, and evidence appropriate to each implementation.
+
+---
+
+## 👩‍💻 Connect With Me
+
+**Doaa Sami Al-Batniji**
+
+*Computer Engineer | AI, Data & Automation*
+
+<p align="center">
+  <a href="https://www.linkedin.com/in/doaa-sami-984426271/">LinkedIn</a>
+  &nbsp; ◆ &nbsp;
+  <a href="https://portfolio-doaa-albatniji.lovable.app/">Portfolio</a>
+  &nbsp; ◆ &nbsp;
+  <a href="https://github.com/doaasami9">GitHub</a>
+  &nbsp; ◆ &nbsp;
+  <a href="mailto:doaasami34@gmail.com">Email</a>
+</p>
+
+---
+
+<p align="center">
+  <em>Understanding problems. Engineering solutions. Building with purpose.</em>
+</p>
